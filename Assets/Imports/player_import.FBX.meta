@@ -1,0 +1,316 @@
+fileFormatVersion: 2
+guid: b46d352619f23b145b34927e21e3af78
+timeCreated: 1522713238
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: charMasc
+    100004: CTRL_gun
+    100006: gun
+    100008: Human_
+    100010: Human_Head
+    100012: Human_LCalf
+    100014: Human_LCollarbone
+    100016: Human_LDigit11
+    100018: Human_LFoot
+    100020: Human_LForearm
+    100022: Human_LPalm
+    100024: Human_LPlatform
+    100026: Human_LThigh
+    100028: Human_LUpperarm
+    100030: Human_Neck
+    100032: Human_Pelvis
+    100034: Human_RCalf
+    100036: Human_RCollarbone
+    100038: Human_RDigit11
+    100040: Human_RFoot
+    100042: Human_RForearm
+    100044: Human_Ribcage
+    100046: Human_RPalm
+    100048: Human_RPlatform
+    100050: Human_RThigh
+    100052: Human_RUpperarm
+    100054: Human_Spine1
+    100056: Human_Spine2
+    100058: Human_Spine3
+    100060: Human_Spine4
+    400000: //RootNode
+    400002: charMasc
+    400004: CTRL_gun
+    400006: gun
+    400008: Human_
+    400010: Human_Head
+    400012: Human_LCalf
+    400014: Human_LCollarbone
+    400016: Human_LDigit11
+    400018: Human_LFoot
+    400020: Human_LForearm
+    400022: Human_LPalm
+    400024: Human_LPlatform
+    400026: Human_LThigh
+    400028: Human_LUpperarm
+    400030: Human_Neck
+    400032: Human_Pelvis
+    400034: Human_RCalf
+    400036: Human_RCollarbone
+    400038: Human_RDigit11
+    400040: Human_RFoot
+    400042: Human_RForearm
+    400044: Human_Ribcage
+    400046: Human_RPalm
+    400048: Human_RPlatform
+    400050: Human_RThigh
+    400052: Human_RUpperarm
+    400054: Human_Spine1
+    400056: Human_Spine2
+    400058: Human_Spine3
+    400060: Human_Spine4
+    2100000: MAT_human
+    2100002: No Name
+    2300000: gun
+    2300002: Human_Head
+    2300004: Human_LCalf
+    2300006: Human_LCollarbone
+    2300008: Human_LDigit11
+    2300010: Human_LFoot
+    2300012: Human_LForearm
+    2300014: Human_LPalm
+    2300016: Human_LThigh
+    2300018: Human_LUpperarm
+    2300020: Human_Neck
+    2300022: Human_Pelvis
+    2300024: Human_RCalf
+    2300026: Human_RCollarbone
+    2300028: Human_RDigit11
+    2300030: Human_RFoot
+    2300032: Human_RForearm
+    2300034: Human_Ribcage
+    2300036: Human_RPalm
+    2300038: Human_RThigh
+    2300040: Human_RUpperarm
+    2300042: Human_Spine1
+    2300044: Human_Spine2
+    2300046: Human_Spine3
+    2300048: Human_Spine4
+    3300000: gun
+    3300002: Human_Head
+    3300004: Human_LCalf
+    3300006: Human_LCollarbone
+    3300008: Human_LDigit11
+    3300010: Human_LFoot
+    3300012: Human_LForearm
+    3300014: Human_LPalm
+    3300016: Human_LThigh
+    3300018: Human_LUpperarm
+    3300020: Human_Neck
+    3300022: Human_Pelvis
+    3300024: Human_RCalf
+    3300026: Human_RCollarbone
+    3300028: Human_RDigit11
+    3300030: Human_RFoot
+    3300032: Human_RForearm
+    3300034: Human_Ribcage
+    3300036: Human_RPalm
+    3300038: Human_RThigh
+    3300040: Human_RUpperarm
+    3300042: Human_Spine1
+    3300044: Human_Spine2
+    3300046: Human_Spine3
+    3300048: Human_Spine4
+    4300000: charMasc
+    4300002: Human_Pelvis
+    4300004: Human_LThigh
+    4300006: Human_LCalf
+    4300008: Human_LFoot
+    4300010: Human_LDigit11
+    4300012: Human_RThigh
+    4300014: Human_RCalf
+    4300016: Human_RFoot
+    4300018: Human_RDigit11
+    4300020: Human_Spine1
+    4300022: Human_Spine2
+    4300024: Human_Spine3
+    4300026: Human_Spine4
+    4300028: Human_Ribcage
+    4300030: Human_LCollarbone
+    4300032: Human_LUpperarm
+    4300034: Human_LForearm
+    4300036: Human_LPalm
+    4300038: Human_RCollarbone
+    4300040: Human_RUpperarm
+    4300042: Human_RForearm
+    4300044: Human_RPalm
+    4300046: gun
+    4300048: Human_Neck
+    4300050: Human_Head
+    7400000: idle
+    7400002: walk
+    7400004: reverse idle
+    9500000: //RootNode
+    13700000: charMasc
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 17
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: walk
+      takeName: Take 001
+      firstFrame: 21.8
+      lastFrame: 41
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: reverse idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 17
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

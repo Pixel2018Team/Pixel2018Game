@@ -1,0 +1,253 @@
+fileFormatVersion: 2
+guid: ff926af7b59d1df4f8efa37a35480704
+timeCreated: 1522713892
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: charZOMBIE
+    100004: Zombie_
+    100006: Zombie_Head
+    100008: Zombie_LCalf
+    100010: Zombie_LCollarbone
+    100012: Zombie_LDigit11
+    100014: Zombie_LFoot
+    100016: Zombie_LForearm
+    100018: Zombie_LPalm
+    100020: Zombie_LPlatform
+    100022: Zombie_LThigh
+    100024: Zombie_LUpperarm
+    100026: Zombie_Neck
+    100028: Zombie_Pelvis
+    100030: Zombie_RCalf
+    100032: Zombie_RCollarbone
+    100034: Zombie_RDigit11
+    100036: Zombie_RFoot
+    100038: Zombie_RForearm
+    100040: Zombie_Ribcage
+    100042: Zombie_RPalm
+    100044: Zombie_RPlatform
+    100046: Zombie_RThigh
+    100048: Zombie_RUpperarm
+    100050: Zombie_Spine1
+    100052: Zombie_Spine2
+    100054: Zombie_Spine3
+    100056: Zombie_Spine4
+    400000: //RootNode
+    400002: charZOMBIE
+    400004: Zombie_
+    400006: Zombie_Head
+    400008: Zombie_LCalf
+    400010: Zombie_LCollarbone
+    400012: Zombie_LDigit11
+    400014: Zombie_LFoot
+    400016: Zombie_LForearm
+    400018: Zombie_LPalm
+    400020: Zombie_LPlatform
+    400022: Zombie_LThigh
+    400024: Zombie_LUpperarm
+    400026: Zombie_Neck
+    400028: Zombie_Pelvis
+    400030: Zombie_RCalf
+    400032: Zombie_RCollarbone
+    400034: Zombie_RDigit11
+    400036: Zombie_RFoot
+    400038: Zombie_RForearm
+    400040: Zombie_Ribcage
+    400042: Zombie_RPalm
+    400044: Zombie_RPlatform
+    400046: Zombie_RThigh
+    400048: Zombie_RUpperarm
+    400050: Zombie_Spine1
+    400052: Zombie_Spine2
+    400054: Zombie_Spine3
+    400056: Zombie_Spine4
+    2100000: 01 - Default
+    2100002: 'Material #38'
+    2100004: 'Material #37'
+    2100006: No Name
+    2300000: Zombie_Head
+    2300002: Zombie_LCalf
+    2300004: Zombie_LCollarbone
+    2300006: Zombie_LDigit11
+    2300008: Zombie_LFoot
+    2300010: Zombie_LForearm
+    2300012: Zombie_LPalm
+    2300014: Zombie_LThigh
+    2300016: Zombie_LUpperarm
+    2300018: Zombie_Neck
+    2300020: Zombie_Pelvis
+    2300022: Zombie_RCalf
+    2300024: Zombie_RCollarbone
+    2300026: Zombie_RDigit11
+    2300028: Zombie_RFoot
+    2300030: Zombie_RForearm
+    2300032: Zombie_Ribcage
+    2300034: Zombie_RPalm
+    2300036: Zombie_RThigh
+    2300038: Zombie_RUpperarm
+    2300040: Zombie_Spine1
+    2300042: Zombie_Spine2
+    2300044: Zombie_Spine3
+    2300046: Zombie_Spine4
+    3300000: Zombie_Head
+    3300002: Zombie_LCalf
+    3300004: Zombie_LCollarbone
+    3300006: Zombie_LDigit11
+    3300008: Zombie_LFoot
+    3300010: Zombie_LForearm
+    3300012: Zombie_LPalm
+    3300014: Zombie_LThigh
+    3300016: Zombie_LUpperarm
+    3300018: Zombie_Neck
+    3300020: Zombie_Pelvis
+    3300022: Zombie_RCalf
+    3300024: Zombie_RCollarbone
+    3300026: Zombie_RDigit11
+    3300028: Zombie_RFoot
+    3300030: Zombie_RForearm
+    3300032: Zombie_Ribcage
+    3300034: Zombie_RPalm
+    3300036: Zombie_RThigh
+    3300038: Zombie_RUpperarm
+    3300040: Zombie_Spine1
+    3300042: Zombie_Spine2
+    3300044: Zombie_Spine3
+    3300046: Zombie_Spine4
+    4300000: charZOMBIE
+    4300002: Zombie_Pelvis
+    4300004: Zombie_LThigh
+    4300006: Zombie_LCalf
+    4300008: Zombie_LFoot
+    4300010: Zombie_LDigit11
+    4300012: Zombie_RThigh
+    4300014: Zombie_RCalf
+    4300016: Zombie_RFoot
+    4300018: Zombie_RDigit11
+    4300020: Zombie_Spine1
+    4300022: Zombie_Spine2
+    4300024: Zombie_Spine3
+    4300026: Zombie_Spine4
+    4300028: Zombie_Ribcage
+    4300030: Zombie_LCollarbone
+    4300032: Zombie_LUpperarm
+    4300034: Zombie_LForearm
+    4300036: Zombie_LPalm
+    4300038: Zombie_RCollarbone
+    4300040: Zombie_RUpperarm
+    4300042: Zombie_RForearm
+    4300044: Zombie_RPalm
+    4300046: Zombie_Neck
+    4300048: Zombie_Head
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: charZOMBIE
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 21
+      lastFrame: 41
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

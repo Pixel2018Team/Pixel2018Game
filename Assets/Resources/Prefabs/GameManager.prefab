@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1167958862330018}
+  m_IsPrefabParent: 1
+--- !u!1 &1167958862330018
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4195774149202360}
+  - component: {fileID: 114793245433183674}
+  - component: {fileID: 114069512906320448}
+  - component: {fileID: 114380155208276974}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4195774149202360
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1167958862330018}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114069512906320448
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1167958862330018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba9b3b70a4d5df345861bedfe85c64ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerTextObject: {fileID: 0}
+  timerType: 0
+  timerLocked: 0
+  countDownMinutes: 0
+  countDownSeconds: 0
+--- !u!114 &114380155208276974
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1167958862330018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e08fadec9673c7e49ae6df4f7ec50cf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planeReference: {fileID: 0}
+  playerPrefab: {fileID: 1231300729853592, guid: 5840f469554023844a1d24790c287645,
+    type: 2}
+  humanAiPrefab: {fileID: 1630491151918274, guid: ee59c09d12b59b2478a151ad748d7b63,
+    type: 2}
+  robotPrefab: {fileID: 0}
+  safeZonePrefab: {fileID: 1143124926932906, guid: f5efe97b6e3bf514ca92d00341126653,
+    type: 2}
+  spawnPointPrefab: {fileID: 1993904437906804, guid: b08cd5de5d4affd46b40e83197477a1b,
+    type: 2}
+  waypointPrefab: {fileID: 1667043113799144, guid: 63b0d3a7e8d7eab46a92ffde5d0f2856,
+    type: 2}
+  numberOfHumanBots: 15
+  numberOfSafeZones: 3
+  numberOfSpawnPoints: 3
+  minDistanceBetweenFixedEntities: 50
+  numberOfWaypoints: 15
+  players: []
+  robot: {fileID: 0}
+  spawnPoints: []
+  safeZones: []
+  humanBots: []
+  zombieBots: []
+  waypoints: []
+  playersSpawnPosition: 0
+--- !u!114 &114793245433183674
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1167958862330018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5639b56bdc4433e4198add2b8cd3d3c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  preloadingSceneName: PreloadingScene
+  firstSceneName: Menu
+  mainSceneName: Main

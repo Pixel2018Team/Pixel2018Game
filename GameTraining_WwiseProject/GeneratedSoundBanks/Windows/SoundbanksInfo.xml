@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="128">
+	<RootPaths>
+		<ProjectRoot>C:\Users\Léandre\Desktop\GameTraining\GameTraining_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Léandre\Desktop\GameTraining\GameTraining_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Léandre\Desktop\GameTraining\GameTraining_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\Léandre\Desktop\GameTraining\GameTraining_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2996866542" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\PIX_2018</ObjectPath>
+			<ShortName>PIX_2018</ShortName>
+			<Path>PIX_2018.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3157003241" Name="test" ObjectPath="\Events\Default Work Unit\test"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="892774154" Language="SFX">
+					<ShortName>Cartoon Hop-SoundBible.com-553158131.wav</ShortName>
+					<Path>SFX\Cartoon Hop-SoundBible.com-553158131_1C9C67B2.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3157003241	test			\Default Work Unit\test	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	892774154	Cartoon Hop-SoundBible_com-553158131	C:\Users\Léandre\Desktop\GameTraining\GameTraining_WwiseProject\.cache\Windows\SFX\Cartoon Hop-SoundBible.com-553158131_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cartoon Hop-SoundBible_com-553158131		123040
+
