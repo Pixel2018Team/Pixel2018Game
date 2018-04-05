@@ -1,2 +1,4 @@
-# Pixel2018_training
-Repo pour s'entrainer, avoir des prototypes etc
+# Pixel2018Game
+Repo pour le jeu du Pixel Challenge 2018
+
+TBD
