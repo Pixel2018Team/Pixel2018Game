@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 23101917624556386}
   - component: {fileID: 114313861215475008}
   m_Layer: 0
-  m_Name: SamKid
+  m_Name: SamKid_template
   m_TagString: kid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
