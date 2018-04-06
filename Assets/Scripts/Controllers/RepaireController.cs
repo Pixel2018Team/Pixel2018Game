@@ -7,7 +7,8 @@ public class RepaireController : MonoBehaviour
     private readonly string GONZUELA_TAG = "gonzuela";
     private readonly string KID_TAG = "kid";
     public bool _isActive = false;
-    private SpriteController _spriteController;
+    public SpriteController _actionButton;
+    public SpriteController _smoke;
     private Image _image;
 
     private GameObject _actor;
@@ -20,7 +21,6 @@ public class RepaireController : MonoBehaviour
 
     void Start()
     {
-        _spriteController = gameObject.GetComponentInChildren<SpriteController>();
         _image = gameObject.GetComponentInChildren<Image>();
     }
 
@@ -31,14 +31,14 @@ public class RepaireController : MonoBehaviour
             if (isBroken && other.tag == GONZUELA_TAG)
             {
                 _isActive = true;
-                _spriteController.SetActive(true);
+                _actionButton.SetActive(true);
                 _actor = other.gameObject;
                 playerTag = _actor.GetComponent<TopDownController>().playerTag;
             }
             else if(!isBroken && other.tag == KID_TAG)
             {
                 _isActive = true;
-                _spriteController.SetActive(true);
+                _actionButton.SetActive(true);
                 _actor = other.gameObject;
                 playerTag = _actor.GetComponent<TopDownKidsController>().playerTag;
             }
@@ -50,7 +50,7 @@ public class RepaireController : MonoBehaviour
         if (_actor == other.gameObject)
         {
             _isActive = false;
-            _spriteController.SetActive(false);
+            _actionButton.SetActive(false);
             _actor = null;
         }
     }
@@ -93,6 +93,7 @@ public class RepaireController : MonoBehaviour
                 animator.SetBool("action", false);
                 acting = false;
                 isBroken = !isBroken;
+                _smoke.SetActive(isBroken);
                 remainingTime = timeForAction;
                 _image.fillAmount = 0.0f;
             }
@@ -114,7 +115,7 @@ public class RepaireController : MonoBehaviour
             var animator = _actor.GetComponent<Animator>();
             animator.SetBool("action", true);
 
-            _spriteController.SetActive(false);
+            _actionButton.SetActive(false);
             _image.enabled = true;
             acting = true;
         }
