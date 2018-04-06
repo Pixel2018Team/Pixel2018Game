@@ -102,7 +102,7 @@ public class LevelManager : MonoBehaviour
     {
         foreach(DoorScript door in _doors)
         {
-            door.Open();
+            door.OpenClose(true);
         }
     }
 
