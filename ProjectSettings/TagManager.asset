@@ -4,14 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - player
-  - ia_human
+  - gonzuela
+  - kid
   - ia_zombie
-  - machine
-  - bullet
-  - trap
-  - safezone
-  - planeReference
   layers:
   - Default
   - TransparentFX
