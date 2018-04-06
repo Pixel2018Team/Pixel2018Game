@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
@@ -48,6 +49,14 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField]
     private GameObject _gameOverPanel;
+
+    [SerializeField]
+    private Image
+        _chaosBar,
+        _consuelaHappy,
+        _consuelaSad,
+        _kidsHappy,
+        _kidsSad;
 
     public bool _consuelaLeads = true;
 
@@ -113,8 +122,27 @@ public class LevelManager : MonoBehaviour
     public void AddChaos(int amount)
     {
         _chaos += amount;
-        if (_chaos > _startingChaos && _consuelaLeads) _consuelaLeads = false;
-        else if (_chaos < _startingChaos && !_consuelaLeads) _consuelaLeads = true;
+
+        _chaosBar.fillAmount = (float)(_chaos / _totalChaos);
+
+        if (_chaos > _startingChaos && _consuelaLeads)
+        {
+            _consuelaLeads = false;
+
+            _consuelaHappy.gameObject.SetActive(false);
+            _consuelaSad.gameObject.SetActive(true);
+            _kidsHappy.gameObject.SetActive(true);
+            _kidsSad.gameObject.SetActive(false);
+        }
+        else if (_chaos < _startingChaos && !_consuelaLeads)
+        {
+            _consuelaLeads = true;
+
+            _consuelaHappy.gameObject.SetActive(true);
+            _consuelaSad.gameObject.SetActive(false);
+            _kidsHappy.gameObject.SetActive(false);
+            _kidsSad.gameObject.SetActive(true);
+        }
     }
 
     /// <summary>
