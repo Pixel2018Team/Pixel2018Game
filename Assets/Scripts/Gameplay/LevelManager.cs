@@ -60,6 +60,7 @@ public class LevelManager : MonoBehaviour
     {
         _gameTimer -= Time.deltaTime;
         if (_gameTimer <= 0) FinishLevel();
+        if (_chaos >= 100) FinishLevel();
     }
 
     private void Reset()
