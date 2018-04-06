@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 65143023020588838}
   - component: {fileID: 114359770236952390}
   m_Layer: 0
-  m_Name: BrokenObject
+  m_Name: BrokenObject 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToRepaire: 5
+  repairing: 0
   playerTag: 0
 --- !u!114 &114763034388349486
 MonoBehaviour:

@@ -27,7 +27,7 @@ public class TopDownController : MonoBehaviour
 
         Vector3 newDirection = Vector3.right * Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.Horizontal))
             + Vector3.forward * Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.Vertical));
-        if(newDirection.sqrMagnitude > 0.0f)
+        if (newDirection.sqrMagnitude > 0.0f)
         {
             transform.rotation = Quaternion.LookRotation(newDirection, Vector3.up);
         }
