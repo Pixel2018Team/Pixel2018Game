@@ -31,6 +31,250 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Bbq_Start" ID="{F36D64B0-A02C-443E-93BF-EEB9598B473E}">
+					<ChildrenList>
+						<Action Name="" ID="{331AA353-005D-43B5-BE7C-5D2D4001281E}" ShortID="699814011">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bbq_Loop" ID="{CB643B59-C926-470A-AD3B-202BB787DF5D}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Bbq_Stop" ID="{3A0BA28C-9281-4717-B308-E6B3BA50A550}">
+					<ChildrenList>
+						<Action Name="" ID="{74EBFDD5-904C-4F67-89F9-55B681C61B9A}" ShortID="278209380">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bbq_Loop" ID="{CB643B59-C926-470A-AD3B-202BB787DF5D}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E62574AB-F0B0-4FBE-962B-D0E8ABE95BAF}" ShortID="669234303">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Bbq_Stop" ID="{E3B3F0A8-EAC6-4A8B-AAF7-BC78E9753461}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Dishes_Start" ID="{09A4D549-EDC4-4D0E-99AC-F77C343EB228}">
+					<ChildrenList>
+						<Action Name="" ID="{A80ED903-2C85-4ECD-B2CF-F30FBD65F0B8}" ShortID="420969015">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Dishes_Loop" ID="{0892C13A-8268-4467-9015-C549C34F8149}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Dishes_Stop" ID="{4203BD2D-DD8E-43FC-BEF3-9B817B70CE20}">
+					<ChildrenList>
+						<Action Name="" ID="{CA00CCFF-7B6E-4198-AACE-03C8BFA7B4CF}" ShortID="274444959">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Dishes_Loop" ID="{0892C13A-8268-4467-9015-C549C34F8149}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Dishes_Impact" ID="{C6A3EAD6-E084-4EAB-ACF2-6CA3F891AB92}">
+					<ChildrenList>
+						<Action Name="" ID="{96B4371B-B5EC-49C6-9F4F-A38A340D5CB1}" ShortID="362581849">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Dishes_Impact" ID="{C27C736C-5722-4FD5-98AD-A14FFFDCFFBA}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Oven_Start" ID="{D4C341DD-2D16-4D3B-A36E-7D39AD17719E}">
+					<ChildrenList>
+						<Action Name="" ID="{180A8861-048A-46F5-9C9C-5FF63EC8D973}" ShortID="906912721">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Oven_Burning_Loop" ID="{5CEAC5A6-BF8D-438C-A324-56DEEC1B3B05}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Oven_Stop" ID="{3F0FE35C-147D-4133-95D6-113D3A425BF5}">
+					<ChildrenList>
+						<Action Name="" ID="{1A7C82AF-F96F-47F5-A7E1-0EE7EAF22924}" ShortID="692240539">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Oven_Burning_Loop" ID="{5CEAC5A6-BF8D-438C-A324-56DEEC1B3B05}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{04FD9FA4-80BD-4BA6-976A-AC3DE641AFDF}" ShortID="530580059">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Oven_Burning_Stop" ID="{FCDA88ED-3712-4B8B-93DB-954337598D1B}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Oven_Stretch" ID="{4C5BC247-4475-44AB-B0FB-71E1D1F50283}">
+					<ChildrenList>
+						<Action Name="" ID="{B00FEA4C-CA25-4F7E-A79B-6B34312E9F75}" ShortID="915272703">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Oven_Stretch" ID="{6919D906-F2BE-4C7E-B573-54B35296D22C}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Extinctor_Use" ID="{720CD8BE-B6E7-46DB-812F-891CB01C11D7}">
+					<ChildrenList>
+						<Action Name="" ID="{0CC1CAB6-A707-4178-8F14-1090486B6F9F}" ShortID="152165427">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Extinctor_Use" ID="{BAF71DC0-BE48-49A7-964F-6A02B23F7597}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Folder Name="ForMixing" ID="{5B633EF4-2F94-4818-9860-EADE2312C31F}" ShortID="331291658">
+					<ChildrenList>
+						<Event Name="Mix_Extinctor_Oven" ID="{44F11878-4D83-4BD3-938C-FDDF2F5D9A5B}">
+							<ChildrenList>
+								<Action Name="" ID="{33E7A584-541B-4080-8387-72A77636B983}" ShortID="918619297">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Extinctor_Use" ID="{720CD8BE-B6E7-46DB-812F-891CB01C11D7}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{65018E88-1B0C-46F8-BB76-A316457196C6}" ShortID="345236961">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Oven_Stop" ID="{3F0FE35C-147D-4133-95D6-113D3A425BF5}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Mix_Toaster_WaterDrop" ID="{FDF94BEF-22D3-4739-9B73-97FECB9F4B75}">
+							<ChildrenList>
+								<Action Name="" ID="{6752CCC1-645B-46B4-9B80-3EB4BBFF592A}" ShortID="74551617">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_Toaster_Drop" ID="{46FED64D-657D-4D7B-8503-B8E6180C034D}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A88C3346-ACCE-4DAF-808F-7E33B6532955}" ShortID="963605020">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_Toaster_Water_Impact" ID="{080620FA-2B30-4877-B486-2AB9F754F975}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Event Name="Toaster_Pickup" ID="{BC0A1134-EA80-495B-836C-F87341D4CDC9}">
+					<ChildrenList>
+						<Action Name="" ID="{E80E2E3B-EE39-4708-9155-589B915E02F5}" ShortID="1057030404">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Toaster_Pickup" ID="{304B5365-B792-42D8-BF43-65BEA98240AB}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Toaster_WaterImpact" ID="{01E3187B-BA07-4DD8-83B0-58798C34D9C5}">
+					<ChildrenList>
+						<Action Name="" ID="{D253BA22-627F-4005-BBD8-48A30D626122}" ShortID="415945352">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Toaster_Water_Impact" ID="{080620FA-2B30-4877-B486-2AB9F754F975}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Toaster_Drop" ID="{E0C83E31-67FA-4363-9DEA-F361ECB39216}">
+					<ChildrenList>
+						<Action Name="" ID="{2FCC1210-C4EF-4C2A-A6DF-C81095D6E5D6}" ShortID="1027021476">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Toaster_Drop" ID="{46FED64D-657D-4D7B-8503-B8E6180C034D}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

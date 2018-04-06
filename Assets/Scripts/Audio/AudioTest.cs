@@ -8,7 +8,7 @@ public class AudioTest : MonoBehaviour {
 
 	void Start(){
 		Debug.Log ("Test sound is playing");
-		AkSoundEngine.PostEvent ("Gamestart", gameObject);
+		AkSoundEngine.PostEvent ("Bbq_Start", gameObject);
 
 	}
 
