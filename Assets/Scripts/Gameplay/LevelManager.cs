@@ -49,22 +49,29 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private GameObject _gameOverPanel;
 
-    public int _chaos = 0;
+    public bool _consuelaLeads = true;
 
+    private int _chaos = 0;
     private List<DoorScript> _doors;
     private int _totalChaos = 0;
+    private int _startingChaos = 0;
+
+    private void Awake()
+    {
+        Reset();
+    }
 
     // Use this for initialization
     private void Start()
     {
-        Reset();
-
         // Populating the list of doors
         foreach(var obj in FindObjectsOfType<DoorScript>())
         {
             DoorScript dm = obj;
             if (obj != null) _doors.Add(dm);
         }
+
+        _startingChaos = (_totalChaos / 2);
     }
 
     // Update is called once per frame
@@ -99,7 +106,22 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Method to modify the actual level of chaos
+    /// </summary>
+    /// <param name="amount">The amount by which to modify the chaos</param>
     public void AddChaos(int amount)
+    {
+        _chaos += amount;
+        if (_chaos > _startingChaos && _consuelaLeads) _consuelaLeads = false;
+        else if (_chaos < _startingChaos && !_consuelaLeads) _consuelaLeads = true;
+    }
+
+    /// <summary>
+    /// Method used to add to the total chaos at the start of the game
+    /// </summary>
+    /// <param name="amount">The amount to add to the total level of chaos</param>
+    public void TotalChaos(int amount)
     {
         this._totalChaos += amount;
     }
