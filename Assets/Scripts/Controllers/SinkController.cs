@@ -15,8 +15,8 @@ public class SinkController : MonoBehaviour
 
     void Start()
     {
-        _spriteController = gameObject.GetComponentInChildren<SpriteController>();
         _image = gameObject.GetComponentInChildren<Image>();
+        _spriteController = gameObject.GetComponentInChildren<SpriteController>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -39,11 +39,18 @@ public class SinkController : MonoBehaviour
 
     private void Update()
     {
-        if (isActive && Input.GetButton(InputMapping.GetInputName(playerTag, InputMapping.Input.X)))
+        if (isActive)
         {
-            _spriteController.SetActive(false);
-            washed += Time.deltaTime;
-            _image.fillAmount = washed / doneWashing;
+            if(Input.GetButton(InputMapping.GetInputName(playerTag, InputMapping.Input.X)))
+            {
+                _spriteController.SetActive(false);
+                washed += Time.deltaTime;
+                _image.fillAmount = washed / doneWashing;
+            }
+            else
+            {
+                _spriteController.SetActive(true);
+            }
         }
     }
 }
