@@ -2,7 +2,7 @@
 
 public class GonzuelaController : MonoBehaviour
 {
-    private string KID_TAG = "kid";
+    private string BREAK_TAG = "breakable";
 
     public float radius = 10.0f;
     private Animator _animator;
@@ -28,12 +28,12 @@ public class GonzuelaController : MonoBehaviour
         Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
         for (int i = 0; i < colliders.Length; i++)
         {
-            if (colliders[i].tag == KID_TAG)
+            if (colliders[i].tag == BREAK_TAG)
             {
-                var kidController = colliders[i].GetComponent<KidController>();
-                if (kidController.isBad && !kidController.isTag)
+                var controller = colliders[i].GetComponent<RepaireController>();
+                if (controller.acting && !controller.isBroken)
                 {
-                    kidController.GetTagged();
+                    controller.CatchActing();
                     _animator.SetTrigger("angry");
                 }
             }

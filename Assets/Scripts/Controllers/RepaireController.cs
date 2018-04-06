@@ -5,16 +5,18 @@ using UnityEngine.UI;
 public class RepaireController : MonoBehaviour
 {
     private readonly string GONZUELA_TAG = "gonzuela";
-    private bool _isActive = false;
+    private readonly string KID_TAG = "kid";
+    public bool _isActive = false;
     private SpriteController _spriteController;
     private Image _image;
-    private GameObject _gonzuela;
 
-    public float timeToRepaire = 5.0f;
-    public float remainingTime = 5.0f;
-    public bool repairing = false;
-
+    private GameObject _actor;
     public InputMapping.PlayerTag playerTag;
+
+    public float timeForAction = 5.0f;
+    public float remainingTime = 5.0f;
+    public bool acting = false;
+    public bool isBroken = false;
 
     void Start()
     {
@@ -24,48 +26,97 @@ public class RepaireController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == GONZUELA_TAG && remainingTime > 0)
+        if(_actor == null)
         {
-            _isActive = true;
-            _spriteController.SetActive(true);
-            _gonzuela = other.gameObject;
+            if (isBroken && other.tag == GONZUELA_TAG)
+            {
+                _isActive = true;
+                _spriteController.SetActive(true);
+                _actor = other.gameObject;
+                playerTag = _actor.GetComponent<TopDownController>().playerTag;
+            }
+            else if(!isBroken && other.tag == KID_TAG)
+            {
+                _isActive = true;
+                _spriteController.SetActive(true);
+                _actor = other.gameObject;
+                playerTag = _actor.GetComponent<TopDownKidsController>().playerTag;
+            }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == GONZUELA_TAG && remainingTime > 0)
+        if (_actor == other.gameObject)
         {
             _isActive = false;
             _spriteController.SetActive(false);
+            _actor = null;
         }
+    }
+
+    public void CatchActing()
+    {
+        _actor.GetComponent<KidController>().GetTagged();
+        var controller = _actor.GetComponent<TopDownKidsController>();
+        controller.enabled = true;
+
+        var animator = _actor.GetComponent<Animator>();
+        animator.SetBool("action", false);
+
+        _actor = null;
+        acting = false;
+        _isActive = false;
+        remainingTime = timeForAction;
+        _image.fillAmount = 0.0f;
     }
 
     void Update()
     {
-        if (repairing)
+        if (acting)
         {
             remainingTime -= Time.deltaTime;
-            _image.fillAmount = (timeToRepaire - remainingTime) / timeToRepaire;
+            _image.fillAmount = (timeForAction - remainingTime) / timeForAction;
             if (remainingTime < 0)
             {
-                var controller = _gonzuela.GetComponent<TopDownController>();
-                var animator = _gonzuela.GetComponent<Animator>();
-                controller.enabled = true;
-                repairing = false;
+                if (isBroken)
+                {
+                    var controller = _actor.GetComponent<TopDownController>();
+                    controller.enabled = true;
+                }
+                else
+                {
+                    var controller = _actor.GetComponent<TopDownKidsController>();
+                    controller.enabled = true;
+                }
+                var animator = _actor.GetComponent<Animator>();
                 animator.SetBool("action", false);
+                acting = false;
+                isBroken = !isBroken;
+                remainingTime = timeForAction;
+                _image.fillAmount = 0.0f;
             }
         }
-        else if (_isActive && remainingTime > 0 && Input.GetButton(InputMapping.GetInputName(playerTag, InputMapping.Input.X)))
+        else if (_isActive && Input.GetButtonDown(InputMapping.GetInputName(playerTag, InputMapping.Input.X)))
         {
-            var controller = _gonzuela.GetComponent<TopDownController>();
-            var animator = _gonzuela.GetComponent<Animator>();
-            _gonzuela.transform.LookAt(new Vector3(transform.position.x, _gonzuela.transform.position.y, transform.position.z));
+            if (isBroken)
+            {
+                var controller = _actor.GetComponent<TopDownController>();
+                controller.enabled = false;
+            }
+            else
+            {
+                var controller = _actor.GetComponent<TopDownKidsController>();
+                controller.enabled = false;
+            }
+            _actor.transform.LookAt(new Vector3(transform.position.x, _actor.transform.position.y, transform.position.z));
+
+            var animator = _actor.GetComponent<Animator>();
             animator.SetBool("action", true);
-            controller.enabled = false;
-            repairing = true;
+
             _spriteController.SetActive(false);
             _image.enabled = true;
+            acting = true;
         }
     }
 }
