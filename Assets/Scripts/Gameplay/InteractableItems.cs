@@ -1,24 +1,36 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using System;
 
 public class InteractableItems : MonoBehaviour
 {
     [Serializable]
-    public enum Type { Knock, Start, Pickup, Open };
+    public enum Type { Knock, Start, Pickup, Open, Fix };
     public Type _type = Type.Knock;
+    private float _timer = 0f;
+    private bool _flag = false;
+    private MeshRenderer _sprite;
+    private Animator _animator;
 
     // Use this for initialization
     private void Start()
     {
-
+        _sprite = GetComponent<MeshRenderer>();
+        _animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     private void Update()
     {
+        if(_timer > 0)
+        {
+            _timer -= Time.deltaTime;
+        }
 
+        if(_flag && _timer<= 0)
+        {
+            _flag = false;
+            Reaction();
+        }
     }
 
     /// <summary>
@@ -39,6 +51,12 @@ public class InteractableItems : MonoBehaviour
                 break;
             case Type.Start:
                 // Demarrer un timer
+                _timer = 5f;
+                _flag = true;
+                _type = Type.Fix;
+                break;
+            case Type.Fix:
+                _type = Type.Start;
                 break;
         }
     }
@@ -46,5 +64,20 @@ public class InteractableItems : MonoBehaviour
     public GameObject Pickup()
     {
         return this.gameObject;
+    }
+
+    /// <summary>
+    /// This method is used to create reactions like the oven catching fire
+    /// </summary>
+    public void Reaction()
+    {
+        _sprite.enabled = true;
+        _animator.enabled = true;
+    }
+
+    public void Fix()
+    {
+        _sprite.enabled = false;
+        _animator.enabled = false;
     }
 }
