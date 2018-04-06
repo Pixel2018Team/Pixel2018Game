@@ -44,8 +44,14 @@ public class InteractableItem : MonoBehaviour {
         }
     }
 
-    //To be overrided by child classes
+    //To be overrided by child classes (combo)
     public virtual void TriggerActionOnCombo(Enum.ComboAnimType animType)
+    {
+
+    }
+
+    //To be overrided by child classes (single action)
+    public virtual void TriggerActionOnInteract()
     {
 
     }
