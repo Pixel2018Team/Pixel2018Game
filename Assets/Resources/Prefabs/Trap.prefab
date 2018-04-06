@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33573294200701206}
   - component: {fileID: 136071664604692370}
   - component: {fileID: 23532021628412552}
+  - component: {fileID: 114841558061603686}
   m_Layer: 0
   m_Name: Trap
   m_TagString: Untagged
@@ -83,6 +84,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1450829979280110}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114841558061603686
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1450829979280110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80e42cb14059bfd49af91468d24a6c97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  decayTime: 3
+  currentTime: 0
+  owner: {fileID: 0}
 --- !u!136 &136071664604692370
 CapsuleCollider:
   m_ObjectHideFlags: 1
