@@ -110,6 +110,7 @@ public class RepaireController : MonoBehaviour
                 var controller = _actor.GetComponent<TopDownKidsController>();
                 controller.enabled = false;
             }
+            _actor.GetComponent<Rigidbody>().velocity = Vector3.zero;
             _actor.transform.LookAt(new Vector3(transform.position.x, _actor.transform.position.y, transform.position.z));
 
             var animator = _actor.GetComponent<Animator>();
