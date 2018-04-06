@@ -4,7 +4,7 @@ using System;
 public class InteractableItems : MonoBehaviour
 {
     [Serializable]
-    public enum Type { Knock, Start, Pickup, Open, Fix };
+    public enum Type { Knock, Start, Pickup, Open, Fix, Clean, Close };
     public Type _type = Type.Knock;
     private float _timer = 0f;
     private bool _flag = false;
@@ -42,6 +42,8 @@ public class InteractableItems : MonoBehaviour
         {
             case Type.Knock:
                 // Deplacer l'objet pour qu'il tombe
+                LevelManager.Instance._chaos += 5;
+                _type = Type.Clean;
                 break;
             case Type.Open:
                 // Bouger l'objet avec une animation
@@ -50,13 +52,24 @@ public class InteractableItems : MonoBehaviour
                 Pickup();
                 break;
             case Type.Start:
+                LevelManager.Instance._chaos += 5;
                 // Demarrer un timer
                 _timer = 5f;
                 _flag = true;
                 _type = Type.Fix;
                 break;
             case Type.Fix:
+                LevelManager.Instance._chaos -= 5;
                 _type = Type.Start;
+                Fix();
+                break;
+            case Type.Clean:
+                LevelManager.Instance._chaos -= 5;
+                _type = Type.Knock;
+                break;
+            case Type.Close:
+                // Faire le deplacement inverse a Open
+                // S'assurer qu'une seule porte est ouverte
                 break;
         }
     }
