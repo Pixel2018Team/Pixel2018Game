@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
-using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
@@ -53,6 +52,7 @@ public class LevelManager : MonoBehaviour
     public int _chaos = 0;
 
     private List<DoorManager> _doors;
+    private int _totalChaos = 0;
 
     // Use this for initialization
     private void Start()
@@ -72,13 +72,14 @@ public class LevelManager : MonoBehaviour
     {
         _gameTimer -= Time.deltaTime;
         if (_gameTimer <= 0) FinishLevel();
-        if (_chaos >= 100) FinishLevel();
+        if (_chaos >= _totalChaos) FinishLevel();
     }
 
     private void Reset()
     {
         _gameTimer = 300f;
         _chaos = 0;
+        _totalChaos = 0;
 
         // Hide the game over panel
         _gameOverPanel.SetActive(false);
@@ -96,5 +97,10 @@ public class LevelManager : MonoBehaviour
         {
             door.Open();
         }
+    }
+
+    public void AddChaos(int amount)
+    {
+        this._totalChaos += amount;
     }
 }
