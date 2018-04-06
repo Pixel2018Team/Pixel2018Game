@@ -4,7 +4,8 @@ using UnityEngine;
 public class RepaireController : MonoBehaviour
 {
     private readonly string GONZUELA = "gonzuela";
-    private bool isActive = false;
+    private bool _isActive = false;
+    private SpriteController _spriteController;
 
     public float timeToRepaire = 5.0f;
 
@@ -12,7 +13,7 @@ public class RepaireController : MonoBehaviour
 
     void Start()
     {
-
+        _spriteController = gameObject.GetComponentInChildren<SpriteController>();
     }
 
     public bool isBroken()
@@ -24,7 +25,8 @@ public class RepaireController : MonoBehaviour
     {
         if (other.tag == GONZUELA)
         {
-            isActive = true;
+            _isActive = true;
+            _spriteController.SetActive(true);
         }
     }
 
@@ -32,13 +34,14 @@ public class RepaireController : MonoBehaviour
     {
         if (other.tag == GONZUELA)
         {
-            isActive = false;
+            _isActive = false;
+            _spriteController.SetActive(false);
         }
     }
 
     void Update()
     {
-        if (isActive && isBroken() && Input.GetButton(InputMapping.GetInputName(playerTag, InputMapping.Input.X)))
+        if (_isActive && isBroken() && Input.GetButton(InputMapping.GetInputName(playerTag, InputMapping.Input.X)))
         {
             timeToRepaire -= Time.deltaTime;
         }
