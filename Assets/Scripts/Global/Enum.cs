@@ -22,4 +22,11 @@ public class Enum {
         Important,
         Error
     };
+
+    public enum InteractableType
+    {
+        SingleAction,
+        ComboCarriable
+    };
+
 }

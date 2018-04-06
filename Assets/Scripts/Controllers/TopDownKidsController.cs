@@ -5,7 +5,15 @@ public class TopDownKidsController : MonoBehaviour
 {
     public float speed = 6.0F;
     public InputMapping.PlayerTag playerTag;
-
+    public GameObject objectCarried;
+    public int lockActionTime; //seconds
+    public float currentlockActionTime;
+    public float minInteractionDistance = 3f;
+    public float facingAngleMargin = 5f;
+    public float facingRotationSpeed = 5f;
+    public GameObject interactableObjectInRange;
+    public GameObject interactableObjectReceiverInRanger;
+    public float tossForce = 5f;
     private Rigidbody _rigidBody;
     private Vector3 _moveInput;
     private Vector3 _moveVelocity;
@@ -14,14 +22,6 @@ public class TopDownKidsController : MonoBehaviour
     private bool controlsLocked;
     private bool isRotatingTowardsObject;
     private State state;
-    public GameObject objectCarried;
-    public int lockActionTime; //seconds
-    public float currentlockActionTime;
-    public float minInteractionDistance = 3f;
-    public float facingAngleMargin = 5f;
-    public float facingRotationSpeed = 5f;
-    public GameObject interactableObjectInRange;
-    private Vector3 carriedObjectSnapPosition;
 
     private enum State
     {
@@ -29,7 +29,9 @@ public class TopDownKidsController : MonoBehaviour
         RotatingTowardsObject,
         InAction,
         CarryingObject,
-        Catched
+        Catched,
+        IA_Wandering,
+        IA_PlayingAnim
     };
 
     private void Awake()
@@ -65,26 +67,17 @@ public class TopDownKidsController : MonoBehaviour
 
             if (Input.GetButtonDown(InputMapping.GetInputName(playerTag, InputMapping.Input.A)))
             {
-                //TODO : single interactable objects
+                //Interact with an object (if we're not holding one)
                 if(interactableObjectInRange != null && objectCarried == null)
                 {
                     InteractWithObject(interactableObjectInRange);
-                    /*if (IsFacingAndCloseToObject(interactableObjectInRange))
-                    {
-                        DebugLogger.Log("Test Interaction", Enum.LoggerMessageType.Important);
-                    }*/
                 }
 
-                //Combo objects
-                else if (interactableObjectInRange != null && objectCarried != null)
+                //Dropping a held object
+                else if (objectCarried != null)
                 {
-                    DropCarriedObject();
-                }
-
-                //Carriable object
-                else if(objectCarried != null)
-                {
-                    DropCarriedObject();
+                    var dropOnReceiver = interactableObjectReceiverInRanger != null ? true : false;
+                    DropCarriedObject(dropOnReceiver);
                 }
             }
         }
@@ -136,29 +129,57 @@ public class TopDownKidsController : MonoBehaviour
     {
         if(obj != null)
         {
+            var interactable = obj.GetComponent<InteractableItem>();
 
-            //if(obj.GetComponent<TBD>().isSingleAction)
-            /*state = State.RotatingTowardsObject;
-            _moveInput = Vector3.zero;
-            _moveVelocity = Vector3.zero;
-            controlsLocked = true;
-            currentlockActionTime = 0f;*/
+            if(interactable != null && interactable.isInteractable)
+            {
+                if (interactable.interactableType == Enum.InteractableType.SingleAction)
+                {
+                    state = State.RotatingTowardsObject;
+                    _moveInput = Vector3.zero;
+                    _moveVelocity = Vector3.zero;
+                    controlsLocked = true;
+                    currentlockActionTime = 0f;
+                }
 
-            //else if(obj.GetComponent<TBD>().isCarriable)
-            objectCarried = obj;
-            objectCarried.transform.position = transform.position + transform.forward * 0.5f;
-            objectCarried.transform.parent = transform;
+                else if (interactable.interactableType == Enum.InteractableType.ComboCarriable)
+                {
+                    state = State.CarryingObject;
+                    objectCarried = obj;
+                    objectCarried.transform.position = transform.position + transform.forward * 0.5f;
+                    objectCarried.transform.parent = transform;
+                    objectCarried.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+                    objectCarried.GetComponent<Rigidbody>().useGravity = false;
+                    objectCarried.GetComponent<Collider>().enabled = false;
+                }
+            }
         }
     }
 
-    public void DropCarriedObject()
+    public void DropCarriedObject(bool dropOnReceiver)
     {
         if (objectCarried != null)
         {
-            objectCarried.transform.parent = null;
-            objectCarried = null;
+            //If combo receiver
+            if (dropOnReceiver)
+            {
+                interactableObjectReceiverInRanger.GetComponent<ComboReceiver>().ReceiveObject(objectCarried);
+                objectCarried.GetComponent<InteractableItem>().isInteractable = false;
+            }
 
-            //TODO drop carried object on another object
+            else
+            {
+                //toss object forward
+                objectCarried.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+                objectCarried.GetComponent<Rigidbody>().useGravity = true;
+                objectCarried.GetComponent<Collider>().enabled = true;
+                objectCarried.GetComponent<Rigidbody>().AddForce(transform.forward.normalized * tossForce, ForceMode.Impulse);
+                objectCarried.transform.parent = null;
+
+            }
+
+            state = State.Normal;
+            objectCarried = null;
         }
     }
 
