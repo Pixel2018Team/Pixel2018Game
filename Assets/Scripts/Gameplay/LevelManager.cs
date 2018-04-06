@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 public class LevelManager : MonoBehaviour
 {
@@ -47,10 +48,19 @@ public class LevelManager : MonoBehaviour
 
     public int _chaos = 0;
 
+    private List<DoorManager> _doors;
+
     // Use this for initialization
     private void Start()
     {
         Reset();
+
+        // Populating the list of doors
+        foreach(var obj in FindObjectsOfType<DoorManager>())
+        {
+            DoorManager dm = obj;
+            if (obj != null) _doors.Add(dm);
+        }
     }
 
     // Update is called once per frame
@@ -70,5 +80,13 @@ public class LevelManager : MonoBehaviour
     private void FinishLevel()
     {
         // Show the gameover screen
+    }
+
+    public void CloseAllDoors()
+    {
+        foreach(DoorManager door in _doors)
+        {
+            door.Close();
+        }
     }
 }
