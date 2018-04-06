@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class MainMenuInteraction : MonoBehaviour
 {
@@ -22,6 +21,9 @@ public class MainMenuInteraction : MonoBehaviour
     public string ButtonName_Back= "_Back";
     public string ButtonName_ExitKB= "ExitKB";
 
+    [SerializeField]
+    private EventSystem _es;
+
     private enum MenuState
     {
         MainScreen,
@@ -34,6 +36,8 @@ public class MainMenuInteraction : MonoBehaviour
         menuState = MenuState.MainScreen;
         p1Ready = false;
         p2Ready = false;
+        _es = FindObjectOfType<EventSystem>();
+        if (_es != null) _es.SetSelectedGameObject(_es.firstSelectedGameObject);
     }
 
     public void PressPlayCallback()
@@ -57,26 +61,29 @@ public class MainMenuInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (menuState == MenuState.MainScreen)
-        //{
-        //    if (Input.GetButtonDown("P1"+ ButtonName_Start) || Input.GetButtonDown("P2"+ ButtonName_Start))
-        //    {
-        //        Debug.Log("press start");
-        //        PressPlayCallback();
-        //    }
+        if (menuState == MenuState.MainScreen)
+        {
+            if (Input.GetButtonDown("P1" + ButtonName_Start) || Input.GetButtonDown("P2" + ButtonName_Start))
+            {
+                if(_es != null)
+                {
+                    if (_es.currentSelectedGameObject.name == "PlayButton") PressPlayCallback();
+                    else if (_es.currentSelectedGameObject.name == "ExitButton") Exit();
+                }
+            }
 
-        //if (Input.GetButtonDown("P1"+ ButtonName_Back) || Input.GetButtonDown("P2"+ ButtonName_Back))
-        //{
-        //    Debug.Log("press scores");
-        //    PressScoresCallback();
-        //}
+            //if (Input.GetButtonDown("P1"+ ButtonName_Back) || Input.GetButtonDown("P2"+ ButtonName_Back))
+            //{
+            //    Debug.Log("press scores");
+            //    PressScoresCallback();
+            //}
 
-        //    if (Input.GetButtonDown(ButtonName_ExitKB))
-        //    {
-        //        Debug.Log("press quit");
-        //        Application.Quit();
-        //    }
-        //}
+            //    if (Input.GetButtonDown(ButtonName_ExitKB))
+            //    {
+            //        Debug.Log("press quit");
+            //        Application.Quit();
+            //    }
+        }
 
         if (menuState == MenuState.PlayerReadyScreen)
         {
