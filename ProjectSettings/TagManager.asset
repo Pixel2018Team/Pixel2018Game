@@ -7,6 +7,9 @@ TagManager:
   - gonzuela
   - kid
   - ia_zombie
+  - Bullet
+  - safezone
+  - breakable
   layers:
   - Default
   - TransparentFX
