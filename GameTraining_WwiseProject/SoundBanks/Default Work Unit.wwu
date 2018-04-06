@@ -5,7 +5,9 @@
 			<ChildrenList>
 				<SoundBank Name="PIX_2018" ID="{C3C77E31-4A3F-47C2-8E0A-F480F4F51061}">
 					<ObjectInclusionList>
-						<ObjectRef Name="test" ID="{508B2B38-9CD1-49AC-BA8F-6BF499C903B6}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Gamestart" ID="{F68CF027-2BD7-40E2-9597-1709832B6D3F}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Bbq_Start" ID="{F36D64B0-A02C-443E-93BF-EEB9598B473E}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Bbq_Stop" ID="{3A0BA28C-9281-4717-B308-E6B3BA50A550}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

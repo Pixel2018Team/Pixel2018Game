@@ -49,7 +49,7 @@ public class ComboReceiver : MonoBehaviour {
         {
             DebugLogger.Log("Received object", Enum.LoggerMessageType.Important);
             isActivated = true;
-            GetComponent<Renderer>().material.color = Color.red;
+            //GetComponent<Renderer>().material.color = Color.red;
 
             obj.transform.parent = transform;
 
@@ -63,6 +63,7 @@ public class ComboReceiver : MonoBehaviour {
                 obj.transform.position = transform.position;
             }
 
+            triggerObject.GetComponent<InteractableItem>().TriggerActionOnCombo(Enum.ComboAnimType.StaticToAnimated);
         }
     }
 }

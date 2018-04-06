@@ -18,6 +18,8 @@ public class KidController : MonoBehaviour
     {
         isTag = true;
         _tag.enabled = true;
+        var animator = GetComponent<Animator>();
+        animator.SetBool("crying", true);
         // Play animation
     }
 

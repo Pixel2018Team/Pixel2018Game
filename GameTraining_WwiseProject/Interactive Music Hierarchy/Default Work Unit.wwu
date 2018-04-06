@@ -1,6 +1,233 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{3F3A4A03-12A8-4908-B129-74342C5DBED3}" SchemaVersion="85">
 	<InteractiveMusic>
-		<WorkUnit Name="Default Work Unit" ID="{3F3A4A03-12A8-4908-B129-74342C5DBED3}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{3F3A4A03-12A8-4908-B129-74342C5DBED3}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="temp" ID="{55A8FE0C-1CC8-47AD-B56B-92283DBD3F27}" ShortID="560865856">
+					<ChildrenList>
+						<MusicPlaylistContainer Name="MUS" ID="{720E854B-CD79-4968-B57C-7554DAB08A4F}" ShortID="23775850">
+							<PropertyList>
+								<Property Name="Tempo" Type="Real64" Value="130"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E4CFB62-4323-4086-A7E2-C74214586B22}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BBEB7192-4061-40B2-BB2C-F43371343F1E}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="PIX18_Mus_BaseLayer" ID="{91C27ECF-14C6-4BD7-B892-948A506EB4BE}" ShortID="223146672">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="40615.3968253968"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E4CFB62-4323-4086-A7E2-C74214586B22}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BBEB7192-4061-40B2-BB2C-F43371343F1E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="PIX18_Mus_BaseLayer" ID="{767B666F-1DF0-417E-8828-25923258DFDB}" ShortID="831846534">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BBEB7192-4061-40B2-BB2C-F43371343F1E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="PIX18_Mus_BaseLayer" ID="{5850CA2D-9E90-4023-AD39-F613C993C0C5}" ShortID="499969488">
+													<Language>SFX</Language>
+													<AudioFile>PIX18_Mus_BaseLayer.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{B50932FF-E62E-40EF-A58C-60B6E99587AF}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{38F5D16B-30D6-43F0-AA8F-7BFB119AC21F}">
+													<ClipList>
+														<MusicClip Name="PIX18_Mus_BaseLayer" ID="{8220B504-3565-4F86-B592-B8E6316FFDD6}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="40615.3968253968"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="PIX18_Mus_BaseLayer" ID="{5850CA2D-9E90-4023-AD39-F613C993C0C5}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+										<MusicTrack Name="PIX18_Mus_GonzuelaLayer" ID="{FD2C05E1-0D70-4E19-92FA-D4EB8D2FD201}" ShortID="28747058">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E4CFB62-4323-4086-A7E2-C74214586B22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BBEB7192-4061-40B2-BB2C-F43371343F1E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="PIX18_Mus_GonzuelaLayer" ID="{BBDE0C5E-D797-4D7D-8DF6-187A8463BCED}" ShortID="364453582">
+													<Language>SFX</Language>
+													<AudioFile>PIX18_Mus_GonzuelaLayer.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<StateInfo>
+												<StateGroupList>
+													<StateGroupInfo MusicSyncType="3">
+														<StateGroupRef Name="MUS_Progression" ID="{355EA027-2A37-4E01-8E93-1A84E68DC0EB}"/>
+													</StateGroupInfo>
+												</StateGroupList>
+												<CustomStateList>
+													<CustomState>
+														<StateRef Name="MUS_GonzuelaLeads" ID="{DC301AEC-AD49-4077-96C5-78F9567155F1}"/>
+														<State Name="" ID="{64ED644E-2A2C-4346-9E0C-29784BED4CE6}" ShortID="789586294"/>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="MUS_KidsLeads" ID="{5ECD4C07-29CE-4A90-8E9C-C8BE5AF119C7}"/>
+														<State Name="" ID="{3C94E22E-2A65-4784-8F6B-F3BC5A72C342}" ShortID="1039849680">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64" Value="-96"/>
+															</PropertyList>
+														</State>
+													</CustomState>
+												</CustomStateList>
+											</StateInfo>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{2BA8D3C3-156F-4087-9207-CE5595986C96}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{1C120341-79D5-4F5B-A4CF-AF18882CB6D2}">
+													<ClipList>
+														<MusicClip Name="PIX18_Mus_GonzuelaLayer" ID="{238D73B8-9064-40C9-8D4F-6A36F8679497}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="40615.3968253968"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="PIX18_Mus_GonzuelaLayer" ID="{BBDE0C5E-D797-4D7D-8DF6-187A8463BCED}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+										<MusicTrack Name="PIX18_Mus_KidsLayer" ID="{955759CD-46C8-492F-94D7-CC18E3B2E143}" ShortID="16491878">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E4CFB62-4323-4086-A7E2-C74214586B22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BBEB7192-4061-40B2-BB2C-F43371343F1E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="PIX18_Mus_KidsLayer" ID="{D9703C55-635C-48EC-AC7A-FB98FC194E8F}" ShortID="113315977">
+													<Language>SFX</Language>
+													<AudioFile>PIX18_Mus_KidsLayer.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<StateInfo>
+												<StateGroupList>
+													<StateGroupInfo MusicSyncType="3">
+														<StateGroupRef Name="MUS_Progression" ID="{355EA027-2A37-4E01-8E93-1A84E68DC0EB}"/>
+													</StateGroupInfo>
+												</StateGroupList>
+												<CustomStateList>
+													<CustomState>
+														<StateRef Name="MUS_GonzuelaLeads" ID="{DC301AEC-AD49-4077-96C5-78F9567155F1}"/>
+														<State Name="" ID="{07BA14AC-1F4E-4702-BC2A-B17C75C28C96}" ShortID="813347207">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64" Value="-96"/>
+															</PropertyList>
+														</State>
+													</CustomState>
+													<CustomState>
+														<StateRef Name="MUS_KidsLeads" ID="{5ECD4C07-29CE-4A90-8E9C-C8BE5AF119C7}"/>
+														<State Name="" ID="{36C2D70F-EE76-4B8A-9BFA-9866102684A6}" ShortID="245846037"/>
+													</CustomState>
+												</CustomStateList>
+											</StateInfo>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{F6978585-7C0F-4D69-ADCF-645D9C179605}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{8717A20A-FA96-4E4C-838D-A394416EACBF}">
+													<ClipList>
+														<MusicClip Name="PIX18_Mus_KidsLayer" ID="{72C12743-AF00-415B-8773-7A478D52B783}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="40615.3968253968"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="PIX18_Mus_KidsLayer" ID="{D9703C55-635C-48EC-AC7A-FB98FC194E8F}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{E39818CC-AEE1-4FF6-B0FF-A71534BEAE73}"/>
+										<MusicCue Name="Exit Cue" ID="{CC4C4A89-EFD5-401C-83B3-0C8E1BE14BBA}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="40615.3968253968"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{D66C4DF4-AAA9-415D-B1A5-F19D71761AA0}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{A5CA828B-AE58-4D0E-B2F4-5533D4CA3C0F}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{071BED96-F238-457A-AEAA-3E70BB279C0C}" ShortID="977917261">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{79924841-300C-42E5-ACCF-FFDC80E22894}" ShortID="943056691">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="PIX18_Mus_BaseLayer" ID="{91C27ECF-14C6-4BD7-B892-948A506EB4BE}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Playlist>
+						</MusicPlaylistContainer>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</InteractiveMusic>
 </WwiseDocument>

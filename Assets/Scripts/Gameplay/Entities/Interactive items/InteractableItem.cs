@@ -8,6 +8,7 @@ public class InteractableItem : MonoBehaviour {
     public GameObject kidThatCanInteract;
     public Enum.InteractableType interactableType;
 
+
     public void Awake()
     {
         isInteractable = true;
@@ -41,5 +42,17 @@ public class InteractableItem : MonoBehaviour {
             col.gameObject.GetComponent<TopDownKidsController>().interactableObjectInRange = null;
             kidThatCanInteract = null;
         }
+    }
+
+    //To be overrided by child classes (combo)
+    public virtual void TriggerActionOnCombo(Enum.ComboAnimType animType)
+    {
+
+    }
+
+    //To be overrided by child classes (single action)
+    public virtual void TriggerActionOnInteract()
+    {
+
     }
 }

@@ -3,13 +3,26 @@
 	<Platform GUID="{FB2A1401-631D-4610-80FC-0EA04A162928}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Init" Hash="403170349" Timestamp="1522805246"/>
-				<File Name="PIX_2018" Hash="3694849647" Timestamp="1522805246"/>
+				<File Name="Init" Hash="1121158178" Timestamp="1523024089"/>
+				<File Name="PIX_2018" Hash="1326020453" Timestamp="1523051473"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="3978779943" Timestamp="1522805247"/>
+				<File Name="" Hash="1547996124" Timestamp="1523051473"/>
+			</Language>
+		</XMLInfo>
+	</Platform>
+	<Platform GUID="{57ACE453-71BE-4DE0-96F8-0E753002F55F}">
+		<Banks>
+			<Language ID="393239870">
+				<File Name="Init" Hash="796698236" Timestamp="1523024088"/>
+				<File Name="PIX_2018" Hash="1326020453" Timestamp="1523051472"/>
+			</Language>
+		</Banks>
+		<XMLInfo>
+			<Language ID="-1">
+				<File Name="" Hash="629771794" Timestamp="1523051472"/>
 			</Language>
 		</XMLInfo>
 	</Platform>

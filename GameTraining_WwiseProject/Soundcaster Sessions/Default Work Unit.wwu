@@ -1,6 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{B53BFCE2-92DF-4058-BE33-F16029BFF70A}" SchemaVersion="85">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{B53BFCE2-92DF-4058-BE33-F16029BFF70A}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{B53BFCE2-92DF-4058-BE33-F16029BFF70A}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="mix" ID="{2C61547B-0AB8-4E63-913E-0A54F33658F3}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Gamestart" ID="{F68CF027-2BD7-40E2-9597-1709832B6D3F}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Extinctor_Use" ID="{720CD8BE-B6E7-46DB-812F-891CB01C11D7}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Mix_Extinctor_Oven" ID="{44F11878-4D83-4BD3-938C-FDDF2F5D9A5B}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Bbq_Start" ID="{F36D64B0-A02C-443E-93BF-EEB9598B473E}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Dishes_Impact" ID="{C6A3EAD6-E084-4EAB-ACF2-6CA3F891AB92}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Bbq_Stop" ID="{3A0BA28C-9281-4717-B308-E6B3BA50A550}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Dishes_Start" ID="{09A4D549-EDC4-4D0E-99AC-F77C343EB228}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Oven_Start" ID="{D4C341DD-2D16-4D3B-A36E-7D39AD17719E}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="2" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Oven_Stretch" ID="{4C5BC247-4475-44AB-B0FB-71E1D1F50283}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="2" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Mix_Toaster_WaterDrop" ID="{FDF94BEF-22D3-4739-9B73-97FECB9F4B75}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Dishes_Stop" ID="{4203BD2D-DD8E-43FC-BEF3-9B817B70CE20}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Oven_Stop" ID="{3F0FE35C-147D-4133-95D6-113D3A425BF5}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="3" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Toaster_Drop" ID="{E0C83E31-67FA-4363-9DEA-F361ECB39216}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="4" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Toaster_WaterImpact" ID="{01E3187B-BA07-4DD8-83B0-58798C34D9C5}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="4" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Toaster_Pickup" ID="{BC0A1134-EA80-495B-836C-F87341D4CDC9}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="4" Y="3"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="MUS_LayersFade" ID="{7261FE18-5570-4FD6-BB00-F07A8CC3F801}"/>
+							<Value>51</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="MUS_KidsLeads" ID="{5ECD4C07-29CE-4A90-8E9C-C8BE5AF119C7}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

@@ -1,6 +1,26 @@
 Event	ID	Name			Wwise Object Path	Notes
-	3157003241	test			\Default Work Unit\test	
+	1360101095	Bbq_Start			\Default Work Unit\Bbq_Start	
+	1506460941	Bbq_Stop			\Default Work Unit\Bbq_Stop	
+	4058101365	Gamestart			\Default Work Unit\Gamestart	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	2769448222	MUS_Progression			\Default Work Unit\MUS_Progression	
+
+State	ID	Name	State Group			Notes
+	0	None	MUS_Progression			
+	2053143045	MUS_GonzuelaLeads	MUS_Progression			
+	3515910163	MUS_KidsLeads	MUS_Progression			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	813347207	MUS_GonzuelaLeads	MUS_Progression	\Interactive Music Hierarchy\Default Work Unit\temp\MUS\PIX18_Mus_BaseLayer\PIX18_Mus_KidsLayer		
+	1039849680	MUS_KidsLeads	MUS_Progression	\Interactive Music Hierarchy\Default Work Unit\temp\MUS\PIX18_Mus_BaseLayer\PIX18_Mus_GonzuelaLayer		
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	892774154	Cartoon Hop-SoundBible_com-553158131	C:\Users\Léandre\Desktop\GameTraining\GameTraining_WwiseProject\.cache\Windows\SFX\Cartoon Hop-SoundBible.com-553158131_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cartoon Hop-SoundBible_com-553158131		123040
+	81588674	SFX_Bbq_Loop	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Bbq_Loop_F17FB28C.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\BBq\Bbq_Loop\SFX_Bbq_Loop		705664
+	109568395	SFX_Bbq_Loop	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Bbq_Loop_572D7801.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\BBq\Bbq_Loop\Bbqstart\SFX_Bbq_Loop		705664
+	113315977	PIX18_Mus_KidsLayer	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\PIX18_Mus_KidsLayer_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\temp\MUS\PIX18_Mus_BaseLayer\PIX18_Mus_KidsLayer		7164620
+	364453582	PIX18_Mus_GonzuelaLayer	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\PIX18_Mus_GonzuelaLayer_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\temp\MUS\PIX18_Mus_BaseLayer\PIX18_Mus_GonzuelaLayer		7164620
+	499969488	PIX18_Mus_BaseLayer	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\PIX18_Mus_BaseLayer_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\temp\MUS\PIX18_Mus_BaseLayer\PIX18_Mus_BaseLayer		7164620
+	615759594	SFX_Bbq_Stop	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Bbq_Stop_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\BBq\SFX_Bbq_Stop		529264
+	737987464	SFX_Bbq_Start	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Bbq_Start_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\BBq\Bbq_Loop\Bbqstart\SFX_Bbq_Start		705664
 

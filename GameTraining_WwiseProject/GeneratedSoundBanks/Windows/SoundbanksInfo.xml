@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="128">
 	<RootPaths>
-		<ProjectRoot>C:\Users\Léandre\Desktop\GameTraining\GameTraining_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\Léandre\Desktop\GameTraining\GameTraining_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\Léandre\Desktop\GameTraining\GameTraining_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>/Users/leandremonette/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/Desktop/Pixel2018Game/GameTraining_WwiseProject/</ProjectRoot>
+		<SourceFilesRoot>/Users/leandremonette/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/Desktop/Pixel2018Game/GameTraining_WwiseProject/.cache/Windows/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/leandremonette/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/Desktop/Pixel2018Game/GameTraining_WwiseProject/GeneratedSoundBanks/Windows/</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\Léandre\Desktop\GameTraining\GameTraining_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>/Users/leandremonette/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/Desktop/Pixel2018Game/GameTraining_WwiseProject/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -21,12 +21,38 @@
 			<ShortName>PIX_2018</ShortName>
 			<Path>PIX_2018.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3157003241" Name="test" ObjectPath="\Events\Default Work Unit\test"/>
+				<Event Id="1360101095" Name="Bbq_Start" ObjectPath="\Events\Default Work Unit\Bbq_Start" MaxAttenuation="200.000000"/>
+				<Event Id="1506460941" Name="Bbq_Stop" ObjectPath="\Events\Default Work Unit\Bbq_Stop" MaxAttenuation="200.000000"/>
+				<Event Id="4058101365" Name="Gamestart" ObjectPath="\Events\Default Work Unit\Gamestart"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="892774154" Language="SFX">
-					<ShortName>Cartoon Hop-SoundBible.com-553158131.wav</ShortName>
-					<Path>SFX\Cartoon Hop-SoundBible.com-553158131_1C9C67B2.wem</Path>
+				<File Id="81588674" Language="SFX">
+					<ShortName>SFX_Bbq_Loop.wav</ShortName>
+					<Path>SFX/SFX_Bbq_Loop_F17FB28C.wem</Path>
+				</File>
+				<File Id="109568395" Language="SFX">
+					<ShortName>SFX_Bbq_Loop.wav</ShortName>
+					<Path>SFX/SFX_Bbq_Loop_572D7801.wem</Path>
+				</File>
+				<File Id="113315977" Language="SFX">
+					<ShortName>PIX18_Mus_KidsLayer.wav</ShortName>
+					<Path>SFX/PIX18_Mus_KidsLayer_F17FB28C.wem</Path>
+				</File>
+				<File Id="364453582" Language="SFX">
+					<ShortName>PIX18_Mus_GonzuelaLayer.wav</ShortName>
+					<Path>SFX/PIX18_Mus_GonzuelaLayer_F17FB28C.wem</Path>
+				</File>
+				<File Id="499969488" Language="SFX">
+					<ShortName>PIX18_Mus_BaseLayer.wav</ShortName>
+					<Path>SFX/PIX18_Mus_BaseLayer_F17FB28C.wem</Path>
+				</File>
+				<File Id="615759594" Language="SFX">
+					<ShortName>SFX_Bbq_Stop.wav</ShortName>
+					<Path>SFX/SFX_Bbq_Stop_1C9C67B2.wem</Path>
+				</File>
+				<File Id="737987464" Language="SFX">
+					<ShortName>SFX_Bbq_Start.wav</ShortName>
+					<Path>SFX/SFX_Bbq_Start_1C9C67B2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

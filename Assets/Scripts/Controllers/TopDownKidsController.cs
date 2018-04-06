@@ -90,12 +90,13 @@ public class TopDownKidsController : MonoBehaviour
                 var rotToObject = Quaternion.LookRotation(objPosition - transform.position);
                 transform.rotation = Quaternion.Slerp(transform.rotation, rotToObject, Time.deltaTime * facingRotationSpeed);
 
-                DebugLogger.Log("angle = " + Vector3.Angle(transform.forward, objPosition - transform.position), Enum.LoggerMessageType.Important);
+                //DebugLogger.Log("angle = " + Vector3.Angle(transform.forward, objPosition - transform.position), Enum.LoggerMessageType.Important);
                 if (Vector3.Angle(transform.forward, objPosition - transform.position) <= facingAngleMargin)
                 {
-                    DebugLogger.Log("Rotation over", Enum.LoggerMessageType.Important);
+                   // DebugLogger.Log("Rotation over", Enum.LoggerMessageType.Important);
                     state = State.InAction;
-                    gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
+                    //gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
+                    interactableObjectInRange.GetComponent<InteractableItem>().TriggerActionOnInteract();
                 }
             }
         }
@@ -175,7 +176,6 @@ public class TopDownKidsController : MonoBehaviour
                 objectCarried.GetComponent<Collider>().enabled = true;
                 objectCarried.GetComponent<Rigidbody>().AddForce(transform.forward.normalized * tossForce, ForceMode.Impulse);
                 objectCarried.transform.parent = null;
-
             }
 
             state = State.Normal;
