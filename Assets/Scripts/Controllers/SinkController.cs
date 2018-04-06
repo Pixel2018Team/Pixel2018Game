@@ -1,13 +1,21 @@
 ﻿using Global;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SinkController : MonoBehaviour
 {
     private readonly string GONZUELA = "gonzuela";
     private bool isActive = false;
 
-    public int washed = 0;
+    public float washed = 0;
+    public float doneWashing = 10.0f;
     public InputMapping.PlayerTag playerTag;
+    private Image _image;
+
+    void Start()
+    {
+        _image = gameObject.GetComponentInChildren<Image>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -25,11 +33,12 @@ public class SinkController : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (isActive && Input.GetButton(InputMapping.GetInputName(playerTag, InputMapping.Input.X)))
         {
-            ++washed;
+            washed += Time.deltaTime;
+            _image.fillAmount = washed / doneWashing;
         }
     }
 }
