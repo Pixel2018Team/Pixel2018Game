@@ -25,9 +25,9 @@ public class TopDownController : MonoBehaviour
             Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.Vertical)));
         _moveVelocity = _moveInput * speed;
 
-        Vector3 newDirection = Vector3.right * Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.RHorizontal))
-            + Vector3.forward * Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.RVertical));
-        if(newDirection.sqrMagnitude > 0.0f)
+        Vector3 newDirection = Vector3.right * Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.Horizontal))
+            + Vector3.forward * Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.Vertical));
+        if (newDirection.sqrMagnitude > 0.0f)
         {
             transform.rotation = Quaternion.LookRotation(newDirection, Vector3.up);
         }
@@ -37,6 +37,7 @@ public class TopDownController : MonoBehaviour
     {
         //TODO: can remove the gravity by removing the up vector
         //_animator.SetFloat("speed", _moveVelocity.magnitude);
+        _animator.SetFloat("speed", _moveVelocity.magnitude);
         _rigidBody.velocity = _moveVelocity + _rigidBody.velocity.y * Vector3.up;
     }
 }
