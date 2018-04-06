@@ -8,6 +8,7 @@ public class InteractableItems : MonoBehaviour
     public Type _type = Type.Knock;
     private float _timer = 0f;
     private bool _flag = false;
+    private bool _reaction = false;
     private MeshRenderer _sprite;
     private Animator _animator;
 
@@ -54,7 +55,7 @@ public class InteractableItems : MonoBehaviour
                 break;
             case Type.Close:
                 // Faire le deplacement inverse a Open
-                // S'assurer qu'une seule porte est ouverte
+                // S'assurer qu'une seule porte est fermee a la fois
                 break;
             case Type.Start:
                 LevelManager.Instance._chaos += 5;
@@ -65,15 +66,11 @@ public class InteractableItems : MonoBehaviour
                 break;
             case Type.Fix:
                 LevelManager.Instance._chaos -= 5;
+                if(_reaction) LevelManager.Instance._chaos -= 5;
                 _type = Type.Start;
                 Fix();
                 break;
         }
-    }
-
-    public GameObject Pickup()
-    {
-        return this.gameObject;
     }
 
     /// <summary>
@@ -81,12 +78,15 @@ public class InteractableItems : MonoBehaviour
     /// </summary>
     public void Reaction()
     {
+        LevelManager.Instance._chaos += 5;
+        _reaction = true;
         _sprite.enabled = true;
         _animator.enabled = true;
     }
 
     public void Fix()
     {
+        _reaction = false;
         _sprite.enabled = false;
         _animator.enabled = false;
     }
