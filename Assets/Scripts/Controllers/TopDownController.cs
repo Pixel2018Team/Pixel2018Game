@@ -35,6 +35,7 @@ public class TopDownController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //TODO: can remove the gravity by removing the up vector
         _animator.SetFloat("speed", _moveVelocity.magnitude);
         _rigidBody.velocity = _moveVelocity + _rigidBody.velocity.y * Vector3.up;
     }
