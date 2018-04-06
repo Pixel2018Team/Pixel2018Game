@@ -82,11 +82,11 @@ public class LevelManager : MonoBehaviour
         // Show the gameover screen
     }
 
-    public void CloseAllDoors()
+    public void OpenAllDoors()
     {
         foreach(DoorManager door in _doors)
         {
-            door.Close();
+            door.Open();
         }
     }
 }
