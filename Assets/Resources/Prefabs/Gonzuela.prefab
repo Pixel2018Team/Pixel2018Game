@@ -378,7 +378,7 @@ GameObject:
   - component: {fileID: 114210681644368762}
   - component: {fileID: 114072402547865646}
   m_Layer: 0
-  m_Name: gonzuela
+  m_Name: Gonzuela
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2604,6 +2604,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6
   playerTag: 0
+  objectCarried: {fileID: 0}
+  lockActionTime: 0
+  currentlockActionTime: 0
+  minInteractionDistance: 3
+  facingAngleMargin: 5
+  facingRotationSpeed: 5
+  interactableObjectInRange: {fileID: 0}
+  interactableObjectReceiverInRanger: {fileID: 0}
+  tossForce: 5
 --- !u!136 &136906033279583704
 CapsuleCollider:
   m_ObjectHideFlags: 1
