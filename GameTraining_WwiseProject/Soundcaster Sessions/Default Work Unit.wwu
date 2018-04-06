@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{B53BFCE2-92DF-4058-BE33-F16029BFF70A}" SchemaVersion="85">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{B53BFCE2-92DF-4058-BE33-F16029BFF70A}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{B53BFCE2-92DF-4058-BE33-F16029BFF70A}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="mix" ID="{2C61547B-0AB8-4E63-913E-0A54F33658F3}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Gamestart" ID="{F68CF027-2BD7-40E2-9597-1709832B6D3F}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="MUS_LayersFade" ID="{7261FE18-5570-4FD6-BB00-F07A8CC3F801}"/>
+							<Value>51</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="MUS_KidsLeads" ID="{5ECD4C07-29CE-4A90-8E9C-C8BE5AF119C7}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

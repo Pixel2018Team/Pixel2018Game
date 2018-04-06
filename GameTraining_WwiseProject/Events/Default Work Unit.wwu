@@ -17,6 +17,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Gamestart" ID="{F68CF027-2BD7-40E2-9597-1709832B6D3F}">
+					<ChildrenList>
+						<Action Name="" ID="{274D0992-B334-443A-8D5F-E5708E9BEDE9}" ShortID="327805823">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MUS" ID="{720E854B-CD79-4968-B57C-7554DAB08A4F}" WorkUnitID="{3F3A4A03-12A8-4908-B129-74342C5DBED3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

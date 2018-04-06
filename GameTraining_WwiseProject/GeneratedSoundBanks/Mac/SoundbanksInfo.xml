@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="128">
+	<RootPaths>
+		<ProjectRoot>/Users/leandremonette/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/Desktop/Pix_2018/GameTraining_WwiseProject/</ProjectRoot>
+		<SourceFilesRoot>/Users/leandremonette/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/Desktop/Pix_2018/GameTraining_WwiseProject/.cache/Mac/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/leandremonette/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/Desktop/Pix_2018/GameTraining_WwiseProject/GeneratedSoundBanks/Mac/</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>/Users/leandremonette/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/Desktop/Pix_2018/GameTraining_WwiseProject/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2996866542" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\PIX_2018</ObjectPath>
+			<ShortName>PIX_2018</ShortName>
+			<Path>PIX_2018.bnk</Path>
+			<IncludedEvents>
+				<Event Id="4058101365" Name="Gamestart" ObjectPath="\Events\Default Work Unit\Gamestart"/>
+				<Event Id="3157003241" Name="test" ObjectPath="\Events\Default Work Unit\test"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="113315977" Language="SFX">
+					<ShortName>PIX18_Mus_KidsLayer.wav</ShortName>
+					<Path>SFX/PIX18_Mus_KidsLayer_F17FB28C.wem</Path>
+				</File>
+				<File Id="364453582" Language="SFX">
+					<ShortName>PIX18_Mus_GonzuelaLayer.wav</ShortName>
+					<Path>SFX/PIX18_Mus_GonzuelaLayer_F17FB28C.wem</Path>
+				</File>
+				<File Id="499969488" Language="SFX">
+					<ShortName>PIX18_Mus_BaseLayer.wav</ShortName>
+					<Path>SFX/PIX18_Mus_BaseLayer_F17FB28C.wem</Path>
+				</File>
+				<File Id="892774154" Language="SFX">
+					<ShortName>Cartoon Hop-SoundBible.com-553158131.wav</ShortName>
+					<Path>SFX/Cartoon Hop-SoundBible.com-553158131_1C9C67B2.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
