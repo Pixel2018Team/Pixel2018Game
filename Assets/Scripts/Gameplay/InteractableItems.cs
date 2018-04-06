@@ -5,18 +5,22 @@ public class InteractableItems : MonoBehaviour
 {
     [Serializable]
     public enum Type { Knock, Start, Fix, Clean };
+
     public Type _type = Type.Knock;
+
     private float _timer = 0f;
     private bool _flag = false;
     private bool _reaction = false;
     private MeshRenderer _sprite;
     private Animator _animator;
+    private Vector3 _originalPos;
 
     // Use this for initialization
     private void Start()
     {
         _sprite = GetComponent<MeshRenderer>();
         _animator = GetComponent<Animator>();
+        _originalPos = this.transform.position;
     }
 
     // Update is called once per frame
@@ -42,17 +46,18 @@ public class InteractableItems : MonoBehaviour
         switch (_type)
         {
             case Type.Knock:
-                // Deplacer l'objet pour qu'il tombe
+                // Move the object to have it fall
                 LevelManager.Instance._chaos += 5;
                 _type = Type.Clean;
                 break;
             case Type.Clean:
+                this.transform.position = _originalPos; // Puts the object back in its original place
                 LevelManager.Instance._chaos -= 5;
                 _type = Type.Knock;
                 break;
             case Type.Start:
                 LevelManager.Instance._chaos += 5;
-                // Demarrer un timer
+                // Start the timer until the fire/flood
                 _timer = 5f;
                 _flag = true;
                 _type = Type.Fix;

@@ -11,18 +11,6 @@ public class DoorManager : MonoBehaviour
         else if (Instance != this) Destroy(this);
     }
 
-    // Use this for initialization
-    private void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    private void Update()
-    {
-
-    }
-
     /// <summary>
     /// Do not use this method to close the door! Use Interact() instead.
     /// </summary>
