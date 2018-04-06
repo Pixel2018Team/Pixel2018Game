@@ -4,9 +4,9 @@ using System;
 public class InteractableItems : MonoBehaviour
 {
     [Serializable]
-    public enum Type { Knock, Start, Fix, Clean };
+    public enum Type { Knock, Fix, Start, Clean };
 
-    public Type _type = Type.Knock;
+    public Type _type;
 
     private float _timer = 0f;
     private bool _flag = false;
@@ -41,12 +41,14 @@ public class InteractableItems : MonoBehaviour
     /// <summary>
     /// Method to handle the interaction with the object according to its type
     /// </summary>
-    public void Interact()
+    /// <param name="Direction">The direction in which the object should fall. Only to be used with the Knock state.</param>
+    public void Interact(Vector3 Direction = new Vector3())
     {
         switch (_type)
         {
             case Type.Knock:
                 // Move the object to have it fall
+                this.transform.position += Direction;
                 LevelManager.Instance._chaos += 5;
                 _type = Type.Clean;
                 break;

@@ -2,13 +2,19 @@
 
 public class DoorManager : MonoBehaviour
 {
+    private bool _open = true;
 
     /// <summary>
     /// Do not use this method to close the door! Use Interact() instead.
     /// </summary>
     public void Open()
     {
-        // Code to open the door
+        if (_open) return;
+        else
+        {
+            // TODO: Code to open the door
+            this._open = true;
+        }
     }
 
     /// <summary>
@@ -17,6 +23,7 @@ public class DoorManager : MonoBehaviour
     public void Interact()
     {
         LevelManager.Instance.OpenAllDoors();
-        // Code to close this door
+        // TODO: Code to close this door
+        this._open = false;
     }
 }
