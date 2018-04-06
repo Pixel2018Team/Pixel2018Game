@@ -5,9 +5,11 @@ public class GonzuelaController : MonoBehaviour
     private string KID_TAG = "kid";
 
     public float radius = 10.0f;
+    private Animator _animator;
 
     void Start()
     {
+        _animator = GetComponent<Animator>();
     }
 
     private void OnDrawGizmos()
@@ -32,6 +34,7 @@ public class GonzuelaController : MonoBehaviour
                 if (kidController.isBad && !kidController.isTag)
                 {
                     kidController.GetTagged();
+                    _animator.SetTrigger("angry");
                 }
             }
         }

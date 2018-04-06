@@ -60,6 +60,7 @@ public class RepaireController : MonoBehaviour
         {
             var controller = _gonzuela.GetComponent<TopDownController>();
             var animator = _gonzuela.GetComponent<Animator>();
+            _gonzuela.transform.LookAt(new Vector3(transform.position.x, _gonzuela.transform.position.y, transform.position.z));
             animator.SetBool("action", true);
             controller.enabled = false;
             repairing = true;
