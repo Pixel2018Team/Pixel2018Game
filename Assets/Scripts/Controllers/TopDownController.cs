@@ -9,12 +9,12 @@ public class TopDownController : MonoBehaviour
     private Rigidbody _rigidBody;
     private Vector3 _moveInput;
     private Vector3 _moveVelocity;
-    private Animator _animator;
+    //private Animator _animator;
 
     void Start()
     {
         _rigidBody = GetComponent<Rigidbody>();
-        _animator = GetComponent<Animator>();
+        //_animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -25,8 +25,8 @@ public class TopDownController : MonoBehaviour
             Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.Vertical)));
         _moveVelocity = _moveInput * speed;
 
-        Vector3 newDirection = Vector3.right * Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.RHorizontal))
-            + Vector3.forward * Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.RVertical));
+        Vector3 newDirection = Vector3.right * Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.Horizontal))
+            + Vector3.forward * Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.Vertical));
         if(newDirection.sqrMagnitude > 0.0f)
         {
             transform.rotation = Quaternion.LookRotation(newDirection, Vector3.up);
@@ -36,7 +36,7 @@ public class TopDownController : MonoBehaviour
     private void FixedUpdate()
     {
         //TODO: can remove the gravity by removing the up vector
-        _animator.SetFloat("speed", _moveVelocity.magnitude);
+        //_animator.SetFloat("speed", _moveVelocity.magnitude);
         _rigidBody.velocity = _moveVelocity + _rigidBody.velocity.y * Vector3.up;
     }
 }
