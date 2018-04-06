@@ -48,29 +48,35 @@ public class MainMenuInteraction : MonoBehaviour
         //Open scores scene
     }
 
+    public void Exit()
+    {
+        Debug.Log("User has pressed exit");
+        Application.Quit();
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (menuState == MenuState.MainScreen)
-        {
-            if (Input.GetButtonDown("P1"+ ButtonName_Start) || Input.GetButtonDown("P2"+ ButtonName_Start))
-            {
-                Debug.Log("press start");
-                PressPlayCallback();
-            }
+        //if (menuState == MenuState.MainScreen)
+        //{
+        //    if (Input.GetButtonDown("P1"+ ButtonName_Start) || Input.GetButtonDown("P2"+ ButtonName_Start))
+        //    {
+        //        Debug.Log("press start");
+        //        PressPlayCallback();
+        //    }
 
-            if (Input.GetButtonDown("P1"+ ButtonName_Back) || Input.GetButtonDown("P2"+ ButtonName_Back))
-            {
-                Debug.Log("press scores");
-                PressScoresCallback();
-            }
+        //if (Input.GetButtonDown("P1"+ ButtonName_Back) || Input.GetButtonDown("P2"+ ButtonName_Back))
+        //{
+        //    Debug.Log("press scores");
+        //    PressScoresCallback();
+        //}
 
-            if (Input.GetButtonDown(ButtonName_ExitKB))
-            {
-                Debug.Log("press quit");
-                Application.Quit();
-            }
-        }
+        //    if (Input.GetButtonDown(ButtonName_ExitKB))
+        //    {
+        //        Debug.Log("press quit");
+        //        Application.Quit();
+        //    }
+        //}
 
         if (menuState == MenuState.PlayerReadyScreen)
         {
