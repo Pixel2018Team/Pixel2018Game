@@ -29,4 +29,10 @@ public class Enum {
         ComboCarriable
     };
 
+    public enum ComboAnimType
+    {
+        StaticToAnimated,
+        AnimatedToStatic
+    };
+
 }

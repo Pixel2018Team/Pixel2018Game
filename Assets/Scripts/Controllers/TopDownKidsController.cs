@@ -175,7 +175,6 @@ public class TopDownKidsController : MonoBehaviour
                 objectCarried.GetComponent<Collider>().enabled = true;
                 objectCarried.GetComponent<Rigidbody>().AddForce(transform.forward.normalized * tossForce, ForceMode.Impulse);
                 objectCarried.transform.parent = null;
-
             }
 
             state = State.Normal;
