@@ -51,7 +51,7 @@ public class LevelManager : MonoBehaviour
 
     public int _chaos = 0;
 
-    private List<DoorManager> _doors;
+    private List<DoorScript> _doors;
     private int _totalChaos = 0;
 
     // Use this for initialization
@@ -60,9 +60,9 @@ public class LevelManager : MonoBehaviour
         Reset();
 
         // Populating the list of doors
-        foreach(var obj in FindObjectsOfType<DoorManager>())
+        foreach(var obj in FindObjectsOfType<DoorScript>())
         {
-            DoorManager dm = obj;
+            DoorScript dm = obj;
             if (obj != null) _doors.Add(dm);
         }
     }
@@ -93,7 +93,7 @@ public class LevelManager : MonoBehaviour
 
     public void OpenAllDoors()
     {
-        foreach(DoorManager door in _doors)
+        foreach(DoorScript door in _doors)
         {
             door.Open();
         }

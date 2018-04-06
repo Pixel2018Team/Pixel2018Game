@@ -1,12 +1,9 @@
 ﻿using UnityEngine;
 
-public class DoorManager : MonoBehaviour
+public class DoorScript : MonoBehaviour
 {
     private bool _open = true;
 
-    /// <summary>
-    /// Do not use this method to close the door! Use Interact() instead.
-    /// </summary>
     public void Open()
     {
         if (_open) return;
