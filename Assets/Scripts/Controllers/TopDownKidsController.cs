@@ -147,7 +147,7 @@ public class TopDownKidsController : MonoBehaviour
                 {
                     state = State.CarryingObject;
                     objectCarried = obj;
-                    objectCarried.transform.position = transform.position + transform.forward * 0.5f;
+                    objectCarried.transform.position = new Vector3( transform.position.x,  transform.position.y + 0.5f, transform.position.z) + transform.forward * 0.5f;
                     objectCarried.transform.parent = transform;
                     objectCarried.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                     objectCarried.GetComponent<Rigidbody>().useGravity = false;
