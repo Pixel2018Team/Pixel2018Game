@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
@@ -46,6 +47,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private float _gameTimer = 300f;
 
+    [SerializeField]
+    private GameObject _gameOverPanel;
+
     public int _chaos = 0;
 
     private List<DoorManager> _doors;
@@ -75,11 +79,15 @@ public class LevelManager : MonoBehaviour
     {
         _gameTimer = 300f;
         _chaos = 0;
+
+        // Hide the game over panel
+        _gameOverPanel.SetActive(false);
     }
 
     private void FinishLevel()
     {
-        // TODO: Show the gameover screen
+        // Show the gameover screen
+        _gameOverPanel.SetActive(true);
     }
 
     public void OpenAllDoors()
