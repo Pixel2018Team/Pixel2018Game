@@ -1,0 +1,268 @@
+fileFormatVersion: 2
+guid: fa5acc7fba6008148b52e4dfde61d8fd
+timeCreated: 1523021008
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: boy_
+    100004: boy_Head
+    100006: boy_LCalf
+    100008: boy_LCollarbone
+    100010: boy_LDigit11
+    100012: boy_LDigit11 1
+    100014: boy_LDigit12
+    100016: boy_LDigit21
+    100018: boy_LDigit22
+    100020: boy_LFoot
+    100022: boy_LForearm
+    100024: boy_LPalm
+    100026: boy_LPlatform
+    100028: boy_LThigh
+    100030: boy_LUpperarm
+    100032: boy_Neck
+    100034: boy_Pelvis
+    100036: boy_RCalf
+    100038: boy_RCollarbone
+    100040: boy_RDigit11
+    100042: boy_RDigit11 1
+    100044: boy_RDigit12
+    100046: boy_RDigit21
+    100048: boy_RDigit22
+    100050: boy_RFoot
+    100052: boy_RForearm
+    100054: boy_Ribcage
+    100056: boy_RPalm
+    100058: boy_RPlatform
+    100060: boy_RThigh
+    100062: boy_RUpperarm
+    100064: boy_Spine1
+    100066: boy_Spine2
+    100068: boy_Spine3
+    100070: enfant_eyeL
+    100072: enfant_eyeR
+    100074: enfant_low
+    400000: //RootNode
+    400002: boy_
+    400004: boy_Head
+    400006: boy_LCalf
+    400008: boy_LCollarbone
+    400010: boy_LDigit11
+    400012: boy_LDigit11 1
+    400014: boy_LDigit12
+    400016: boy_LDigit21
+    400018: boy_LDigit22
+    400020: boy_LFoot
+    400022: boy_LForearm
+    400024: boy_LPalm
+    400026: boy_LPlatform
+    400028: boy_LThigh
+    400030: boy_LUpperarm
+    400032: boy_Neck
+    400034: boy_Pelvis
+    400036: boy_RCalf
+    400038: boy_RCollarbone
+    400040: boy_RDigit11
+    400042: boy_RDigit11 1
+    400044: boy_RDigit12
+    400046: boy_RDigit21
+    400048: boy_RDigit22
+    400050: boy_RFoot
+    400052: boy_RForearm
+    400054: boy_Ribcage
+    400056: boy_RPalm
+    400058: boy_RPlatform
+    400060: boy_RThigh
+    400062: boy_RUpperarm
+    400064: boy_Spine1
+    400066: boy_Spine2
+    400068: boy_Spine3
+    400070: enfant_eyeL
+    400072: enfant_eyeR
+    400074: enfant_low
+    2100000: No Name
+    2100002: MAT_boy
+    2300000: boy_Head
+    2300002: boy_LCalf
+    2300004: boy_LCollarbone
+    2300006: boy_LDigit11
+    2300008: boy_LDigit11 1
+    2300010: boy_LDigit12
+    2300012: boy_LDigit21
+    2300014: boy_LDigit22
+    2300016: boy_LFoot
+    2300018: boy_LForearm
+    2300020: boy_LPalm
+    2300022: boy_LThigh
+    2300024: boy_LUpperarm
+    2300026: boy_Neck
+    2300028: boy_Pelvis
+    2300030: boy_RCalf
+    2300032: boy_RCollarbone
+    2300034: boy_RDigit11
+    2300036: boy_RDigit11 1
+    2300038: boy_RDigit12
+    2300040: boy_RDigit21
+    2300042: boy_RDigit22
+    2300044: boy_RFoot
+    2300046: boy_RForearm
+    2300048: boy_Ribcage
+    2300050: boy_RPalm
+    2300052: boy_RThigh
+    2300054: boy_RUpperarm
+    2300056: boy_Spine1
+    2300058: boy_Spine2
+    2300060: boy_Spine3
+    2300062: enfant_eyeL
+    2300064: enfant_eyeR
+    3300000: boy_Head
+    3300002: boy_LCalf
+    3300004: boy_LCollarbone
+    3300006: boy_LDigit11
+    3300008: boy_LDigit11 1
+    3300010: boy_LDigit12
+    3300012: boy_LDigit21
+    3300014: boy_LDigit22
+    3300016: boy_LFoot
+    3300018: boy_LForearm
+    3300020: boy_LPalm
+    3300022: boy_LThigh
+    3300024: boy_LUpperarm
+    3300026: boy_Neck
+    3300028: boy_Pelvis
+    3300030: boy_RCalf
+    3300032: boy_RCollarbone
+    3300034: boy_RDigit11
+    3300036: boy_RDigit11 1
+    3300038: boy_RDigit12
+    3300040: boy_RDigit21
+    3300042: boy_RDigit22
+    3300044: boy_RFoot
+    3300046: boy_RForearm
+    3300048: boy_Ribcage
+    3300050: boy_RPalm
+    3300052: boy_RThigh
+    3300054: boy_RUpperarm
+    3300056: boy_Spine1
+    3300058: boy_Spine2
+    3300060: boy_Spine3
+    3300062: enfant_eyeL
+    3300064: enfant_eyeR
+    4300000: boy_Pelvis
+    4300002: boy_LThigh
+    4300004: boy_LCalf
+    4300006: boy_LFoot
+    4300008: boy_LDigit11
+    4300010: boy_RThigh
+    4300012: boy_RCalf
+    4300014: boy_RFoot
+    4300016: boy_RDigit11
+    4300018: boy_Spine1
+    4300020: boy_Spine2
+    4300022: boy_Spine3
+    4300024: boy_Ribcage
+    4300026: boy_LCollarbone
+    4300028: boy_LUpperarm
+    4300030: boy_LForearm
+    4300032: boy_LPalm
+    4300034: boy_LDigit11
+    4300036: boy_LDigit12
+    4300038: boy_LDigit21
+    4300040: boy_LDigit22
+    4300042: boy_RCollarbone
+    4300044: boy_RUpperarm
+    4300046: boy_RForearm
+    4300048: boy_RPalm
+    4300050: boy_RDigit11
+    4300052: boy_RDigit12
+    4300054: boy_RDigit21
+    4300056: boy_RDigit22
+    4300058: boy_Neck
+    4300060: boy_Head
+    4300062: enfant_eyeL
+    4300064: enfant_eyeR
+    4300066: enfant_low
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: enfant_low
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

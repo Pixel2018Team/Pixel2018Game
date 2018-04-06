@@ -9,12 +9,12 @@ public class TopDownController : MonoBehaviour
     private Rigidbody _rigidBody;
     private Vector3 _moveInput;
     private Vector3 _moveVelocity;
-    //private Animator _animator;
+    private Animator _animator;
 
     void Start()
     {
         _rigidBody = GetComponent<Rigidbody>();
-        //_animator = GetComponent<Animator>();
+        _animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -35,8 +35,7 @@ public class TopDownController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //TODO: can remove the gravity by removing the up vector
-        //_animator.SetFloat("speed", _moveVelocity.magnitude);
+        _animator.SetFloat("speed", _moveVelocity.magnitude);
         _rigidBody.velocity = _moveVelocity + _rigidBody.velocity.y * Vector3.up;
     }
 }

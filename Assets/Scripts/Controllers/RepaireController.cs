@@ -50,13 +50,17 @@ public class RepaireController : MonoBehaviour
             if (remainingTime < 0)
             {
                 var controller = _gonzuela.GetComponent<TopDownController>();
+                var animator = _gonzuela.GetComponent<Animator>();
                 controller.enabled = true;
                 repairing = false;
+                animator.SetBool("action", false);
             }
         }
         else if (_isActive && remainingTime > 0 && Input.GetButton(InputMapping.GetInputName(playerTag, InputMapping.Input.X)))
         {
             var controller = _gonzuela.GetComponent<TopDownController>();
+            var animator = _gonzuela.GetComponent<Animator>();
+            animator.SetBool("action", true);
             controller.enabled = false;
             repairing = true;
             _spriteController.SetActive(false);
