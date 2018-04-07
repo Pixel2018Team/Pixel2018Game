@@ -52,11 +52,13 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField]
     private Image
-        _chaosBar,
         _consuelaHappy,
         _consuelaSad,
         _kidsHappy,
         _kidsSad;
+
+    [SerializeField]
+    private Slider _chaosBar;
 
     public bool _consuelaLeads = true;
 
@@ -123,7 +125,7 @@ public class LevelManager : MonoBehaviour
     {
         _chaos += amount;
 
-        _chaosBar.fillAmount = (float)(_chaos / _totalChaos);
+        _chaosBar.value = (float)(_chaos / _totalChaos);
 
         if (_chaos > _startingChaos && _consuelaLeads)
         {
