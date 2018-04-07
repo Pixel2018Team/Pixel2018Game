@@ -65,6 +65,10 @@ public class ComboReceiver : MonoBehaviour {
             }
 
             triggerObject.GetComponent<InteractableItem>().TriggerActionOnCombo(Enum.ComboAnimType.StaticToAnimated);
+
+            triggerObject.GetComponent<InteractableItem>().CheckProvokeChaos();
+
+            
         }
     }
 }
