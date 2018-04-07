@@ -53,9 +53,6 @@ public class LevelManager : MonoBehaviour
         _KidsGOPanel,
         _xButton;
 
-    [SerializeField]
-    private Text ScoreTextTest;
-
     public int maxChaos;
 
     [SerializeField]
@@ -92,7 +89,6 @@ public class LevelManager : MonoBehaviour
         _startingChaos = (maxChaos / 2);
         _chaos = _startingChaos;
         _chaosBar.value = ((float)_chaos / (float)maxChaos);
-        ScoreTextTest.text = _chaos.ToString();
     }
 
     // Update is called once per frame
@@ -179,7 +175,5 @@ public class LevelManager : MonoBehaviour
             if (_kidsHappy != null) _kidsHappy.gameObject.SetActive(false);
             if (_kidsSad != null) _kidsSad.gameObject.SetActive(true);
         }
-
-        ScoreTextTest.text = _chaos.ToString();
     }
 }
