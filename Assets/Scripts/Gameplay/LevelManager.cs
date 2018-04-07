@@ -48,27 +48,27 @@ public class LevelManager : MonoBehaviour
     private float _gameTimer = 300f;
 
     [SerializeField]
-    private GameObject _gameOverPanel;
+    private GameObject
+        _ConsuelaGOPanel,
+        _KidsGOPanel,
+        _xButton;
 
-    [SerializeField]
-    private Text ScoreTextTest;
-
-    [SerializeField]
     public int maxChaos;
 
     [SerializeField]
     private Image
-        _chaosBar,
         _consuelaHappy,
         _consuelaSad,
         _kidsHappy,
         _kidsSad;
 
+    [SerializeField]
+    private Slider _chaosBar;
+
     public bool _consuelaLeads = true;
 
     private int _chaos = 0;
     private List<DoorScript> _doors;
-    private int _totalChaos;
     private int _startingChaos = 0;
 
     private void Awake()
@@ -86,35 +86,50 @@ public class LevelManager : MonoBehaviour
             if (obj != null) _doors.Add(dm);
         }
 
-        _startingChaos = (_totalChaos / 2);
+        _startingChaos = (maxChaos / 2);
+        _chaos = _startingChaos;
+        _chaosBar.value = ((float)_chaos / (float)maxChaos);
     }
 
     // Update is called once per frame
     private void Update()
     {
-        _gameTimer -= Time.deltaTime;
+        if(_gameTimer > 0) _gameTimer -= Time.deltaTime;
         if (_gameTimer <= 0) FinishLevel();
-        if (_chaos >= _totalChaos) FinishLevel();
+        if (_chaos >= maxChaos) FinishLevel();
+
+        if(_gameTimer <= 0)
+        {
+            if(Input.GetButtonDown("P1_X") || Input.GetButtonDown("P2_X"))
+            {
+                Reset();
+            }
+        }
     }
 
     private void Reset()
     {
         _gameTimer = 300f;
         _chaos = 0;
-        _totalChaos = maxChaos;
 
         // Hide the game over panel
-        //_gameOverPanel.SetActive(false);
+        if (_ConsuelaGOPanel != null) _ConsuelaGOPanel.SetActive(false);
+        if (_KidsGOPanel != null) _KidsGOPanel.SetActive(false);
+        if (_xButton != null) _xButton.SetActive(false);
     }
 
     private void FinishLevel()
     {
         // Show the gameover screen
-
-        if(_gameOverPanel != null)
+        if(_ConsuelaGOPanel != null && _chaos <= _startingChaos)
         {
-            _gameOverPanel.SetActive(true);
+            _ConsuelaGOPanel.SetActive(true);
         }
+        else if(_KidsGOPanel != null && _chaos > _startingChaos)
+        {
+            _KidsGOPanel.SetActive(true);
+        }
+        if (_xButton != null) _xButton.SetActive(true);
     }
 
     public void OpenAllDoors()
@@ -133,10 +148,7 @@ public class LevelManager : MonoBehaviour
     {
         _chaos += amount;
 
-        if(_chaosBar != null)
-        {
-            _chaosBar.fillAmount = (float)(_chaos / _totalChaos);
-        }
+        _chaosBar.value = ((float)_chaos / (float)maxChaos);
 
         if (_chaos > _startingChaos && _consuelaLeads)
         {
@@ -158,21 +170,10 @@ public class LevelManager : MonoBehaviour
         {
             _consuelaLeads = true;
 
-            _consuelaHappy.gameObject.SetActive(true);
-            _consuelaSad.gameObject.SetActive(false);
-            _kidsHappy.gameObject.SetActive(false);
-            _kidsSad.gameObject.SetActive(true);
+            if (_consuelaHappy != null) _consuelaHappy.gameObject.SetActive(true);
+            if (_consuelaSad != null) _consuelaSad.gameObject.SetActive(false);
+            if (_kidsHappy != null) _kidsHappy.gameObject.SetActive(false);
+            if (_kidsSad != null) _kidsSad.gameObject.SetActive(true);
         }
-
-        ScoreTextTest.text = _chaos.ToString();
-    }
-
-    /// <summary>
-    /// Method used to add to the total chaos at the start of the game
-    /// </summary>
-    /// <param name="amount">The amount to add to the total level of chaos</param>
-    public void TotalChaos(int amount)
-    {
-        this._totalChaos += amount;
     }
 }

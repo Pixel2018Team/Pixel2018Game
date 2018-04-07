@@ -13,7 +13,7 @@ public class DoorScript : MonoBehaviour
     public float maxOpenTime = 1.5f;
     public float currentOpenTime = 0f;
 
-    public void Awake()
+    private void Awake()
     {
         closeDir = new Vector3(transform.forward.x, transform.forward.y, transform.forward.z);
         openDir = new Vector3(transform.right.x, transform.right.y, transform.right.z);
@@ -43,7 +43,7 @@ public class DoorScript : MonoBehaviour
         }
     }
 
-    public void Update()
+    private void Update()
     {
         Debug.DrawRay(transform.position, transform.forward, Color.red);
 
@@ -85,9 +85,7 @@ public class DoorScript : MonoBehaviour
                         
                     }
                 }
-
-                
-                //Debug.Log("angle from starting angle = " + Vector3.Angle(transform.forward, closeDir));
+                Debug.Log("angle from starting angle = " + Vector3.Angle(transform.forward, closeDir));
             }
         }
     }
@@ -98,8 +96,6 @@ public class DoorScript : MonoBehaviour
     public void Interact()
     {
         LevelManager.Instance.OpenAllDoors();
-        // TODO: Code to close this door
-        //this._open = false;
     }
 
     public void OnTriggerEnter(Collider col)
