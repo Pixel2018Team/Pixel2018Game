@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -56,13 +57,6 @@ public class LevelManager : MonoBehaviour
     public int maxChaos;
 
     [SerializeField]
-    private Image
-        _consuelaHappy,
-        _consuelaSad,
-        _kidsHappy,
-        _kidsSad;
-
-    [SerializeField]
     private Slider _chaosBar;
 
     public bool _consuelaLeads = true;
@@ -70,6 +64,7 @@ public class LevelManager : MonoBehaviour
     private int _chaos = 0;
     private List<DoorScript> _doors;
     private int _startingChaos = 0;
+    private bool _gameover = false;
 
     private void Awake()
     {
@@ -80,11 +75,11 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         // Populating the list of doors
-        foreach (var obj in FindObjectsOfType<DoorScript>())
-        {
-            DoorScript dm = obj;
-            if (obj != null) _doors.Add(dm);
-        }
+        //foreach (var obj in FindObjectsOfType<DoorScript>())
+        //{
+        //    DoorScript dm = obj;
+        //    if (dm != null) _doors.Add(dm);
+        //}
 
         _startingChaos = (maxChaos / 2);
         _chaos = _startingChaos;
@@ -108,12 +103,18 @@ public class LevelManager : MonoBehaviour
                 Reset();
             }
         }
+
+        if(_gameover)
+        {
+            if (Input.GetButtonDown("P1_X") || Input.GetButtonDown("P2_X")) SceneManager.LoadScene(2);
+        }
     }
 
     private void Reset()
     {
         _gameTimer = 300f;
         _chaos = 0;
+        _gameover = false;
 
         // Hide the game over panel
         if (_ConsuelaGOPanel != null) _ConsuelaGOPanel.SetActive(false);
@@ -133,6 +134,8 @@ public class LevelManager : MonoBehaviour
             _KidsGOPanel.SetActive(true);
         }
         if (_xButton != null) _xButton.SetActive(true);
+
+        _gameover = true;
     }
 
     public void OpenAllDoors()
@@ -159,29 +162,12 @@ public class LevelManager : MonoBehaviour
         if (_chaos > _startingChaos && _consuelaLeads)
         {
             _consuelaLeads = false;
-            AkSoundEngine.SetState("MUS_Progression", "MUS_KidsLeads");
-
-            if (_consuelaHappy != null)
-                _consuelaHappy.gameObject.SetActive(false);
-
-            if (_consuelaSad != null)
-                _consuelaSad.gameObject.SetActive(true);
-
-            if (_kidsHappy != null)
-                _kidsHappy.gameObject.SetActive(true);
-
-            if (_kidsSad != null)
-                _kidsSad.gameObject.SetActive(false);
+            AkSoundEngine.PostEvent("Kids_Lead", gameObject);
         }
         else if (_chaos < _startingChaos && !_consuelaLeads)
         {
             _consuelaLeads = true;
-            AkSoundEngine.SetState("MUS_Progression", "MUS_GonzuelaLeads");
-
-            if (_consuelaHappy != null) _consuelaHappy.gameObject.SetActive(true);
-            if (_consuelaSad != null) _consuelaSad.gameObject.SetActive(false);
-            if (_kidsHappy != null) _kidsHappy.gameObject.SetActive(false);
-            if (_kidsSad != null) _kidsSad.gameObject.SetActive(true);
+            AkSoundEngine.PostEvent("Gonzuela_Leads", gameObject);
         }
     }
 }

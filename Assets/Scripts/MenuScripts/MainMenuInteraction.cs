@@ -8,14 +8,6 @@ public class MainMenuInteraction : MonoBehaviour
     public GameObject MenuCanvas;
     public GameObject PlayerConfirmCanvas;
     private MenuState menuState;
-    public GameObject p1ReadyLabel;
-    public GameObject p2ReadyLabel;
-
-    public string p1ReadyTextDefault = "P1 not ready";
-    public string p1ReadyText = "P1 ready";
-    public string p2ReadyTextDefault = "P2 not ready";
-    public string p2ReadyText = "P2 ready";
-    public bool p1Ready, p2Ready;
 
     public string ButtonName_Start = "_Start";
     public string ButtonName_Back= "_Back";
@@ -34,8 +26,6 @@ public class MainMenuInteraction : MonoBehaviour
     private void Start()
     {
         menuState = MenuState.MainScreen;
-        p1Ready = false;
-        p2Ready = false;
         _es = FindObjectOfType<EventSystem>();
         if (_es != null) _es.SetSelectedGameObject(_es.firstSelectedGameObject);
     }
@@ -43,9 +33,9 @@ public class MainMenuInteraction : MonoBehaviour
     public void PressPlayCallback()
     {
         MenuCanvas.SetActive(false);
-        //PlayerConfirmCanvas.SetActive(true);
-        //menuState = MenuState.PlayerReadyScreen;
-        SceneManager.LoadScene(2);
+        PlayerConfirmCanvas.SetActive(true);
+        menuState = MenuState.PlayerReadyScreen;
+        //SceneManager.LoadScene(2);
     }
 
     public void Exit()
@@ -59,7 +49,7 @@ public class MainMenuInteraction : MonoBehaviour
     {
         if (menuState == MenuState.MainScreen)
         {
-            if (Input.GetButtonDown("P1" + ButtonName_Start) || Input.GetButtonDown("P2" + ButtonName_Start))
+            if (Input.GetButtonDown("P1" + ButtonName_Start) || Input.GetButtonDown("P1_A") || Input.GetButtonDown("P2" + ButtonName_Start) || Input.GetButtonDown("P2_A"))
             {
                 if(_es != null)
                 {
@@ -71,38 +61,9 @@ public class MainMenuInteraction : MonoBehaviour
 
         if (menuState == MenuState.PlayerReadyScreen)
         {
-            if (Input.GetButtonDown("P1"+ ButtonName_Start))
-            {
-                p1Ready = !p1Ready;
+            if (Input.GetButtonDown("P1_X")) SceneManager.LoadScene(2);
 
-                if (p1Ready)
-                {
-                    p1ReadyLabel.GetComponent<Text>().text = p1ReadyText;
-                }
-                else
-                {
-                    p1ReadyLabel.GetComponent<Text>().text = p1ReadyTextDefault;
-                }
-            }
-
-            if (Input.GetButtonDown("P2"+ ButtonName_Start) || Input.GetButtonDown("Submit"))
-            {
-                p2Ready = !p2Ready;
-
-                if (p2Ready)
-                {
-                    p2ReadyLabel.GetComponent<Text>().text = p2ReadyText;
-                }
-                else
-                {
-                    p2ReadyLabel.GetComponent<Text>().text = p2ReadyTextDefault;
-                }
-            }
-        }
-
-        if(p1Ready && p2Ready)
-        {
-            SceneManager.LoadScene(2);
+            if (Input.GetButtonDown("P2_X")) SceneManager.LoadScene(2);
         }
     }
 }
