@@ -88,6 +88,7 @@ public class LevelManager : MonoBehaviour
         }
 
         _startingChaos = (maxChaos / 2);
+        _chaos = _startingChaos;
     }
 
     // Update is called once per frame
