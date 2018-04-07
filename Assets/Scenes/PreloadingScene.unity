@@ -165,7 +165,7 @@ Prefab:
     - target: {fileID: 114793245433183674, guid: cc81d744c7000cd458956d652b5d47c7,
         type: 2}
       propertyPath: mainSceneName
-      value: Main_integration_test
+      value: Main
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114380155208276974, guid: cc81d744c7000cd458956d652b5d47c7, type: 2}
