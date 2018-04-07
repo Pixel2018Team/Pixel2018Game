@@ -19,6 +19,9 @@ public class RepaireController : MonoBehaviour
     public bool acting = false;
     public bool isBroken = false;
 
+    public string breakSoundEventName;
+    public string fixSoundEventName;
+
     void Start()
     {
         _image = gameObject.GetComponentInChildren<Image>();
@@ -91,6 +94,16 @@ public class RepaireController : MonoBehaviour
                 animator.SetBool("action", false);
                 acting = false;
                 isBroken = !isBroken;
+
+                if (isBroken)
+                {
+                    AkSoundEngine.PostEvent(breakSoundEventName, gameObject);
+                }
+                else
+                {
+                    AkSoundEngine.PostEvent(fixSoundEventName, gameObject);
+                }
+
                 _smoke.SetActive(isBroken);
                 remainingTime = timeForAction;
                 _image.fillAmount = 0.0f;
