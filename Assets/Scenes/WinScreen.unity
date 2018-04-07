@@ -211,6 +211,7 @@ MonoBehaviour:
   _gameTimer: 300
   _ConsuelaGOPanel: {fileID: 270410660}
   _KidsGOPanel: {fileID: 121414914}
+  _xButton: {fileID: 0}
   ScoreTextTest: {fileID: 0}
   maxChaos: 0
   _consuelaHappy: {fileID: 0}

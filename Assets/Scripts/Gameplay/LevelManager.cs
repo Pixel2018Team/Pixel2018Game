@@ -98,9 +98,17 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        _gameTimer -= Time.deltaTime;
+        if(_gameTimer > 0) _gameTimer -= Time.deltaTime;
         if (_gameTimer <= 0) FinishLevel();
         if (_chaos >= maxChaos) FinishLevel();
+
+        if(_gameTimer <= 0)
+        {
+            if(Input.GetButtonDown("P1_X") || Input.GetButtonDown("P2_X"))
+            {
+                Reset();
+            }
+        }
     }
 
     private void Reset()
