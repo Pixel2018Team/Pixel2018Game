@@ -1557,12 +1557,12 @@ Prefab:
     - target: {fileID: 114280603874754892, guid: 757adbd4891f1834d9cf6658eab01b56,
         type: 2}
       propertyPath: breakSoundEventName
-      value: Bbq_Start
+      value: Oven_Start
       objectReference: {fileID: 0}
     - target: {fileID: 114280603874754892, guid: 757adbd4891f1834d9cf6658eab01b56,
         type: 2}
       propertyPath: fixSoundEventName
-      value: Bbq_Stop
+      value: Oven_Stop
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 757adbd4891f1834d9cf6658eab01b56, type: 2}
