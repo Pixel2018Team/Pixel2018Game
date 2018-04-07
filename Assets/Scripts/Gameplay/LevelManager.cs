@@ -74,6 +74,8 @@ public class LevelManager : MonoBehaviour
     // Use this for initialization
     private void Start()
     {
+        _doors = new List<DoorScript>();
+
         // Populating the list of doors
         //foreach (var obj in FindObjectsOfType<DoorScript>())
         //{
