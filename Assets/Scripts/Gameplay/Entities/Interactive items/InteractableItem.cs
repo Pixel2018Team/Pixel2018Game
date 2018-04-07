@@ -12,21 +12,11 @@ public class InteractableItem : MonoBehaviour {
     public bool causesChaos;
 
 
-    public void Awake()
+    private void Awake()
     {
         isInteractable = true;
         kidThatCanInteract = null;
     }
-
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     public void OnTriggerEnter(Collider col)
     {

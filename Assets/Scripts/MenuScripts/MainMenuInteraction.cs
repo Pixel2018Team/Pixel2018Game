@@ -31,7 +31,7 @@ public class MainMenuInteraction : MonoBehaviour
     }
 
     // Use this for initialization
-    void Start()
+    private void Start()
     {
         menuState = MenuState.MainScreen;
         p1Ready = false;
@@ -54,7 +54,7 @@ public class MainMenuInteraction : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (menuState == MenuState.MainScreen)
         {

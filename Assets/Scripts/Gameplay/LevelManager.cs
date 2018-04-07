@@ -53,7 +53,6 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private Text ScoreTextTest;
 
-    [SerializeField]
     public int maxChaos;
 
     [SerializeField]
@@ -107,13 +106,15 @@ public class LevelManager : MonoBehaviour
         _chaos = 0;
 
         // Hide the game over panel
-        //_gameOverPanel.SetActive(false);
+        if (_gameOverPanel != null)
+        {
+            _gameOverPanel.SetActive(false);
+        }
     }
 
     private void FinishLevel()
     {
         // Show the gameover screen
-
         if(_gameOverPanel != null)
         {
             _gameOverPanel.SetActive(true);

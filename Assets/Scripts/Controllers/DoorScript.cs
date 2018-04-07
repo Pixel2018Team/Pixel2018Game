@@ -8,7 +8,7 @@ public class DoorScript : MonoBehaviour
     public bool test;
     private Vector3 startDir, openDir, closeDir;
 
-    public void Awake()
+    private void Awake()
     {
         closeDir = new Vector3(transform.forward.x, transform.forward.y, transform.forward.z);
         openDir = new Vector3(transform.right.x, transform.right.y, transform.right.z);
@@ -35,7 +35,7 @@ public class DoorScript : MonoBehaviour
         isRotating = true;
     }
 
-    public void Update()
+    private void Update()
     {
         Debug.DrawRay(transform.position, transform.forward, Color.red);
 
