@@ -58,8 +58,6 @@ public class RepaireController : MonoBehaviour
     public void CatchActing()
     {
         _actor.GetComponent<KidController>().GetTagged();
-        var controller = _actor.GetComponent<TopDownKidsController>();
-        controller.enabled = true;
 
         var animator = _actor.GetComponent<Animator>();
         animator.SetBool("action", false);

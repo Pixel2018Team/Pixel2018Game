@@ -20,7 +20,9 @@ public class KidController : MonoBehaviour
         _tag.enabled = true;
         var animator = GetComponent<Animator>();
         animator.SetBool("crying", true);
-        // Play animation
+        transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
+        var controller = GetComponent<TopDownKidsController>();
+        controller.enabled = false;
     }
 
     void Update()
