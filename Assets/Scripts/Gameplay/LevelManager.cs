@@ -48,7 +48,10 @@ public class LevelManager : MonoBehaviour
     private float _gameTimer = 300f;
 
     [SerializeField]
-    private GameObject _gameOverPanel;
+    private GameObject
+        _ConsuelaGOPanel,
+        _KidsGOPanel,
+        _xButton;
 
     [SerializeField]
     private Text ScoreTextTest;
@@ -106,19 +109,23 @@ public class LevelManager : MonoBehaviour
         _chaos = 0;
 
         // Hide the game over panel
-        if (_gameOverPanel != null)
-        {
-            _gameOverPanel.SetActive(false);
-        }
+        if (_ConsuelaGOPanel != null) _ConsuelaGOPanel.SetActive(false);
+        if (_KidsGOPanel != null) _KidsGOPanel.SetActive(false);
+        if (_xButton != null) _xButton.SetActive(false);
     }
 
     private void FinishLevel()
     {
         // Show the gameover screen
-        if(_gameOverPanel != null)
+        if(_ConsuelaGOPanel != null && _chaos <= _startingChaos)
         {
-            _gameOverPanel.SetActive(true);
+            _ConsuelaGOPanel.SetActive(true);
         }
+        else if(_KidsGOPanel != null && _chaos > _startingChaos)
+        {
+            _KidsGOPanel.SetActive(true);
+        }
+        if (_xButton != null) _xButton.SetActive(true);
     }
 
     public void OpenAllDoors()
