@@ -10,6 +10,7 @@ public class WaypointsManager : MonoBehaviour {
     private float leftBound, rightBound, topBound, botBound;
     public GameObject planeReference;
     public GameObject waypointPrefab;
+    public bool randomGeneration;
 
     public void Awake()
     {
@@ -25,8 +26,10 @@ public class WaypointsManager : MonoBehaviour {
 
     public void Start()
     {
-
-        //CreateWaypointsList();
+        if (randomGeneration)
+        {
+            CreateWaypointsList();
+        }
     }
 
     public void CreateWaypointsList()

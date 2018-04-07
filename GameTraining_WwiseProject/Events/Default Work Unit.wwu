@@ -3,20 +3,6 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="test" ID="{508B2B38-9CD1-49AC-BA8F-6BF499C903B6}">
-					<ChildrenList>
-						<Action Name="" ID="{BCA47CCE-3361-4B2F-BFAB-319AB1EEABDB}" ShortID="935646854">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Cartoon Hop-SoundBible_com-553158131" ID="{9AB75784-BA70-45B9-8A7E-74CF6888FFAB}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Gamestart" ID="{F68CF027-2BD7-40E2-9597-1709832B6D3F}">
 					<ChildrenList>
 						<Action Name="" ID="{274D0992-B334-443A-8D5F-E5708E9BEDE9}" ShortID="327805823">
@@ -270,6 +256,188 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="SFX_Toaster_Drop" ID="{46FED64D-657D-4D7B-8503-B8E6180C034D}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Kids_Leading" ID="{19E75DC0-A905-4826-9A62-B6E9B8C11BDE}">
+					<ChildrenList>
+						<Action Name="" ID="{1885DDC5-1E7E-4BA9-9C42-E10F1EE562EA}" ShortID="746757593">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VO_Kids_Happy" ID="{804DC8AD-1C4A-4649-AB63-C560D620AA31}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Kids_Crying" ID="{FB5E5CF4-1FC4-4CAC-A487-3BF8651E2E42}">
+					<ChildrenList>
+						<Action Name="" ID="{EC5F67C8-B9FA-481D-B58A-FB0A17099852}" ShortID="1029597351">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VO_Kids_Crying" ID="{535B1BCF-BE79-442F-B523-91D232FAF729}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Gonzuela_Leading" ID="{606250E7-74AF-4F72-9A87-286994A300F1}">
+					<ChildrenList>
+						<Action Name="" ID="{6E9577E8-4F13-435A-A4F7-162F1D6200AD}" ShortID="589302689">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="VO_Kids_Unhappy" ID="{BDD60C6B-46E7-403A-81A2-61C6419EAB4A}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Bookshelf_Break" ID="{879E7E35-1DC8-40D4-9C29-D37B11A066F9}">
+					<ChildrenList>
+						<Action Name="" ID="{189E9FC2-D11E-4EA3-A172-8EA44CD44BA7}" ShortID="494585268">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Bookshelf_Break" ID="{290AF76D-2A41-417C-BF36-D1A44D4EF7E5}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Bookshelf_Replace" ID="{57D41F6E-889F-4740-BFC9-657432BC5384}">
+					<ChildrenList>
+						<Action Name="" ID="{5F5EC5FD-52C4-4A9F-B2C7-6DB320E5D66D}" ShortID="515622560">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Bookshelf_Replace" ID="{0104F779-AB7F-4537-8DA8-FFB22DF2609E}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Lightswitch_On" ID="{17684984-1E73-435B-8A24-C4BF3F415738}">
+					<ChildrenList>
+						<Action Name="" ID="{329E152F-59E4-44EC-B805-49BA0C7E6F99}" ShortID="649510310">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_LightSwitch_On" ID="{0680A90C-A496-42B9-BA0B-97BB8751040A}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Lightswitch_Off" ID="{F8A31715-204F-469A-A694-5599D7D6408F}">
+					<ChildrenList>
+						<Action Name="" ID="{1CFE898A-1E60-4F43-8462-E7AA5946ACF5}" ShortID="450406482">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_LightSwitch_Off" ID="{0A8C1A89-6A0D-40D4-979F-BF158986697A}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Picture_Break" ID="{76134999-D34B-4FE0-A788-BE3D4D05D821}">
+					<ChildrenList>
+						<Action Name="" ID="{CFD48B9A-79C8-442D-824E-AD2A0E5BABE5}" ShortID="505943665">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Picture_Break" ID="{AFE30619-9E91-440F-9AC5-AD2592F9B0EB}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Picture_Replace" ID="{D83CB0FD-9CE6-40C2-BD9B-CF508CD2EEA0}">
+					<ChildrenList>
+						<Action Name="" ID="{3C17565E-008E-4A83-9DF0-C39FABCF3A08}" ShortID="498507992">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Picture_Replace" ID="{449C10B8-98D9-44D3-A9A9-91A2E775DB57}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Woodblock_Break" ID="{91C50A2F-3109-4DB9-BD65-EAC35B493EE4}">
+					<ChildrenList>
+						<Action Name="" ID="{944D12F0-53F0-4FB2-A342-704AE9BAB01C}" ShortID="263590434">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Woodblock_Break" ID="{B8DD14E6-7811-40E4-910A-EF6892BEF535}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Woodblock_Replace" ID="{3ACC5E18-155C-4C7E-9F4F-8CB8EC0643BE}">
+					<ChildrenList>
+						<Action Name="" ID="{F6FD26B5-032F-4406-8D28-0EF7578028E8}" ShortID="173013376">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX_Woodblock_Replace" ID="{3EDE0C26-BAC1-4626-9DBD-787BB6B9E653}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Door_Open" ID="{4CE2F97A-1BAC-43E2-931D-F55E5D6098F4}">
+					<ChildrenList>
+						<Action Name="" ID="{69FD43E1-7F14-481D-80C5-BE039238DFCB}" ShortID="327694493">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Door_Open" ID="{E2C44BF8-F0D2-40F5-934B-2E02110F9DEC}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Door_Close" ID="{BB8E5DB0-11DA-46E5-9920-2A8433C2006A}">
+					<ChildrenList>
+						<Action Name="" ID="{0771F0A0-1446-4B2C-9689-2FA6864F676D}" ShortID="732340579">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Door_Close" ID="{B3AEE56D-DC54-4EB1-8B05-6B85A0C44C30}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

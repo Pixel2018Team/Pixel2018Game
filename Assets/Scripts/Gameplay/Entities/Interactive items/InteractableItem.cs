@@ -6,7 +6,10 @@ public class InteractableItem : MonoBehaviour {
 
     public bool isInteractable;
     public GameObject kidThatCanInteract;
+    public GameObject currentOwner; //entity that manipulated this object
     public Enum.InteractableType interactableType;
+    public int chaosAmount = 10;
+    public bool causesChaos;
 
 
     public void Awake()
@@ -27,9 +30,9 @@ public class InteractableItem : MonoBehaviour {
 
     public void OnTriggerEnter(Collider col)
     {
-        DebugLogger.Log("trigger enter interactable object", Enum.LoggerMessageType.Important);
-        if (col.gameObject.tag == "kid" && kidThatCanInteract == null)
+        if (col.gameObject.tag == "kid" && !col.gameObject.GetComponent<TopDownKidsController>().controlledByAI && kidThatCanInteract == null)
         {
+            DebugLogger.Log("trigger enter interactable object", Enum.LoggerMessageType.Important);
             kidThatCanInteract = col.gameObject;
             col.gameObject.GetComponent<TopDownKidsController>().interactableObjectInRange = gameObject;
         }
@@ -53,6 +56,18 @@ public class InteractableItem : MonoBehaviour {
     //To be overrided by child classes (single action)
     public virtual void TriggerActionOnInteract()
     {
+    }
 
+    public void CheckProvokeChaos()
+    {
+        if (causesChaos && currentOwner.tag == "kid")
+        {
+            LevelManager.Instance.AddChaos(chaosAmount);
+        }
+    }
+
+    public void ReleaseOwner()
+    {
+        currentOwner = null;
     }
 }
