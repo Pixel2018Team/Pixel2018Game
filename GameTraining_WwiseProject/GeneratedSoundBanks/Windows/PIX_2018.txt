@@ -1,30 +1,33 @@
 Event	ID	Name			Wwise Object Path	Notes
 	128625444	Door_Close			\Default Work Unit\Door_Close	
 	280670697	Lightswitch_Off			\Default Work Unit\Lightswitch_Off	
+	430734518	Gonz_CaughtKid			\Default Work Unit\Gonz_CaughtKid	
 	509177165	Toaster_WaterImpact			\Default Work Unit\Toaster_WaterImpact	
 	535830432	Door_Open			\Default Work Unit\Door_Open	
 	536084281	Extinctor_Use			\Default Work Unit\Extinctor_Use	
+	663907016	Gonzuela_Leads			\Default Work Unit\Gonzuela_Leads	
 	743584214	Oven_Stop			\Default Work Unit\Oven_Stop	
 	763008841	Woodblock_Break			\Default Work Unit\Woodblock_Break	
 	797412272	Dishes_Start			\Default Work Unit\Dishes_Start	
-	858248185	Kids_Leading			\Default Work Unit\Kids_Leading	
 	1009363664	Picture_Replace			\Default Work Unit\Picture_Replace	
 	1047931541	Toaster_Drop			\Default Work Unit\Toaster_Drop	
 	1205450473	Kids_Crying			\Default Work Unit\Kids_Crying	
 	1360101095	Bbq_Start			\Default Work Unit\Bbq_Start	
 	1506460941	Bbq_Stop			\Default Work Unit\Bbq_Stop	
 	1598914998	Bookshelf_Break			\Default Work Unit\Bookshelf_Break	
-	1704623631	Gonzuela_Leading			\Default Work Unit\Gonzuela_Leading	
+	1675969863	Kids_Lead			\Default Work Unit\Kids_Lead	
 	1782344986	Toaster_Pickup			\Default Work Unit\Toaster_Pickup	
 	2174854684	Dishes_Stop			\Default Work Unit\Dishes_Stop	
 	2253880733	Lightswitch_On			\Default Work Unit\Lightswitch_On	
 	2575070678	Oven_Start			\Default Work Unit\Oven_Start	
+	2607556080	Menu			\Default Work Unit\Menu	
 	2983120780	Woodblock_Replace			\Default Work Unit\Woodblock_Replace	
 	3311659667	Bookshelf_Replace			\Default Work Unit\Bookshelf_Replace	
 	3489924218	Dishes_Impact			\Default Work Unit\Dishes_Impact	
 	3683557997	Oven_Stretch			\Default Work Unit\Oven_Stretch	
 	3873705293	Picture_Break			\Default Work Unit\Picture_Break	
 	4058101365	Gamestart			\Default Work Unit\Gamestart	
+	4264815106	EndGame			\Default Work Unit\EndGame	
 
 State Group	ID	Name			Wwise Object Path	Notes
 	2769448222	MUS_Progression			\Default Work Unit\MUS_Progression	
@@ -35,53 +38,76 @@ State	ID	Name	State Group			Notes
 	3515910163	MUS_KidsLeads	MUS_Progression			
 
 Custom State	ID	Name	State Group	Owner		Notes
-	813347207	MUS_GonzuelaLeads	MUS_Progression	\Interactive Music Hierarchy\Default Work Unit\temp\MUS\PIX18_Mus_BaseLayer\PIX18_Mus_KidsLayer		
-	1039849680	MUS_KidsLeads	MUS_Progression	\Interactive Music Hierarchy\Default Work Unit\temp\MUS\PIX18_Mus_BaseLayer\PIX18_Mus_GonzuelaLayer		
+	813347207	MUS_GonzuelaLeads	MUS_Progression	\Interactive Music Hierarchy\Default Work Unit\MUS\PIX18_Mus_BaseLayer\PIX18_Mus_KidsLayer		
+	1039849680	MUS_KidsLeads	MUS_Progression	\Interactive Music Hierarchy\Default Work Unit\MUS\PIX18_Mus_BaseLayer\PIX18_Mus_GonzuelaLayer		
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1064063191	MUS_Stigners_Sidechain			\Default Work Unit\MUS_Stigners_Sidechain	
+
+Trigger	ID	Name			Wwise Object Path	Notes
+	3675480228	KidsLead			\Default Work Unit\KidsLead	
+	3755775617	GonzLead			\Default Work Unit\GonzLead	
+
+Effect plug-ins	ID	Name	Type				Notes
+	200492606	Wwise Meter (Custom)	Wwise Meter			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	64366828	VO_Baby_Hit_03	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\VO_Baby_Hit_03_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Kids_Crying\VO_Baby_Hit_03		808784
+	64366828	VO_Baby_Hit_03	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\VO_Baby_Hit_03_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\Kids\VO_Kids_Crying\VO_Baby_Hit_03		808784
 	81588674	SFX_Bbq_Loop	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Bbq_Loop_F17FB28C.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\BBq\Bbq_Loop\SFX_Bbq_Loop		705664
 	86822573	SFX_Door_Open_L3_02	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Door_Open_L3_02_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Door\Door_Open\Door_OpenL3\SFX_Door_Open_L3_02		350092
 	109568395	SFX_Bbq_Loop	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Bbq_Loop_572D7801.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\BBq\Bbq_Loop\Bbqstart\SFX_Bbq_Loop		705664
-	113315977	PIX18_Mus_KidsLayer	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\PIX18_Mus_KidsLayer_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\temp\MUS\PIX18_Mus_BaseLayer\PIX18_Mus_KidsLayer		7164620
+	109642826	VO_Gonz_CaughtKid_01	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\VO_Gonz_CaughtKid_01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\Gonz\Gonz_CaughtKid\VO_Gonz_CaughtKid_01		231008
+	113315977	PIX18_Mus_KidsLayer	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\PIX18_Mus_KidsLayer_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\PIX18_Mus_BaseLayer\PIX18_Mus_KidsLayer		14329172
 	116155236	SFX_Door_Close_L1_02	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Door_Close_L1_02_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Door\Door_Close\Door_CloseL1\SFX_Door_Close_L1_02		236136
 	127725770	SFX_Door_Close_L2_02	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Door_Close_L2_02_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Door\Door_Close\Door_CLoseL2\SFX_Door_Close_L2_02		236136
 	139926779	SFX_Picture_Break	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Picture_Break_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Picture\SFX_Picture_Break		126828
 	147477361	SFX_Extinctor_Use	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Extinctor_Use_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\SFX_Extinctor_Use		617464
 	158616958	SFX_Oven_Stretch_02	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Oven_Stretch_02_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Oven\Oven_Stretch\SFX_Oven_Stretch_02		216468
 	161666379	SFX_Picture_Replace	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Picture_Replace_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Picture\SFX_Picture_Replace		222524
+	182147281	VO_Gonz_CaughtKid_06	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\VO_Gonz_CaughtKid_06_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\Gonz\Gonz_CaughtKid\VO_Gonz_CaughtKid_06		428716
 	189920005	SFX_Oven_Burning_Loop	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Oven_Burning_Loop_F17FB28C.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Oven\SFX_Oven_Burning_Loop		705664
 	194829564	SFX_Woodblock_Break	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Woodblock_Break_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Woodblock\SFX_Woodblock_Break		318880
 	236910838	SFX_Toaster_Drop	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Toaster_Drop_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Toaster\SFX_Toaster_Drop		246900
 	245305357	SFX_Oven_Stretch_01	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Oven_Stretch_01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Oven\Oven_Stretch\SFX_Oven_Stretch_01		246700
 	248843256	SFX_Dishes_impact_03	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Dishes_impact_03_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Dishes\Dishes_Impact\SFX_Dishes_impact_03		197716
 	269960480	SFX_Door_Open_L3_04	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Door_Open_L3_04_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Door\Door_Open\Door_OpenL3\SFX_Door_Open_L3_04		276084
+	275608934	VO_Gonz_Unhappy_01	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\VO_Gonz_Unhappy_01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\Gonz\Gonz_Unhappy\VO_Gonz_Unhappy_01		415324
 	296653858	SFX_Door_Open_L3_01	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Door_Open_L3_01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Door\Door_Open\Door_OpenL3\SFX_Door_Open_L3_01		348448
+	301835017	VO_Gonz_Unhappy_04	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\VO_Gonz_Unhappy_04_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\Gonz\Gonz_Unhappy\VO_Gonz_Unhappy_04		346416
 	333840999	SFX_Woodblock_Replace	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Woodblock_Replace_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Woodblock\SFX_Woodblock_Replace		233968
 	350599103	SFX_Door_Close_L2_01	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Door_Close_L2_01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Door\Door_Close\Door_CLoseL2\SFX_Door_Close_L2_01		228192
-	364453582	PIX18_Mus_GonzuelaLayer	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\PIX18_Mus_GonzuelaLayer_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\temp\MUS\PIX18_Mus_BaseLayer\PIX18_Mus_GonzuelaLayer		7164620
-	365936063	VO_Kids_Happy	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\VO_Kids_Happy_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Kids_Happy		524516
+	364453582	PIX18_Mus_GonzuelaLayer	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\PIX18_Mus_GonzuelaLayer_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\PIX18_Mus_BaseLayer\PIX18_Mus_GonzuelaLayer		14329172
+	373018850	MUS_GonzLead	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\MUS_GonzLead_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Stigners\MUS_GonzLead\MUS_GonzLead		977052
 	404242412	SFX_Door_Close_L1_01	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Door_Close_L1_01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Door\Door_Close\Door_CloseL1\SFX_Door_Close_L1_01		228192
 	432096879	SFX_Oven_Burning_Stop	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Oven_Burning_Stop_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Oven\SFX_Oven_Burning_Stop		264664
-	435133464	VO_Baby_Hit_01	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\VO_Baby_Hit_01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Kids_Crying\VO_Baby_Hit_01		708572
-	452920392	VO_Kids_Unhappy	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\VO_Kids_Unhappy_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Kids_Unhappy		1484344
-	499969488	PIX18_Mus_BaseLayer	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\PIX18_Mus_BaseLayer_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\temp\MUS\PIX18_Mus_BaseLayer\PIX18_Mus_BaseLayer		7164620
+	435133464	VO_Baby_Hit_01	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\VO_Baby_Hit_01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\Kids\VO_Kids_Crying\VO_Baby_Hit_01		708572
+	452920392	VO_Kids_Unhappy	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\VO_Kids_Unhappy_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\Kids\VO_Kids_Unhappy		1484344
+	458327607	VO_Gonz_CaughtKid_03	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\VO_Gonz_CaughtKid_03_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\Gonz\Gonz_CaughtKid\VO_Gonz_CaughtKid_03		446176
+	461821238	VO_Gonz_Unhappy_03	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\VO_Gonz_Unhappy_03_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\Gonz\Gonz_Unhappy\VO_Gonz_Unhappy_03		516896
+	499969488	PIX18_Mus_BaseLayer	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\PIX18_Mus_BaseLayer_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MUS\PIX18_Mus_BaseLayer\PIX18_Mus_BaseLayer		14329172
+	545005782	VO_Gonz_CaughtKid_04	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\VO_Gonz_CaughtKid_04_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\Gonz\Gonz_CaughtKid\VO_Gonz_CaughtKid_04		482548
+	559039275	VO_Gonz_Unhappy_05	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\VO_Gonz_Unhappy_05_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\Gonz\Gonz_Unhappy\VO_Gonz_Unhappy_05		679644
 	572823702	SFX_Bookshelf_Replace	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Bookshelf_Replace_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Bookshelf\SFX_Bookshelf_Replace		309764
+	589784696	VO_Gonz_CaughtKid_05	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\VO_Gonz_CaughtKid_05_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\Gonz\Gonz_CaughtKid\VO_Gonz_CaughtKid_05		449648
 	615759594	SFX_Bbq_Stop	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Bbq_Stop_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\BBq\SFX_Bbq_Stop		529264
 	621181394	SFX_Dishes_impact_02	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Dishes_impact_02_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Dishes\Dishes_Impact\SFX_Dishes_impact_02		126268
+	660286116	VO_Gonz_Unhappy_02	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\VO_Gonz_Unhappy_02_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\Gonz\Gonz_Unhappy\VO_Gonz_Unhappy_02		488836
 	670778273	SFX_LightSwitch_Off	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_LightSwitch_Off_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Switch\SFX_LightSwitch_Off		256716
 	673708732	SFX_Door_Open_L3_03	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Door_Open_L3_03_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Door\Door_Open\Door_OpenL3\SFX_Door_Open_L3_03		276700
 	737987464	SFX_Bbq_Start	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Bbq_Start_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\BBq\Bbq_Loop\Bbqstart\SFX_Bbq_Start		705664
 	744368649	SFX_Door_Open_L2_01	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Door_Open_L2_01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Door\Door_Open\Door_OpenL2\SFX_Door_Open_L2_01		212736
 	749757211	SFX_Door_Open_L1	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Door_Open_L1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Door\Door_Open\SFX_Door_Open_L1		212736
+	759305288	VO_Gonz_CaughtKid_07	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\VO_Gonz_CaughtKid_07_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\Gonz\Gonz_CaughtKid\VO_Gonz_CaughtKid_07		383416
 	795269752	SFX_Oven_Stretch_04	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Oven_Stretch_04_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Oven\Oven_Stretch\SFX_Oven_Stretch_04		237728
+	813228153	MUS_KidsLead	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\MUS_KidsLead_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Stigners\MUS_KidsLead\MUS_KidsLead		732804
 	858152331	SFX_Toaster_Water_Impact	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Toaster_Water_Impact_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Toaster\SFX_Toaster_Water_Impact		565096
 	927583315	SFX_Dishes_impact_01	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Dishes_impact_01_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Dishes\Dishes_Impact\SFX_Dishes_impact_01		186500
 	963540285	SFX_Oven_Stretch_03	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Oven_Stretch_03_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Oven\Oven_Stretch\SFX_Oven_Stretch_03		197472
+	973283581	VO_Gonz_CaughtKid_02	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\VO_Gonz_CaughtKid_02_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\Gonz\Gonz_CaughtKid\VO_Gonz_CaughtKid_02		468276
 	973711741	SFX_Dishes_Loop	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Dishes_Loop_F17FB28C.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Dishes\SFX_Dishes_Loop		4321864
 	1004019001	SFX_Toaster_Pickup	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Toaster_Pickup_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Toaster\SFX_Toaster_Pickup		317864
 	1031439115	SFX_Bookshelf_Break	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Bookshelf_Break_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Bookshelf\SFX_Bookshelf_Break		301272
 	1042793073	SFX_Door_Open_L2_02	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_Door_Open_L2_02_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Door\Door_Open\Door_OpenL2\SFX_Door_Open_L2_02		212736
 	1044616284	SFX_LightSwitch_On	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\SFX_LightSwitch_On_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Switch\SFX_LightSwitch_On		359700
-	1062726546	VO_Baby_Hit_02	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\VO_Baby_Hit_02_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\VO_Kids_Crying\VO_Baby_Hit_02		623092
+	1062726546	VO_Baby_Hit_02	Y:\Desktop\Pixel2018Game\GameTraining_WwiseProject\.cache\Windows\SFX\VO_Baby_Hit_02_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\VO\Kids\VO_Kids_Crying\VO_Baby_Hit_02		623092
 

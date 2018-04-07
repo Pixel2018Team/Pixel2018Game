@@ -5,6 +5,27 @@
 			<ChildrenList>
 				<Event Name="Gamestart" ID="{F68CF027-2BD7-40E2-9597-1709832B6D3F}">
 					<ChildrenList>
+						<Action Name="" ID="{39CE762B-17AF-49C6-850A-2E3037CCDC70}" ShortID="517603548">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="-48"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MUS_Stigners_Sidechain" ID="{7261FE18-5570-4FD6-BB00-F07A8CC3F801}" WorkUnitID="{984F371D-8246-4448-9F08-10BD93704E5A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{552A8BA6-A52C-48FE-B2F0-D73517731C58}" ShortID="433439893">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MUS_GonzuelaLeads" ID="{DC301AEC-AD49-4077-96C5-78F9567155F1}" WorkUnitID="{70A2E602-0038-49F3-8033-7E9D0F78433D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 						<Action Name="" ID="{274D0992-B334-443A-8D5F-E5708E9BEDE9}" ShortID="327805823">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
@@ -261,15 +282,35 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Kids_Leading" ID="{19E75DC0-A905-4826-9A62-B6E9B8C11BDE}">
+				<Event Name="Kids_Lead" ID="{19E75DC0-A905-4826-9A62-B6E9B8C11BDE}">
 					<ChildrenList>
-						<Action Name="" ID="{1885DDC5-1E7E-4BA9-9C42-E10F1EE562EA}" ShortID="746757593">
+						<Action Name="" ID="{C39EE94C-48DC-4A83-88B1-865897238B08}" ShortID="52788163">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MUS_KidsLeads" ID="{5ECD4C07-29CE-4A90-8E9C-C8BE5AF119C7}" WorkUnitID="{70A2E602-0038-49F3-8033-7E9D0F78433D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{AF25A521-15D9-4B74-82B2-E7EDFC0AA524}" ShortID="749727609">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="35"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="KidsLead" ID="{D3AA2327-7A8B-4FBF-932E-40EF07E2157E}" WorkUnitID="{8496A4A9-1E27-4C40-AE6D-B720E02A3338}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E1A227D5-42B9-4841-827A-4F7B4B57D846}" ShortID="878370611">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="VO_Kids_Happy" ID="{804DC8AD-1C4A-4649-AB63-C560D620AA31}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+									<ObjectRef Name="Gonz_Unhappy" ID="{5490A7CC-0D4D-457B-97D2-2A02A07ED16D}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -289,8 +330,18 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Gonzuela_Leading" ID="{606250E7-74AF-4F72-9A87-286994A300F1}">
+				<Event Name="Gonzuela_Leads" ID="{606250E7-74AF-4F72-9A87-286994A300F1}">
 					<ChildrenList>
+						<Action Name="" ID="{B499DAE8-7209-4080-A420-72D65DD82AD6}" ShortID="628626315">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MUS_GonzuelaLeads" ID="{DC301AEC-AD49-4077-96C5-78F9567155F1}" WorkUnitID="{70A2E602-0038-49F3-8033-7E9D0F78433D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 						<Action Name="" ID="{6E9577E8-4F13-435A-A4F7-162F1D6200AD}" ShortID="589302689">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
@@ -298,6 +349,16 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="VO_Kids_Unhappy" ID="{BDD60C6B-46E7-403A-81A2-61C6419EAB4A}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{735E01DD-32F0-424E-A249-F37B2F5FDEA4}" ShortID="996851009">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="35"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GonzLead" ID="{F4241A5A-1874-4FC2-92A8-A03F4962F185}" WorkUnitID="{8496A4A9-1E27-4C40-AE6D-B720E02A3338}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -438,6 +499,31 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Door_Close" ID="{B3AEE56D-DC54-4EB1-8B05-6B85A0C44C30}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Menu" ID="{A143A4E2-9FE4-41E0-B314-03C92DC16991}"/>
+				<Event Name="EndGame" ID="{260ECEEB-5529-4126-9743-DA88450E9448}">
+					<ChildrenList>
+						<Action Name="" ID="{D6D697A3-6E32-49A6-BD11-B4F08E814836}" ShortID="647583087">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Gonz_CaughtKid" ID="{656460AE-865F-440E-81EE-82D76CFB244A}">
+					<ChildrenList>
+						<Action Name="" ID="{58D484CA-7A41-4A4B-BCCE-287DC632ED80}" ShortID="332719998">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gonz_CaughtKid" ID="{028B55DD-4F70-4537-8731-190F98D934E9}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

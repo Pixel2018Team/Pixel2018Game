@@ -30,13 +30,16 @@
 				<Event Id="2174854684" Name="Dishes_Stop" ObjectPath="\Events\Default Work Unit\Dishes_Stop" MaxAttenuation="0.000000"/>
 				<Event Id="128625444" Name="Door_Close" ObjectPath="\Events\Default Work Unit\Door_Close" MaxAttenuation="200.000000"/>
 				<Event Id="535830432" Name="Door_Open" ObjectPath="\Events\Default Work Unit\Door_Open" MaxAttenuation="200.000000"/>
+				<Event Id="4264815106" Name="EndGame" ObjectPath="\Events\Default Work Unit\EndGame" MaxAttenuation="0.000000"/>
 				<Event Id="536084281" Name="Extinctor_Use" ObjectPath="\Events\Default Work Unit\Extinctor_Use" MaxAttenuation="200.000000"/>
 				<Event Id="4058101365" Name="Gamestart" ObjectPath="\Events\Default Work Unit\Gamestart"/>
-				<Event Id="1704623631" Name="Gonzuela_Leading" ObjectPath="\Events\Default Work Unit\Gonzuela_Leading"/>
+				<Event Id="430734518" Name="Gonz_CaughtKid" ObjectPath="\Events\Default Work Unit\Gonz_CaughtKid"/>
+				<Event Id="663907016" Name="Gonzuela_Leads" ObjectPath="\Events\Default Work Unit\Gonzuela_Leads"/>
 				<Event Id="1205450473" Name="Kids_Crying" ObjectPath="\Events\Default Work Unit\Kids_Crying"/>
-				<Event Id="858248185" Name="Kids_Leading" ObjectPath="\Events\Default Work Unit\Kids_Leading"/>
+				<Event Id="1675969863" Name="Kids_Lead" ObjectPath="\Events\Default Work Unit\Kids_Lead"/>
 				<Event Id="280670697" Name="Lightswitch_Off" ObjectPath="\Events\Default Work Unit\Lightswitch_Off" MaxAttenuation="200.000000"/>
 				<Event Id="2253880733" Name="Lightswitch_On" ObjectPath="\Events\Default Work Unit\Lightswitch_On" MaxAttenuation="200.000000"/>
+				<Event Id="2607556080" Name="Menu" ObjectPath="\Events\Default Work Unit\Menu" MaxAttenuation="0.000000"/>
 				<Event Id="2575070678" Name="Oven_Start" ObjectPath="\Events\Default Work Unit\Oven_Start" MaxAttenuation="200.000000"/>
 				<Event Id="743584214" Name="Oven_Stop" ObjectPath="\Events\Default Work Unit\Oven_Stop" MaxAttenuation="200.000000"/>
 				<Event Id="3683557997" Name="Oven_Stretch" ObjectPath="\Events\Default Work Unit\Oven_Stretch" MaxAttenuation="200.000000"/>
@@ -64,6 +67,10 @@
 				<File Id="109568395" Language="SFX">
 					<ShortName>SFX_Bbq_Loop.wav</ShortName>
 					<Path>SFX/SFX_Bbq_Loop_572D7801.wem</Path>
+				</File>
+				<File Id="109642826" Language="SFX">
+					<ShortName>VO_Gonz_CaughtKid_01.wav</ShortName>
+					<Path>SFX/VO_Gonz_CaughtKid_01_1C9C67B2.wem</Path>
 				</File>
 				<File Id="113315977" Language="SFX">
 					<ShortName>PIX18_Mus_KidsLayer.wav</ShortName>
@@ -93,6 +100,10 @@
 					<ShortName>SFX_Picture_Replace.wav</ShortName>
 					<Path>SFX/SFX_Picture_Replace_1C9C67B2.wem</Path>
 				</File>
+				<File Id="182147281" Language="SFX">
+					<ShortName>VO_Gonz_CaughtKid_06.wav</ShortName>
+					<Path>SFX/VO_Gonz_CaughtKid_06_1C9C67B2.wem</Path>
+				</File>
 				<File Id="189920005" Language="SFX">
 					<ShortName>SFX_Oven_Burning_Loop.wav</ShortName>
 					<Path>SFX/SFX_Oven_Burning_Loop_F17FB28C.wem</Path>
@@ -117,9 +128,17 @@
 					<ShortName>SFX_Door_Open_L3_04.wav</ShortName>
 					<Path>SFX/SFX_Door_Open_L3_04_1C9C67B2.wem</Path>
 				</File>
+				<File Id="275608934" Language="SFX">
+					<ShortName>VO_Gonz_Unhappy_01.wav</ShortName>
+					<Path>SFX/VO_Gonz_Unhappy_01_1C9C67B2.wem</Path>
+				</File>
 				<File Id="296653858" Language="SFX">
 					<ShortName>SFX_Door_Open_L3_01.wav</ShortName>
 					<Path>SFX/SFX_Door_Open_L3_01_1C9C67B2.wem</Path>
+				</File>
+				<File Id="301835017" Language="SFX">
+					<ShortName>VO_Gonz_Unhappy_04.wav</ShortName>
+					<Path>SFX/VO_Gonz_Unhappy_04_1C9C67B2.wem</Path>
 				</File>
 				<File Id="333840999" Language="SFX">
 					<ShortName>SFX_Woodblock_Replace.wav</ShortName>
@@ -133,9 +152,9 @@
 					<ShortName>PIX18_Mus_GonzuelaLayer.wav</ShortName>
 					<Path>SFX/PIX18_Mus_GonzuelaLayer_F17FB28C.wem</Path>
 				</File>
-				<File Id="365936063" Language="SFX">
-					<ShortName>VO_Kids_Happy.wav</ShortName>
-					<Path>SFX/VO_Kids_Happy_1C9C67B2.wem</Path>
+				<File Id="373018850" Language="SFX">
+					<ShortName>MUS_GonzLead.wav</ShortName>
+					<Path>SFX/MUS_GonzLead_F17FB28C.wem</Path>
 				</File>
 				<File Id="404242412" Language="SFX">
 					<ShortName>SFX_Door_Close_L1_01.wav</ShortName>
@@ -153,13 +172,33 @@
 					<ShortName>VO_Kids_Unhappy.wav</ShortName>
 					<Path>SFX/VO_Kids_Unhappy_1C9C67B2.wem</Path>
 				</File>
+				<File Id="458327607" Language="SFX">
+					<ShortName>VO_Gonz_CaughtKid_03.wav</ShortName>
+					<Path>SFX/VO_Gonz_CaughtKid_03_1C9C67B2.wem</Path>
+				</File>
+				<File Id="461821238" Language="SFX">
+					<ShortName>VO_Gonz_Unhappy_03.wav</ShortName>
+					<Path>SFX/VO_Gonz_Unhappy_03_1C9C67B2.wem</Path>
+				</File>
 				<File Id="499969488" Language="SFX">
 					<ShortName>PIX18_Mus_BaseLayer.wav</ShortName>
 					<Path>SFX/PIX18_Mus_BaseLayer_F17FB28C.wem</Path>
 				</File>
+				<File Id="545005782" Language="SFX">
+					<ShortName>VO_Gonz_CaughtKid_04.wav</ShortName>
+					<Path>SFX/VO_Gonz_CaughtKid_04_1C9C67B2.wem</Path>
+				</File>
+				<File Id="559039275" Language="SFX">
+					<ShortName>VO_Gonz_Unhappy_05.wav</ShortName>
+					<Path>SFX/VO_Gonz_Unhappy_05_1C9C67B2.wem</Path>
+				</File>
 				<File Id="572823702" Language="SFX">
 					<ShortName>SFX_Bookshelf_Replace.wav</ShortName>
 					<Path>SFX/SFX_Bookshelf_Replace_1C9C67B2.wem</Path>
+				</File>
+				<File Id="589784696" Language="SFX">
+					<ShortName>VO_Gonz_CaughtKid_05.wav</ShortName>
+					<Path>SFX/VO_Gonz_CaughtKid_05_1C9C67B2.wem</Path>
 				</File>
 				<File Id="615759594" Language="SFX">
 					<ShortName>SFX_Bbq_Stop.wav</ShortName>
@@ -168,6 +207,10 @@
 				<File Id="621181394" Language="SFX">
 					<ShortName>SFX_Dishes_impact_02.wav</ShortName>
 					<Path>SFX/SFX_Dishes_impact_02_1C9C67B2.wem</Path>
+				</File>
+				<File Id="660286116" Language="SFX">
+					<ShortName>VO_Gonz_Unhappy_02.wav</ShortName>
+					<Path>SFX/VO_Gonz_Unhappy_02_1C9C67B2.wem</Path>
 				</File>
 				<File Id="670778273" Language="SFX">
 					<ShortName>SFX_LightSwitch_Off.wav</ShortName>
@@ -189,9 +232,17 @@
 					<ShortName>SFX_Door_Open_L1.wav</ShortName>
 					<Path>SFX/SFX_Door_Open_L1_1C9C67B2.wem</Path>
 				</File>
+				<File Id="759305288" Language="SFX">
+					<ShortName>VO_Gonz_CaughtKid_07.wav</ShortName>
+					<Path>SFX/VO_Gonz_CaughtKid_07_1C9C67B2.wem</Path>
+				</File>
 				<File Id="795269752" Language="SFX">
 					<ShortName>SFX_Oven_Stretch_04.wav</ShortName>
 					<Path>SFX/SFX_Oven_Stretch_04_1C9C67B2.wem</Path>
+				</File>
+				<File Id="813228153" Language="SFX">
+					<ShortName>MUS_KidsLead.wav</ShortName>
+					<Path>SFX/MUS_KidsLead_F17FB28C.wem</Path>
 				</File>
 				<File Id="858152331" Language="SFX">
 					<ShortName>SFX_Toaster_Water_Impact.wav</ShortName>
@@ -204,6 +255,10 @@
 				<File Id="963540285" Language="SFX">
 					<ShortName>SFX_Oven_Stretch_03.wav</ShortName>
 					<Path>SFX/SFX_Oven_Stretch_03_1C9C67B2.wem</Path>
+				</File>
+				<File Id="973283581" Language="SFX">
+					<ShortName>VO_Gonz_CaughtKid_02.wav</ShortName>
+					<Path>SFX/VO_Gonz_CaughtKid_02_1C9C67B2.wem</Path>
 				</File>
 				<File Id="973711741" Language="SFX">
 					<ShortName>SFX_Dishes_Loop.wav</ShortName>

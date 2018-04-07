@@ -18,16 +18,12 @@
 							<Position X="0" Y="3"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Gonzuela_Leading" ID="{606250E7-74AF-4F72-9A87-286994A300F1}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
-							<Position X="0" Y="4"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Kids_Leading" ID="{19E75DC0-A905-4826-9A62-B6E9B8C11BDE}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
-							<Position X="0" Y="5"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Bbq_Start" ID="{F36D64B0-A02C-443E-93BF-EEB9598B473E}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<ObjectRef Name="Gonzuela_Leads" ID="{606250E7-74AF-4F72-9A87-286994A300F1}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
 							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Gonz_CaughtKid" ID="{656460AE-865F-440E-81EE-82D76CFB244A}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="1" Y="1"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Dishes_Start" ID="{09A4D549-EDC4-4D0E-99AC-F77C343EB228}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
@@ -42,8 +38,12 @@
 							<Position X="1" Y="4"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Bbq_Stop" ID="{3A0BA28C-9281-4717-B308-E6B3BA50A550}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<ObjectRef Name="Kids_Lead" ID="{19E75DC0-A905-4826-9A62-B6E9B8C11BDE}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
 							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Kids_Crying" ID="{FB5E5CF4-1FC4-4CAC-A487-3BF8651E2E42}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="2" Y="1"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Dishes_Stop" ID="{4203BD2D-DD8E-43FC-BEF3-9B817B70CE20}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
@@ -58,12 +58,20 @@
 							<Position X="2" Y="4"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Bbq_Stop" ID="{3A0BA28C-9281-4717-B308-E6B3BA50A550}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Mix_Toaster_WaterDrop" ID="{FDF94BEF-22D3-4739-9B73-97FECB9F4B75}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
 							<Position X="3" Y="1"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Oven_Stop" ID="{3F0FE35C-147D-4133-95D6-113D3A425BF5}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
 							<Position X="3" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Bbq_Start" ID="{F36D64B0-A02C-443E-93BF-EEB9598B473E}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="4" Y="0"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Toaster_Drop" ID="{E0C83E31-67FA-4363-9DEA-F361ECB39216}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
@@ -80,8 +88,8 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
-							<GameParameterRef Name="MUS_LayersFade" ID="{7261FE18-5570-4FD6-BB00-F07A8CC3F801}"/>
-							<Value>51</Value>
+							<GameParameterRef Name="MUS_Stigners_Sidechain" ID="{7261FE18-5570-4FD6-BB00-F07A8CC3F801}"/>
+							<Value>-48</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
