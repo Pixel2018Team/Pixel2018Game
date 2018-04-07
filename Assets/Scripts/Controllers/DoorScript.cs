@@ -46,7 +46,7 @@ public class DoorScript : MonoBehaviour
 
         if (test)
         {
-            Debug.Log("test " + test);
+            //Debug.Log("test " + test);
             OpenClose(!hasToOpen);
             test = false;
         }
@@ -55,7 +55,7 @@ public class DoorScript : MonoBehaviour
         {
             if (hasToOpen)
             {
-                Debug.Log("signed angle = " + Vector3.SignedAngle(transform.forward, openDir, transform.up));
+                //Debug.Log("signed angle = " + Vector3.SignedAngle(transform.forward, openDir, transform.up));
                 transform.Rotate(transform.up, rotSpeed * Time.deltaTime);
 
                 if (Vector3.SignedAngle(transform.forward, openDir, transform.up) <= 0)
