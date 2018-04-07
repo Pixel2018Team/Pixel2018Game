@@ -7,6 +7,7 @@ public class ComboReceiver : MonoBehaviour {
     public GameObject triggerObject; //object that should interact with this
     public bool isActivated;
     public SnapPositionForTrigger snapPositionForTrigger;
+    public float offsetY = 1.0f;
 
     public enum SnapPositionForTrigger
     {
@@ -60,10 +61,14 @@ public class ComboReceiver : MonoBehaviour {
             
             else if (snapPositionForTrigger == SnapPositionForTrigger.Inside)
             {
-                obj.transform.position = transform.position;
+                obj.transform.position = new Vector3(transform.position.x, transform.position.y + offsetY, transform.position.z);
             }
 
             triggerObject.GetComponent<InteractableItem>().TriggerActionOnCombo(Enum.ComboAnimType.StaticToAnimated);
+
+            triggerObject.GetComponent<InteractableItem>().CheckProvokeChaos();
+
+            
         }
     }
 }

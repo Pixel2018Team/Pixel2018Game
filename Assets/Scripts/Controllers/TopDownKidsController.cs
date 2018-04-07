@@ -22,6 +22,7 @@ public class TopDownKidsController : MonoBehaviour
     private bool controlsLocked;
     private bool isRotatingTowardsObject;
     private State state;
+    private GameObject objectCurrentlyUsed;
 
     private enum State
     {
@@ -96,7 +97,9 @@ public class TopDownKidsController : MonoBehaviour
                    // DebugLogger.Log("Rotation over", Enum.LoggerMessageType.Important);
                     state = State.InAction;
                     //gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
+                    interactableObjectInRange.GetComponent<InteractableItem>().currentOwner = gameObject;
                     interactableObjectInRange.GetComponent<InteractableItem>().TriggerActionOnInteract();
+
                 }
             }
         }
@@ -111,13 +114,14 @@ public class TopDownKidsController : MonoBehaviour
                 DebugLogger.Log("Interaction phase over", Enum.LoggerMessageType.Important);
                 state = State.Normal;
                 controlsLocked = false;
-                gameObject.GetComponent<MeshRenderer>().material.color = Color.white;
+                objectCurrentlyUsed.GetComponent<InteractableItem>().CheckProvokeChaos();
+                releaseOwnershipOnUsedObject();
+                //gameObject.GetComponent<MeshRenderer>().material.color = Color.white;
             }
         }
 
         if(state == State.CarryingObject)
         {
-
         }
 
         if (state == State.Catched)
@@ -131,12 +135,13 @@ public class TopDownKidsController : MonoBehaviour
         if(obj != null)
         {
             var interactable = obj.GetComponent<InteractableItem>();
-
+            Debug.Log("sdsd");
             if(interactable != null && interactable.isInteractable)
             {
                 if (interactable.interactableType == Enum.InteractableType.SingleAction)
                 {
                     state = State.RotatingTowardsObject;
+                    objectCurrentlyUsed = obj;
                     _moveInput = Vector3.zero;
                     _moveVelocity = Vector3.zero;
                     controlsLocked = true;
@@ -147,14 +152,25 @@ public class TopDownKidsController : MonoBehaviour
                 {
                     state = State.CarryingObject;
                     objectCarried = obj;
-                    objectCarried.transform.position = transform.position + transform.forward * 0.5f;
+                    objectCurrentlyUsed = obj;
+                    objectCarried.transform.position = new Vector3( transform.position.x,  transform.position.y + 0.5f, transform.position.z) + transform.forward * 0.5f;
                     objectCarried.transform.parent = transform;
                     objectCarried.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                     objectCarried.GetComponent<Rigidbody>().useGravity = false;
                     objectCarried.GetComponent<Collider>().enabled = false;
+                    objectCarried.GetComponent<InteractableItem>().currentOwner = gameObject;
                 }
             }
         }
+    }
+
+    public void releaseOwnershipOnUsedObject()
+    {
+        if(objectCurrentlyUsed != null)
+        {
+            objectCurrentlyUsed.GetComponent<InteractableItem>().currentOwner = null;
+            objectCurrentlyUsed = null;
+        }    
     }
 
     public void DropCarriedObject(bool dropOnReceiver)
@@ -177,9 +193,10 @@ public class TopDownKidsController : MonoBehaviour
                 objectCarried.GetComponent<Rigidbody>().AddForce(transform.forward.normalized * tossForce, ForceMode.Impulse);
                 objectCarried.transform.parent = null;
             }
-
+            objectCarried.GetComponent<InteractableItem>().currentOwner = null;
             state = State.Normal;
             objectCarried = null;
+            objectCurrentlyUsed = null;
         }
     }
 
