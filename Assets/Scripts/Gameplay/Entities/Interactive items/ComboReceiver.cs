@@ -5,6 +5,7 @@ using UnityEngine;
 public class ComboReceiver : MonoBehaviour {
 
     public GameObject triggerObject; //object that should interact with this
+    public SpriteController _sprite;
     public bool isActivated;
     public SnapPositionForTrigger snapPositionForTrigger;
     public float offsetY = 1.0f;
@@ -66,9 +67,8 @@ public class ComboReceiver : MonoBehaviour {
 
             triggerObject.GetComponent<InteractableItem>().TriggerActionOnCombo(Enum.ComboAnimType.StaticToAnimated);
 
+            _sprite.SetActive(true);
             triggerObject.GetComponent<InteractableItem>().CheckProvokeChaos();
-
-            
         }
     }
 }
