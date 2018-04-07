@@ -281,7 +281,7 @@ GameObject:
   - component: {fileID: 195312867893963868}
   - component: {fileID: 114223382703071410}
   m_Layer: 0
-  m_Name: Boy
+  m_Name: boy
   m_TagString: kid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2631,7 +2631,7 @@ MonoBehaviour:
   facingAngleMargin: 5
   facingRotationSpeed: 5
   interactableObjectInRange: {fileID: 0}
-  interactableObjectReceiverInRanger: {fileID: 0}
+  interactableObjectReceiverInRange: {fileID: 0}
   tossForce: 5
   requestedSwitchKid: 0
   controlledByAI: 0

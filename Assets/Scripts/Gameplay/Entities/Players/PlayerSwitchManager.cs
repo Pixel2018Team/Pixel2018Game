@@ -72,7 +72,6 @@ public class PlayerSwitchManager : MonoBehaviour {
         {
             var controller = kidToModify.GetComponent<TopDownKidsController>();
             controller.controlledByAI = true;
-            controller.SetAnimationsAIOrPlayer();
             //drop any object held by the ai
             if (controller.objectCarried != null)
             {
@@ -85,6 +84,7 @@ public class PlayerSwitchManager : MonoBehaviour {
             {
                 ai.enabled = true;
                 ai.EnableDisableAgent(true);
+                ai.StartIdle();
             }
         }
     }
@@ -97,7 +97,6 @@ public class PlayerSwitchManager : MonoBehaviour {
         {
             var controller = kidToModify.GetComponent<TopDownKidsController>();
             controller.controlledByAI = false;
-            controller.SetAnimationsAIOrPlayer();
             var ai = kidToModify.GetComponent<AIKid>();
 
             if (ai != null)

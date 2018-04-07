@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class AIKid : MonoBehaviour
 {
 
-    public TopDownKidsController controllerReference;
+    public TopDownKidsController _controllerReference;
     public List<GameObject> wayPoints;
     public int maxIdleTime; //seconds
     public float distanceMargin; //margin used to decide if the npc has reached a waypoint
@@ -18,6 +18,9 @@ public class AIKid : MonoBehaviour
     private bool canChooseWaypoint;
     private Vector3 targetWaypoint;
     private Animator _animator;
+    private float stuckDistance = 1.5f;
+    private Vector3 stuckLastPosition;
+    private float stuckDistanceTick = 3f;
 
     public enum AIState
     {
@@ -30,6 +33,7 @@ public class AIKid : MonoBehaviour
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
+        _controllerReference = GetComponent<TopDownKidsController>();
     }
 
     // Use this for initialization
@@ -37,6 +41,23 @@ public class AIKid : MonoBehaviour
     {
         wayPoints = WaypointsManager.GetWaypointsManager().waypoints;
         StartIdle();
+        stuckLastPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        InvokeRepeating("CheckForAIStuck", stuckDistanceTick, stuckDistanceTick);
+    }
+
+    public void CheckForAIStuck()
+    {
+        Debug.Log("sfsdfds");
+        if(_controllerReference.controlledByAI && state == AIState.GoingToWayPoint)
+        {
+            DebugLogger.Log("Checking for stuck", Enum.LoggerMessageType.Important);
+            if(Vector3.Distance(transform.position, stuckLastPosition) <= stuckDistance)
+            {
+                DebugLogger.Log("AI is stuck", Enum.LoggerMessageType.Error);
+                StartIdle();
+            }
+        }
+        stuckLastPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
     }
 
     // Update is called once per frame
@@ -60,6 +81,7 @@ public class AIKid : MonoBehaviour
 
         else if (state == AIState.GoingToWayPoint)
         {
+            _controllerReference.SetPlayerVelocity(_navMeshAgent.velocity);
             //Debug.Log("remaining distance : " + Vector3.Distance(transform.position, targetWaypoint));
             //If waypoint reached, trigger idle state
             if (Vector3.Distance(transform.position, _navMeshAgent.destination) <= distanceMargin)
@@ -70,7 +92,6 @@ public class AIKid : MonoBehaviour
             //Else continue moving
             else
             {
-
             }
         }
     }
@@ -88,7 +109,6 @@ public class AIKid : MonoBehaviour
         currentIdleTimer = 0;
         nextIdleEndTime = Random.Range(0, maxIdleTime);
        // DebugLogger.Log(gameObject.name + "starts idling'!", Enum.LoggerMessageType.Error);
-        _animator.SetBool("ai_walking", false);
     }
 
     //Choose the next waypoint to move to
@@ -101,8 +121,7 @@ public class AIKid : MonoBehaviour
             //DebugLogger.Log(gameObject.name + "'s destination = " + targetWaypoint, Enum.LoggerMessageType.Important);
             _navMeshAgent.SetDestination(targetWaypoint);
             state = AIState.GoingToWayPoint;
-            _animator.SetBool("ai_walking", true);
-            DebugLogger.Log(gameObject.name + "starts moving !", Enum.LoggerMessageType.Important);
+            //DebugLogger.Log(gameObject.name + "starts moving !", Enum.LoggerMessageType.Important);
         }
     }
 

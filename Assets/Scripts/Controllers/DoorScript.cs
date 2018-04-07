@@ -7,32 +7,37 @@ public class DoorScript : MonoBehaviour
     public float rotSpeed;
     public bool test;
     private Vector3 startDir, openDir, closeDir;
+    private int numberOfKidsInbounds;
+    public bool doorLocked;
 
     public void Awake()
     {
         closeDir = new Vector3(transform.forward.x, transform.forward.y, transform.forward.z);
         openDir = new Vector3(transform.right.x, transform.right.y, transform.right.z);
         Debug.DrawRay(transform.position, closeDir, Color.green, 1200);
-
         Debug.DrawRay(transform.position, openDir, Color.yellow, 1200);
+        numberOfKidsInbounds = 0;
     }
 
     public void OpenClose(bool open)
     {
-        hasToOpen = open;
-        Debug.Log("open = " + open);
-
-        if (hasToOpen)
+        if (!doorLocked)
         {
-            startDir = closeDir;
-        }
+            hasToOpen = open;
+            //Debug.Log("open = " + open);
 
-        else
-        {
-            startDir = openDir;
-        }
+            if (hasToOpen)
+            {
+                startDir = closeDir;
+            }
 
-        isRotating = true;
+            else
+            {
+                startDir = openDir;
+            }
+
+            isRotating = true;
+        }
     }
 
     public void Update()
@@ -57,7 +62,7 @@ public class DoorScript : MonoBehaviour
                 {
                     isRotating = false;
                 }
-                Debug.Log("angle from starting angle = " + Vector3.Angle(transform.forward, openDir));
+               // Debug.Log("angle from starting angle = " + Vector3.Angle(transform.forward, openDir));
             }
             else
             {
@@ -66,12 +71,8 @@ public class DoorScript : MonoBehaviour
                 {
                     isRotating = false;
                 }
-                Debug.Log("angle from starting angle = " + Vector3.Angle(transform.forward, closeDir));
+                //Debug.Log("angle from starting angle = " + Vector3.Angle(transform.forward, closeDir));
             }
-
-
-
-
         }
     }
 
@@ -83,5 +84,32 @@ public class DoorScript : MonoBehaviour
         LevelManager.Instance.OpenAllDoors();
         // TODO: Code to close this door
         //this._open = false;
+    }
+
+    public void OnTriggerEnter(Collider col)
+    {
+        var obj = col.gameObject;
+        if (obj.tag == "kid")
+        {
+            numberOfKidsInbounds++;
+            if (obj.GetComponent<TopDownKidsController>().controlledByAI)
+            {
+                OpenClose(true);
+            }
+        }
+    }
+
+    public void OnTriggerExit(Collider col)
+    {
+        var obj = col.gameObject;
+        if (obj.tag == "kid")
+        {
+            numberOfKidsInbounds--;
+
+            if(numberOfKidsInbounds == 0)
+            {
+                OpenClose(false);
+            }
+        }
     }
 }

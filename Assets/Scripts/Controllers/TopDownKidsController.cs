@@ -51,23 +51,9 @@ public class TopDownKidsController : MonoBehaviour
         _animator = GetComponent<Animator>();
     }
 
-    public void SetAnimationsAIOrPlayer()
+    public void SetPlayerVelocity(Vector3 vel)
     {
-        if (controlledByAI)
-        {
-            if (_animator.GetBool("controlledByAI") == false)
-            {
-                _animator.SetBool("controlledByAI", true);
-            }
-        }
-
-        else
-        {
-            if (_animator.GetBool("controlledByAI") == true)
-            {
-                _animator.SetBool("controlledByAI", false);
-            }
-        }
+        _moveVelocity = vel;
     }
 
     void Update()
