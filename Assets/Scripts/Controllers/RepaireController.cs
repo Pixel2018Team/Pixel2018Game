@@ -52,9 +52,12 @@ public class RepaireController : MonoBehaviour
     {
         if (_actor == other.gameObject)
         {
-            _isActive = false;
-            _actionButton.SetActive(false);
-            _actor = null;
+            if (!acting)
+            {
+                _isActive = false;
+                _actionButton.SetActive(false);
+                _actor = null;
+            }
         }
     }
 
