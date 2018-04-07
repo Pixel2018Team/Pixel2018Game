@@ -2415,6 +2415,7 @@ MonoBehaviour:
   isBroken: 0
   breakSoundEventName: Oven_Start
   fixSoundEventName: Oven_Stop
+  chaosLevel: 0
 --- !u!4 &472989963 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 054d311c9d5bc6c47bacea7f25a95570, type: 3}
@@ -5038,7 +5039,7 @@ MonoBehaviour:
   isTag: 0
   freezeTime: 10
   currentTime: 0
-  playerTag: 0
+  playerTag: 1
 --- !u!114 &814195488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5103,7 +5104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  playerTag: 0
+  playerTag: 1
   objectCarried: {fileID: 0}
   lockActionTime: 3
   currentlockActionTime: 0
@@ -5122,7 +5123,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 814195486}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 81d189070f08ba84ba4ce3fd16da7a52, type: 3}
   m_Name: 
@@ -6306,6 +6307,7 @@ MonoBehaviour:
   isBroken: 0
   breakSoundEventName: Bbq_Start
   fixSoundEventName: Bbq_Stop
+  chaosLevel: 0
 --- !u!65 &897984876
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7777,6 +7779,7 @@ MonoBehaviour:
   isBroken: 0
   breakSoundEventName: Picture_Break
   fixSoundEventName: Picture_Replace
+  chaosLevel: 0
 --- !u!1 &1090137755
 GameObject:
   m_ObjectHideFlags: 0
@@ -9915,7 +9918,7 @@ MonoBehaviour:
   isTag: 0
   freezeTime: 10
   currentTime: 0
-  playerTag: 0
+  playerTag: 1
 --- !u!114 &1393336335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9980,7 +9983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  playerTag: 0
+  playerTag: 1
   objectCarried: {fileID: 0}
   lockActionTime: 3
   currentlockActionTime: 0
@@ -9999,7 +10002,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1393336333}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 81d189070f08ba84ba4ce3fd16da7a52, type: 3}
   m_Name: 
@@ -11481,10 +11484,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1591576443}
-  - component: {fileID: 1591576444}
   - component: {fileID: 1591576445}
   m_Layer: 0
-  m_Name: level_manager
+  m_Name: LevelManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11503,17 +11505,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 56
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1591576444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1591576442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07796e15bf89b5c45b2d902e8783e7c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1591576445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11532,6 +11523,7 @@ MonoBehaviour:
   maxChaos: 100
   _chaosBar: {fileID: 1458334290}
   _consuelaLeads: 1
+  _chaos: 0
 --- !u!4 &1598898895 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400062, guid: 0958b52302e396449bec1a318a44a0fb, type: 3}
@@ -11805,7 +11797,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1668862415}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -13262,7 +13254,7 @@ MonoBehaviour:
   isTag: 0
   freezeTime: 10
   currentTime: 0
-  playerTag: 0
+  playerTag: 1
 --- !u!114 &1866680879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13327,7 +13319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  playerTag: 0
+  playerTag: 1
   objectCarried: {fileID: 0}
   lockActionTime: 3
   currentlockActionTime: 0
@@ -13346,7 +13338,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1866680877}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 81d189070f08ba84ba4ce3fd16da7a52, type: 3}
   m_Name: 

@@ -108,7 +108,7 @@ public class LevelManager : MonoBehaviour
 
         if(_gameover)
         {
-            //if (Input.GetButtonDown("P1_X") || Input.GetButtonDown("P2_X")) SceneManager.LoadScene(2);
+            if (Input.GetButtonDown("P1_X") || Input.GetButtonDown("P2_X")) SceneManager.LoadScene(2);
         }
     }
 

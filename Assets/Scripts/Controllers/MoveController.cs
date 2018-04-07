@@ -32,7 +32,7 @@ public class MoveController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(_actor == null)
+        if (_actor == null)
         {
             if (isBroken && other.tag == GONZUELA_TAG)
             {
@@ -41,9 +41,9 @@ public class MoveController : MonoBehaviour
                 _actor = other.gameObject;
                 playerTag = _actor.GetComponent<TopDownController>().playerTag;
             }
-            else if(!isBroken && other.tag == KID_TAG)
+            else if (!isBroken && other.tag == KID_TAG)
             {
-                var controller = _actor.GetComponent<TopDownKidsController>();
+                var controller = other.gameObject.GetComponent<TopDownKidsController>();
                 if (!controller.controlledByAI)
                 {
                     _isActive = true;
@@ -84,9 +84,10 @@ public class MoveController : MonoBehaviour
         if (isBroken)
         {
             chaosLevel += Time.deltaTime;
-            if(chaosLevel > 1.0f)
+            if (chaosLevel > 1.0f)
             {
                 chaosLevel = 0.0f;
+                Debug.Log(LevelManager.Instance.gameObject.name);
                 LevelManager.Instance.AddChaos(1);
             }
         }
@@ -106,7 +107,7 @@ public class MoveController : MonoBehaviour
                 else
                 {
                     var controller = _actor.GetComponent<TopDownKidsController>();
-                    if(controller != null)
+                    if (controller != null)
                         controller.enabled = true;
                 }
                 var animator = _actor.GetComponent<Animator>();
@@ -123,6 +124,7 @@ public class MoveController : MonoBehaviour
                 {
                     AkSoundEngine.PostEvent(fixSoundEventName, gameObject);
                     gameObject.transform.Rotate(-_destroyRotation);
+                    LevelManager.Instance.AddChaos(-10);
                 }
                 remainingTime = timeForAction;
                 _image.fillAmount = 0.0f;

@@ -22,6 +22,8 @@ public class RepaireController : MonoBehaviour
     public string breakSoundEventName;
     public string fixSoundEventName;
 
+    public float chaosLevel = 0.0f;
+
     void Start()
     {
         _image = gameObject.GetComponentInChildren<Image>();
@@ -40,7 +42,7 @@ public class RepaireController : MonoBehaviour
             }
             else if(!isBroken && other.tag == KID_TAG)
             {
-                var controller = _actor.GetComponent<TopDownKidsController>();
+                var controller = other.gameObject.GetComponent<TopDownKidsController>();
                 if (!controller.controlledByAI)
                 {
                     _isActive = true;
@@ -81,6 +83,16 @@ public class RepaireController : MonoBehaviour
 
     void Update()
     {
+        if (isBroken)
+        {
+            chaosLevel += Time.deltaTime;
+            if (chaosLevel > 1.0f)
+            {
+                chaosLevel = 0.0f;
+                LevelManager.Instance.AddChaos(1);
+            }
+        }
+
         if (acting)
         {
             remainingTime -= Time.deltaTime;
@@ -109,6 +121,7 @@ public class RepaireController : MonoBehaviour
                 else
                 {
                     AkSoundEngine.PostEvent(fixSoundEventName, gameObject);
+                    LevelManager.Instance.AddChaos(-10);
                 }
 
                 _smoke.SetActive(isBroken);

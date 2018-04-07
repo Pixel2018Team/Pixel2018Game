@@ -202,6 +202,7 @@ public class TopDownKidsController : MonoBehaviour
             {
                 AkSoundEngine.PostEvent("Toaster_Drop", gameObject);
                 AkSoundEngine.PostEvent("Toaster_WaterImpact", gameObject);
+                LevelManager.Instance.AddChaos(15);
                 interactableObjectReceiverInRange.GetComponent<ComboReceiver>().ReceiveObject(objectCarried);
                 objectCarried.GetComponent<InteractableItem>().isInteractable = false;
             }
