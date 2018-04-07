@@ -80,7 +80,7 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         // Populating the list of doors
-        foreach(var obj in FindObjectsOfType<DoorScript>())
+        foreach (var obj in FindObjectsOfType<DoorScript>())
         {
             DoorScript dm = obj;
             if (obj != null) _doors.Add(dm);
@@ -88,19 +88,22 @@ public class LevelManager : MonoBehaviour
 
         _startingChaos = (maxChaos / 2);
         _chaos = _startingChaos;
-        _chaosBar.value = ((float)_chaos / (float)maxChaos);
+        if(_chaosBar != null)
+        {
+            _chaosBar.value = ((float)_chaos / (float)maxChaos);
+        }
     }
 
     // Update is called once per frame
     private void Update()
     {
-        if(_gameTimer > 0) _gameTimer -= Time.deltaTime;
+        if (_gameTimer > 0) _gameTimer -= Time.deltaTime;
         if (_gameTimer <= 0) FinishLevel();
         if (_chaos >= maxChaos) FinishLevel();
 
-        if(_gameTimer <= 0)
+        if (_gameTimer <= 0)
         {
-            if(Input.GetButtonDown("P1_X") || Input.GetButtonDown("P2_X"))
+            if (Input.GetButtonDown("P1_X") || Input.GetButtonDown("P2_X"))
             {
                 Reset();
             }
@@ -121,11 +124,11 @@ public class LevelManager : MonoBehaviour
     private void FinishLevel()
     {
         // Show the gameover screen
-        if(_ConsuelaGOPanel != null && _chaos <= _startingChaos)
+        if (_ConsuelaGOPanel != null && _chaos <= _startingChaos)
         {
             _ConsuelaGOPanel.SetActive(true);
         }
-        else if(_KidsGOPanel != null && _chaos > _startingChaos)
+        else if (_KidsGOPanel != null && _chaos > _startingChaos)
         {
             _KidsGOPanel.SetActive(true);
         }
@@ -134,7 +137,7 @@ public class LevelManager : MonoBehaviour
 
     public void OpenAllDoors()
     {
-        foreach(DoorScript door in _doors)
+        foreach (DoorScript door in _doors)
         {
             door.OpenClose(true);
         }
@@ -148,14 +151,18 @@ public class LevelManager : MonoBehaviour
     {
         _chaos += amount;
 
-        _chaosBar.value = ((float)_chaos / (float)maxChaos);
+        if(_chaosBar != null)
+        {
+            _chaosBar.value = ((float)_chaos / (float)maxChaos);
+        }
 
         if (_chaos > _startingChaos && _consuelaLeads)
         {
             _consuelaLeads = false;
+            AkSoundEngine.SetState("MUS_Progression", "MUS_KidsLeads");
 
-            if(_consuelaHappy != null)
-            _consuelaHappy.gameObject.SetActive(false);
+            if (_consuelaHappy != null)
+                _consuelaHappy.gameObject.SetActive(false);
 
             if (_consuelaSad != null)
                 _consuelaSad.gameObject.SetActive(true);
@@ -169,6 +176,7 @@ public class LevelManager : MonoBehaviour
         else if (_chaos < _startingChaos && !_consuelaLeads)
         {
             _consuelaLeads = true;
+            AkSoundEngine.SetState("MUS_Progression", "MUS_GonzuelaLeads");
 
             if (_consuelaHappy != null) _consuelaHappy.gameObject.SetActive(true);
             if (_consuelaSad != null) _consuelaSad.gameObject.SetActive(false);

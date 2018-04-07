@@ -31,10 +31,24 @@ public class GonzuelaController : MonoBehaviour
             if (colliders[i].tag == BREAK_TAG)
             {
                 var controller = colliders[i].GetComponent<RepaireController>();
-                if (controller.acting && !controller.isBroken)
+                if(controller != null)
                 {
-                    controller.CatchActing();
-                    _animator.SetTrigger("angry");
+                    if (controller.acting && !controller.isBroken)
+                    {
+                        controller.CatchActing();
+                        _animator.SetTrigger("angry");
+                        AkSoundEngine.PostEvent("Gonz_CaughtKid", gameObject);
+                    }
+                }
+                else
+                {
+                    var moveController = colliders[i].GetComponent<MoveController>();
+                    if (moveController.acting && !moveController.isBroken)
+                    {
+                        moveController.CatchActing();
+                        _animator.SetTrigger("angry");
+                        AkSoundEngine.PostEvent("Gonz_CaughtKid", gameObject);
+                    }
                 }
             }
         }

@@ -25,6 +25,8 @@ public class KidController : MonoBehaviour
         var animator = GetComponent<Animator>();
         animator.SetBool("crying", true);
         transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
+        AkSoundEngine.PostEvent("Kids_Crying", gameObject);
+
         var controller = GetComponent<TopDownKidsController>();
         controller.enabled = false;
 

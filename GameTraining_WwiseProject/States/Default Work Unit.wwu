@@ -5,7 +5,7 @@
 			<ChildrenList>
 				<StateGroup Name="MUS_Progression" ID="{355EA027-2A37-4E01-8E93-1A84E68DC0EB}">
 					<PropertyList>
-						<Property Name="DefaultTransitionTime" Type="Real64" Value="5"/>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="2"/>
 					</PropertyList>
 					<ChildrenList>
 						<State Name="None" ID="{F0E4814B-11F4-46E8-B384-95C717C83F43}"/>

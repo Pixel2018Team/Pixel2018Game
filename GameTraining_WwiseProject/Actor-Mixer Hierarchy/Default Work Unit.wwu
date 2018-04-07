@@ -2668,7 +2668,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="VO_Kids_Happy" ID="{804DC8AD-1C4A-4649-AB63-C560D620AA31}" ShortID="51650432">
+						<ActorMixer Name="Kids" ID="{50F355B1-56D4-4C5E-A007-345329547D7A}" ShortID="656064343">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E4CFB62-4323-4086-A7E2-C74214586B22}"/>
@@ -2678,16 +2678,128 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="VO_Kids_Happy" ID="{943EDA92-7823-4C8A-BFC1-F285342B4410}" ShortID="365936063">
-									<Language>SFX</Language>
-									<AudioFile>VO_Kids_Happy.wav</AudioFile>
-								</AudioFileSource>
+								<RandomSequenceContainer Name="VO_Kids_Crying" ID="{535B1BCF-BE79-442F-B523-91D232FAF729}" ShortID="635729817">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E4CFB62-4323-4086-A7E2-C74214586B22}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BBEB7192-4061-40B2-BB2C-F43371343F1E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="VO_Baby_Hit_01" ID="{E33D334F-50BB-4B37-BF7B-C01765EA4803}" ShortID="321590186">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E4CFB62-4323-4086-A7E2-C74214586B22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BBEB7192-4061-40B2-BB2C-F43371343F1E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="VO_Baby_Hit_01" ID="{55E67EBF-2923-4A32-A537-95B0DF77534A}" ShortID="435133464">
+													<Language>SFX</Language>
+													<AudioFile>VO_Baby_Hit_01.Wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="VO_Baby_Hit_01" ID="{55E67EBF-2923-4A32-A537-95B0DF77534A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="VO_Baby_Hit_02" ID="{2B4B7BA4-39E9-4899-ACAD-E27BF14FCDFC}" ShortID="898892248">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E4CFB62-4323-4086-A7E2-C74214586B22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BBEB7192-4061-40B2-BB2C-F43371343F1E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="VO_Baby_Hit_02" ID="{7FD7591B-7660-4848-962A-5AEF04662A2F}" ShortID="1062726546">
+													<Language>SFX</Language>
+													<AudioFile>VO_Baby_Hit_02.Wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="VO_Baby_Hit_02" ID="{7FD7591B-7660-4848-962A-5AEF04662A2F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="VO_Baby_Hit_03" ID="{7CF1AC21-A46F-4AC6-B310-555A0F224B0A}" ShortID="510088158">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E4CFB62-4323-4086-A7E2-C74214586B22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BBEB7192-4061-40B2-BB2C-F43371343F1E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="VO_Baby_Hit_03" ID="{D9AB4C8F-1F37-406D-AF36-3A2A6E5FF89A}" ShortID="64366828">
+													<Language>SFX</Language>
+													<AudioFile>VO_Baby_Hit_03.Wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="VO_Baby_Hit_03" ID="{D9AB4C8F-1F37-406D-AF36-3A2A6E5FF89A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<Sound Name="VO_Kids_Happy" ID="{804DC8AD-1C4A-4649-AB63-C560D620AA31}" ShortID="51650432">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E4CFB62-4323-4086-A7E2-C74214586B22}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BBEB7192-4061-40B2-BB2C-F43371343F1E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Kids_Happy" ID="{943EDA92-7823-4C8A-BFC1-F285342B4410}" ShortID="365936063">
+											<Language>SFX</Language>
+											<AudioFile>VO_Kids_Happy.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Kids_Happy" ID="{943EDA92-7823-4C8A-BFC1-F285342B4410}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VO_Kids_Unhappy" ID="{BDD60C6B-46E7-403A-81A2-61C6419EAB4A}" ShortID="144276896">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E4CFB62-4323-4086-A7E2-C74214586B22}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BBEB7192-4061-40B2-BB2C-F43371343F1E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VO_Kids_Unhappy" ID="{8773747A-632F-437F-B111-1C1662D49301}" ShortID="452920392">
+											<Language>SFX</Language>
+											<AudioFile>VO_Kids_Unhappy.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VO_Kids_Unhappy" ID="{8773747A-632F-437F-B111-1C1662D49301}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="VO_Kids_Happy" ID="{943EDA92-7823-4C8A-BFC1-F285342B4410}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="VO_Kids_Unhappy" ID="{BDD60C6B-46E7-403A-81A2-61C6419EAB4A}" ShortID="144276896">
+						</ActorMixer>
+						<ActorMixer Name="Gonz" ID="{79401EBB-F7F6-4815-8267-3C5341450A7A}" ShortID="396412029">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E4CFB62-4323-4086-A7E2-C74214586B22}"/>
@@ -2697,84 +2809,326 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="VO_Kids_Unhappy" ID="{8773747A-632F-437F-B111-1C1662D49301}" ShortID="452920392">
-									<Language>SFX</Language>
-									<AudioFile>VO_Kids_Unhappy.wav</AudioFile>
-								</AudioFileSource>
+								<RandomSequenceContainer Name="Gonz_CaughtKid" ID="{028B55DD-4F70-4537-8731-190F98D934E9}" ShortID="491447055">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E4CFB62-4323-4086-A7E2-C74214586B22}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BBEB7192-4061-40B2-BB2C-F43371343F1E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="VO_Gonz_CaughtKid_01" ID="{E35BB484-D21B-4BE0-9B4D-CFDC64D55D84}" ShortID="999767396">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E4CFB62-4323-4086-A7E2-C74214586B22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BBEB7192-4061-40B2-BB2C-F43371343F1E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="VO_Gonz_CaughtKid_01" ID="{D309026F-1AEF-45CC-B3DA-A9953D98DF58}" ShortID="109642826">
+													<Language>SFX</Language>
+													<AudioFile>VO_Gonz_CaughtKid_01.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="VO_Gonz_CaughtKid_01" ID="{D309026F-1AEF-45CC-B3DA-A9953D98DF58}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="VO_Gonz_CaughtKid_02" ID="{F5CA2DDA-1009-4D3B-8CCC-BC79DE5B31F7}" ShortID="584151711">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E4CFB62-4323-4086-A7E2-C74214586B22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BBEB7192-4061-40B2-BB2C-F43371343F1E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="VO_Gonz_CaughtKid_02" ID="{2AE6F52B-5DC1-48AB-8C53-DA8A4EC8C5F1}" ShortID="973283581">
+													<Language>SFX</Language>
+													<AudioFile>VO_Gonz_CaughtKid_02.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="VO_Gonz_CaughtKid_02" ID="{2AE6F52B-5DC1-48AB-8C53-DA8A4EC8C5F1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="VO_Gonz_CaughtKid_03" ID="{F970D394-199B-44D8-866C-66F9CE449812}" ShortID="649395178">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E4CFB62-4323-4086-A7E2-C74214586B22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BBEB7192-4061-40B2-BB2C-F43371343F1E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="VO_Gonz_CaughtKid_03" ID="{1D4CC326-2C2A-4364-AEC8-D9964627231B}" ShortID="458327607">
+													<Language>SFX</Language>
+													<AudioFile>VO_Gonz_CaughtKid_03.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="VO_Gonz_CaughtKid_03" ID="{1D4CC326-2C2A-4364-AEC8-D9964627231B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="VO_Gonz_CaughtKid_04" ID="{DEEAB888-4A9F-4785-930B-2324530B784F}" ShortID="900138748">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E4CFB62-4323-4086-A7E2-C74214586B22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BBEB7192-4061-40B2-BB2C-F43371343F1E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="VO_Gonz_CaughtKid_04" ID="{76512CD9-18E1-4990-B40D-9B8F84BCFFDD}" ShortID="545005782">
+													<Language>SFX</Language>
+													<AudioFile>VO_Gonz_CaughtKid_04.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="VO_Gonz_CaughtKid_04" ID="{76512CD9-18E1-4990-B40D-9B8F84BCFFDD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="VO_Gonz_CaughtKid_05" ID="{45A733F8-F8FE-439A-8CB1-8247CA5441D2}" ShortID="447531854">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E4CFB62-4323-4086-A7E2-C74214586B22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BBEB7192-4061-40B2-BB2C-F43371343F1E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="VO_Gonz_CaughtKid_05" ID="{C0987625-B5C7-4B92-9B05-41DDAF8CFCF1}" ShortID="589784696">
+													<Language>SFX</Language>
+													<AudioFile>VO_Gonz_CaughtKid_05.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="VO_Gonz_CaughtKid_05" ID="{C0987625-B5C7-4B92-9B05-41DDAF8CFCF1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="VO_Gonz_CaughtKid_06" ID="{D3E9199C-F6FB-40F5-9FCE-C395216888B9}" ShortID="5155232">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E4CFB62-4323-4086-A7E2-C74214586B22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BBEB7192-4061-40B2-BB2C-F43371343F1E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="VO_Gonz_CaughtKid_06" ID="{67FC6BD2-4EC9-410B-AC6E-619D118ECDBF}" ShortID="182147281">
+													<Language>SFX</Language>
+													<AudioFile>VO_Gonz_CaughtKid_06.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="VO_Gonz_CaughtKid_06" ID="{67FC6BD2-4EC9-410B-AC6E-619D118ECDBF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="VO_Gonz_CaughtKid_07" ID="{F4A1185A-4AC7-4F14-A5E5-CE3141FDBDFB}" ShortID="543621808">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E4CFB62-4323-4086-A7E2-C74214586B22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BBEB7192-4061-40B2-BB2C-F43371343F1E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="VO_Gonz_CaughtKid_07" ID="{4FD3B9E1-D98A-4F51-BD1B-88C5DC8ECCFA}" ShortID="759305288">
+													<Language>SFX</Language>
+													<AudioFile>VO_Gonz_CaughtKid_07.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="VO_Gonz_CaughtKid_07" ID="{4FD3B9E1-D98A-4F51-BD1B-88C5DC8ECCFA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Gonz_Happy" ID="{73927598-3EC3-49B1-A978-E3BA8B052CC9}" ShortID="937892434">
+									<PropertyList>
+										<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E4CFB62-4323-4086-A7E2-C74214586B22}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BBEB7192-4061-40B2-BB2C-F43371343F1E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="VO_Gonz_Happy_01" ID="{A099620C-2D78-4012-AF8F-C5DA48252A4E}" ShortID="90198584">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E4CFB62-4323-4086-A7E2-C74214586B22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BBEB7192-4061-40B2-BB2C-F43371343F1E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="VO_Gonz_Happy_01" ID="{272C921D-3C21-47C8-9C59-C5C605212F5D}" ShortID="139940600">
+													<Language>SFX</Language>
+													<AudioFile>VO_Gonz_Happy_01.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="VO_Gonz_Happy_01" ID="{272C921D-3C21-47C8-9C59-C5C605212F5D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="VO_Gonz_Happy_02" ID="{846FAF2E-243D-4FA9-BF55-FD10C4AC37BE}" ShortID="984938111">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E4CFB62-4323-4086-A7E2-C74214586B22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BBEB7192-4061-40B2-BB2C-F43371343F1E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="VO_Gonz_Happy_02" ID="{7720E8D4-10FE-4081-B107-43B97A515D25}" ShortID="1045082646">
+													<Language>SFX</Language>
+													<AudioFile>VO_Gonz_Happy_02.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="VO_Gonz_Happy_02" ID="{7720E8D4-10FE-4081-B107-43B97A515D25}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Gonz_Unhappy" ID="{5490A7CC-0D4D-457B-97D2-2A02A07ED16D}" ShortID="949882144">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E4CFB62-4323-4086-A7E2-C74214586B22}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BBEB7192-4061-40B2-BB2C-F43371343F1E}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="VO_Gonz_Unhappy_01" ID="{74855DC4-8AF5-4849-A111-238908086181}" ShortID="1026743876">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E4CFB62-4323-4086-A7E2-C74214586B22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BBEB7192-4061-40B2-BB2C-F43371343F1E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="VO_Gonz_Unhappy_01" ID="{3AA16137-7A13-444D-8E0F-2A49C738286E}" ShortID="275608934">
+													<Language>SFX</Language>
+													<AudioFile>VO_Gonz_Unhappy_01.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="VO_Gonz_Unhappy_01" ID="{3AA16137-7A13-444D-8E0F-2A49C738286E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="VO_Gonz_Unhappy_02" ID="{FDB72077-3EBA-4718-8476-42066C0D7963}" ShortID="384093075">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E4CFB62-4323-4086-A7E2-C74214586B22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BBEB7192-4061-40B2-BB2C-F43371343F1E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="VO_Gonz_Unhappy_02" ID="{6074E7C4-5157-4E47-B54D-0F7CD3940E46}" ShortID="660286116">
+													<Language>SFX</Language>
+													<AudioFile>VO_Gonz_Unhappy_02.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="VO_Gonz_Unhappy_02" ID="{6074E7C4-5157-4E47-B54D-0F7CD3940E46}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="VO_Gonz_Unhappy_03" ID="{6E03E7B2-6941-4200-963C-3A21D2829987}" ShortID="673243995">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E4CFB62-4323-4086-A7E2-C74214586B22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BBEB7192-4061-40B2-BB2C-F43371343F1E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="VO_Gonz_Unhappy_03" ID="{688B8374-1EE3-4859-87E8-560C165AD1F6}" ShortID="461821238">
+													<Language>SFX</Language>
+													<AudioFile>VO_Gonz_Unhappy_03.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="VO_Gonz_Unhappy_03" ID="{688B8374-1EE3-4859-87E8-560C165AD1F6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="VO_Gonz_Unhappy_04" ID="{FFD92F6A-A034-4B1F-8E35-DF23D1E2CA4B}" ShortID="574091331">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E4CFB62-4323-4086-A7E2-C74214586B22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BBEB7192-4061-40B2-BB2C-F43371343F1E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="VO_Gonz_Unhappy_04" ID="{41A587E1-9F83-4990-BD84-E2F288680E18}" ShortID="301835017">
+													<Language>SFX</Language>
+													<AudioFile>VO_Gonz_Unhappy_04.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="VO_Gonz_Unhappy_04" ID="{41A587E1-9F83-4990-BD84-E2F288680E18}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="VO_Gonz_Unhappy_05" ID="{739676A7-C824-401D-BA4A-7729FADDEEBB}" ShortID="533194067">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E4CFB62-4323-4086-A7E2-C74214586B22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BBEB7192-4061-40B2-BB2C-F43371343F1E}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="VO_Gonz_Unhappy_05" ID="{4A45AE56-560C-4F58-99E5-D4862FC5B99D}" ShortID="559039275">
+													<Language>SFX</Language>
+													<AudioFile>VO_Gonz_Unhappy_05.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="VO_Gonz_Unhappy_05" ID="{4A45AE56-560C-4F58-99E5-D4862FC5B99D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
 							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="VO_Kids_Unhappy" ID="{8773747A-632F-437F-B111-1C1662D49301}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<RandomSequenceContainer Name="VO_Kids_Crying" ID="{535B1BCF-BE79-442F-B523-91D232FAF729}" ShortID="635729817">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E4CFB62-4323-4086-A7E2-C74214586B22}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BBEB7192-4061-40B2-BB2C-F43371343F1E}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<Sound Name="VO_Baby_Hit_01" ID="{E33D334F-50BB-4B37-BF7B-C01765EA4803}" ShortID="321590186">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E4CFB62-4323-4086-A7E2-C74214586B22}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BBEB7192-4061-40B2-BB2C-F43371343F1E}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="VO_Baby_Hit_01" ID="{55E67EBF-2923-4A32-A537-95B0DF77534A}" ShortID="435133464">
-											<Language>SFX</Language>
-											<AudioFile>VO_Baby_Hit_01.Wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="VO_Baby_Hit_01" ID="{55E67EBF-2923-4A32-A537-95B0DF77534A}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="VO_Baby_Hit_02" ID="{2B4B7BA4-39E9-4899-ACAD-E27BF14FCDFC}" ShortID="898892248">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E4CFB62-4323-4086-A7E2-C74214586B22}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BBEB7192-4061-40B2-BB2C-F43371343F1E}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="VO_Baby_Hit_02" ID="{7FD7591B-7660-4848-962A-5AEF04662A2F}" ShortID="1062726546">
-											<Language>SFX</Language>
-											<AudioFile>VO_Baby_Hit_02.Wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="VO_Baby_Hit_02" ID="{7FD7591B-7660-4848-962A-5AEF04662A2F}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="VO_Baby_Hit_03" ID="{7CF1AC21-A46F-4AC6-B310-555A0F224B0A}" ShortID="510088158">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0E4CFB62-4323-4086-A7E2-C74214586B22}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BBEB7192-4061-40B2-BB2C-F43371343F1E}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="VO_Baby_Hit_03" ID="{D9AB4C8F-1F37-406D-AF36-3A2A6E5FF89A}" ShortID="64366828">
-											<Language>SFX</Language>
-											<AudioFile>VO_Baby_Hit_03.Wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="VO_Baby_Hit_03" ID="{D9AB4C8F-1F37-406D-AF36-3A2A6E5FF89A}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
-						</RandomSequenceContainer>
+						</ActorMixer>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>

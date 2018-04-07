@@ -3,7 +3,13 @@
 	<GameParameters>
 		<WorkUnit Name="Default Work Unit" ID="{984F371D-8246-4448-9F08-10BD93704E5A}" PersistMode="Standalone">
 			<ChildrenList>
-				<GameParameter Name="MUS_LayersFade" ID="{7261FE18-5570-4FD6-BB00-F07A8CC3F801}"/>
+				<GameParameter Name="MUS_Stigners_Sidechain" ID="{7261FE18-5570-4FD6-BB00-F07A8CC3F801}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="-48"/>
+						<Property Name="Max" Type="Real64" Value="0"/>
+						<Property Name="Min" Type="Real64" Value="-48"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>
