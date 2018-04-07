@@ -6,7 +6,10 @@ public class InteractableItem : MonoBehaviour {
 
     public bool isInteractable;
     public GameObject kidThatCanInteract;
+    public GameObject currentOwner; //entity that manipulated this object
     public Enum.InteractableType interactableType;
+    public int chaosAmount = 10;
+    public bool causesChaos;
 
 
     public void Awake()
@@ -53,6 +56,18 @@ public class InteractableItem : MonoBehaviour {
     //To be overrided by child classes (single action)
     public virtual void TriggerActionOnInteract()
     {
+    }
 
+    public void CheckProvokeChaos()
+    {
+        if (causesChaos && currentOwner.tag == "kid")
+        {
+            LevelManager.Instance.AddChaos(chaosAmount);
+        }
+    }
+
+    public void ReleaseOwner()
+    {
+        currentOwner = null;
     }
 }

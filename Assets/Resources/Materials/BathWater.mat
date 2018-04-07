@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Water
+  m_Name: BathWater
   m_Shader: {fileID: 4800000, guid: a9d727b637a1c9747945f99e3c7984f2, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -59,25 +59,25 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _BaseSpeed: 0.13
+    - _BaseSpeed: 0.1
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0.641
+    - _Glossiness: 0.52
     - _GlossyReflections: 1
-    - _Metallic: 0.871
+    - _Metallic: 0
     - _Mode: 0
-    - _NoiseScale: 0.149
+    - _NoiseScale: 0.04
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Transparency: 0.12
+    - _Transparency: 0.64
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.7058823, g: 0.85395527, b: 1, a: 0.334}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

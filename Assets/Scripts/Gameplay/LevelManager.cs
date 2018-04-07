@@ -51,6 +51,12 @@ public class LevelManager : MonoBehaviour
     private GameObject _gameOverPanel;
 
     [SerializeField]
+    private Text ScoreTextTest;
+
+    [SerializeField]
+    public int maxChaos;
+
+    [SerializeField]
     private Image
         _chaosBar,
         _consuelaHappy,
@@ -62,7 +68,7 @@ public class LevelManager : MonoBehaviour
 
     private int _chaos = 0;
     private List<DoorScript> _doors;
-    private int _totalChaos = 0;
+    private int _totalChaos;
     private int _startingChaos = 0;
 
     private void Awake()
@@ -95,16 +101,20 @@ public class LevelManager : MonoBehaviour
     {
         _gameTimer = 300f;
         _chaos = 0;
-        _totalChaos = 0;
+        _totalChaos = maxChaos;
 
         // Hide the game over panel
-        _gameOverPanel.SetActive(false);
+        //_gameOverPanel.SetActive(false);
     }
 
     private void FinishLevel()
     {
         // Show the gameover screen
-        _gameOverPanel.SetActive(true);
+
+        if(_gameOverPanel != null)
+        {
+            _gameOverPanel.SetActive(true);
+        }
     }
 
     public void OpenAllDoors()
@@ -123,16 +133,26 @@ public class LevelManager : MonoBehaviour
     {
         _chaos += amount;
 
-        _chaosBar.fillAmount = (float)(_chaos / _totalChaos);
+        if(_chaosBar != null)
+        {
+            _chaosBar.fillAmount = (float)(_chaos / _totalChaos);
+        }
 
         if (_chaos > _startingChaos && _consuelaLeads)
         {
             _consuelaLeads = false;
 
+            if(_consuelaHappy != null)
             _consuelaHappy.gameObject.SetActive(false);
-            _consuelaSad.gameObject.SetActive(true);
-            _kidsHappy.gameObject.SetActive(true);
-            _kidsSad.gameObject.SetActive(false);
+
+            if (_consuelaSad != null)
+                _consuelaSad.gameObject.SetActive(true);
+
+            if (_kidsHappy != null)
+                _kidsHappy.gameObject.SetActive(true);
+
+            if (_kidsSad != null)
+                _kidsSad.gameObject.SetActive(false);
         }
         else if (_chaos < _startingChaos && !_consuelaLeads)
         {
@@ -143,6 +163,8 @@ public class LevelManager : MonoBehaviour
             _kidsHappy.gameObject.SetActive(false);
             _kidsSad.gameObject.SetActive(true);
         }
+
+        ScoreTextTest.text = _chaos.ToString();
     }
 
     /// <summary>
