@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class KidController : MonoBehaviour
 {
-    private SpriteRenderer _tag;
+    public SpriteController _cryLeft;
+    public SpriteController _cryRight;
 
     public bool isBad = false;
     public bool isTag = false;
@@ -14,13 +15,13 @@ public class KidController : MonoBehaviour
 
     void Start()
     {
-        _tag = GetComponentInChildren<SpriteRenderer>();
     }
 
     public void GetTagged()
     {
         isTag = true;
-        _tag.enabled = true;
+        _cryLeft.SetActive(true);
+        _cryRight.SetActive(true);
         var animator = GetComponent<Animator>();
         animator.SetBool("crying", true);
         transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
@@ -43,7 +44,8 @@ public class KidController : MonoBehaviour
                 animator.SetBool("crying", false);
 
                 isTag = false;
-                _tag.enabled = false;
+                _cryLeft.SetActive(false);
+                _cryRight.SetActive(false);
             }
         }
         else
