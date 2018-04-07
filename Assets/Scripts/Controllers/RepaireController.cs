@@ -40,10 +40,14 @@ public class RepaireController : MonoBehaviour
             }
             else if(!isBroken && other.tag == KID_TAG)
             {
-                _isActive = true;
-                _actionButton.SetActive(true);
-                _actor = other.gameObject;
-                playerTag = _actor.GetComponent<TopDownKidsController>().playerTag;
+                var controller = _actor.GetComponent<TopDownKidsController>();
+                if (!controller.controlledByAI)
+                {
+                    _isActive = true;
+                    _actionButton.SetActive(true);
+                    _actor = other.gameObject;
+                    playerTag = controller.playerTag;
+                }
             }
         }
     }

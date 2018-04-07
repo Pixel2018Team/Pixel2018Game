@@ -23,6 +23,8 @@ public class MoveController : MonoBehaviour
     public string breakSoundEventName;
     public string fixSoundEventName;
 
+    public float chaosLevel = 0.0f;
+
     void Start()
     {
         _image = gameObject.GetComponentInChildren<Image>();
@@ -41,10 +43,14 @@ public class MoveController : MonoBehaviour
             }
             else if(!isBroken && other.tag == KID_TAG)
             {
-                _isActive = true;
-                _actionButton.SetActive(true);
-                _actor = other.gameObject;
-                playerTag = _actor.GetComponent<TopDownKidsController>().playerTag;
+                var controller = _actor.GetComponent<TopDownKidsController>();
+                if (!controller.controlledByAI)
+                {
+                    _isActive = true;
+                    _actionButton.SetActive(true);
+                    _actor = other.gameObject;
+                    playerTag = controller.playerTag;
+                }
             }
         }
     }
@@ -75,6 +81,16 @@ public class MoveController : MonoBehaviour
 
     void Update()
     {
+        if (isBroken)
+        {
+            chaosLevel += Time.deltaTime;
+            if(chaosLevel > 1.0f)
+            {
+                chaosLevel = 0.0f;
+                LevelManager.Instance.AddChaos(1);
+            }
+        }
+
         if (acting)
         {
             remainingTime -= Time.deltaTime;

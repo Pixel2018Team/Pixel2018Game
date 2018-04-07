@@ -61,7 +61,7 @@ public class LevelManager : MonoBehaviour
 
     public bool _consuelaLeads = true;
 
-    private int _chaos = 0;
+    public int _chaos = 0;
     private List<DoorScript> _doors;
     private int _startingChaos = 0;
     private bool _gameover = false;

@@ -98,6 +98,7 @@ public class PlayerSwitchManager : MonoBehaviour {
             var controller = kidToModify.GetComponent<TopDownKidsController>();
             controller.controlledByAI = false;
             var ai = kidToModify.GetComponent<AIKid>();
+            kidToModify.GetComponent<Rigidbody>().AddForce(Vector3.up * 0.1f);
 
             if (ai != null)
             {
