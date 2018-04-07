@@ -3,14 +3,17 @@
 public class DoorScript : MonoBehaviour
 {
     public bool hasToOpen = false;
+    public bool isOpened = false;
     public bool isRotating = false;
     public float rotSpeed;
     public bool test;
     private Vector3 startDir, openDir, closeDir;
     private int numberOfKidsInbounds;
     public bool doorLocked;
+    public float maxOpenTime = 1.5f;
+    public float currentOpenTime = 0f;
 
-    public void Awake()
+    private void Awake()
     {
         closeDir = new Vector3(transform.forward.x, transform.forward.y, transform.forward.z);
         openDir = new Vector3(transform.right.x, transform.right.y, transform.right.z);
@@ -40,38 +43,49 @@ public class DoorScript : MonoBehaviour
         }
     }
 
-    public void Update()
+    private void Update()
     {
         Debug.DrawRay(transform.position, transform.forward, Color.red);
 
         if (test)
         {
-            Debug.Log("test " + test);
+            //Debug.Log("test " + test);
             OpenClose(!hasToOpen);
             test = false;
         }
 
         if (isRotating)
         {
-            if (hasToOpen)
+            if (hasToOpen && !isOpened)
             {
-                Debug.Log("signed angle = " + Vector3.SignedAngle(transform.forward, openDir, transform.up));
+                //Debug.Log("signed angle = " + Vector3.SignedAngle(transform.forward, openDir, transform.up));
                 transform.Rotate(transform.up, rotSpeed * Time.deltaTime);
 
                 if (Vector3.SignedAngle(transform.forward, openDir, transform.up) <= 0)
                 {
                     isRotating = false;
+                    currentOpenTime = 0f;
+                    isOpened = true;
                 }
+
                // Debug.Log("angle from starting angle = " + Vector3.Angle(transform.forward, openDir));
             }
+            //has to close
             else
             {
-                transform.Rotate(transform.up, -rotSpeed * Time.deltaTime);
-                if (Vector3.SignedAngle(transform.forward, closeDir, transform.up) >= 0)
+                currentOpenTime += Time.deltaTime;
+                var elapsedOpenSecs = currentOpenTime % 60;
+                if (elapsedOpenSecs >= maxOpenTime)
                 {
-                    isRotating = false;
+                    isOpened = false;
+                    transform.Rotate(transform.up, -rotSpeed * Time.deltaTime);
+                    if (Vector3.SignedAngle(transform.forward, closeDir, transform.up) >= 0)
+                    {
+                        isRotating = false;
+                        
+                    }
                 }
-                //Debug.Log("angle from starting angle = " + Vector3.Angle(transform.forward, closeDir));
+                Debug.Log("angle from starting angle = " + Vector3.Angle(transform.forward, closeDir));
             }
         }
     }
@@ -82,8 +96,6 @@ public class DoorScript : MonoBehaviour
     public void Interact()
     {
         LevelManager.Instance.OpenAllDoors();
-        // TODO: Code to close this door
-        //this._open = false;
     }
 
     public void OnTriggerEnter(Collider col)
@@ -92,10 +104,16 @@ public class DoorScript : MonoBehaviour
         if (obj.tag == "kid")
         {
             numberOfKidsInbounds++;
-            if (obj.GetComponent<TopDownKidsController>().controlledByAI)
+
+            if (!isOpened)
             {
                 OpenClose(true);
             }
+            
+            /*if (obj.GetComponent<TopDownKidsController>().controlledByAI)
+            {
+                OpenClose(true);
+            }*/
         }
     }
 
@@ -106,9 +124,14 @@ public class DoorScript : MonoBehaviour
         {
             numberOfKidsInbounds--;
 
-            if(numberOfKidsInbounds == 0)
+            if(numberOfKidsInbounds <= 0 && isOpened)
             {
                 OpenClose(false);
+            }
+
+            if(numberOfKidsInbounds < 0)
+            {
+                numberOfKidsInbounds = 0;
             }
         }
     }

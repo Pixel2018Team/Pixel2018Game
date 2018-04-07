@@ -39,15 +39,18 @@ public class AIKid : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        wayPoints = WaypointsManager.GetWaypointsManager().waypoints;
+        if(WaypointsManager.GetWaypointsManager() != null)
+        {
+            wayPoints = WaypointsManager.GetWaypointsManager().waypoints;
+        }
+        
         StartIdle();
         stuckLastPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-        InvokeRepeating("CheckForAIStuck", stuckDistanceTick, stuckDistanceTick);
+        InvokeRepeating("CheckForAIStuck", 0f, 3f);
     }
 
-    public void CheckForAIStuck()
+     void CheckForAIStuck()
     {
-        Debug.Log("sfsdfds");
         if(_controllerReference.controlledByAI && state == AIState.GoingToWayPoint)
         {
             DebugLogger.Log("Checking for stuck", Enum.LoggerMessageType.Important);
@@ -63,7 +66,7 @@ public class AIKid : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Behaviour when not following a player and not saved yet
+        _controllerReference.SetPlayerVelocity(_navMeshAgent.velocity);
 
         if (state == AIState.Idle)
         {
@@ -81,7 +84,6 @@ public class AIKid : MonoBehaviour
 
         else if (state == AIState.GoingToWayPoint)
         {
-            _controllerReference.SetPlayerVelocity(_navMeshAgent.velocity);
             //Debug.Log("remaining distance : " + Vector3.Distance(transform.position, targetWaypoint));
             //If waypoint reached, trigger idle state
             if (Vector3.Distance(transform.position, _navMeshAgent.destination) <= distanceMargin)
