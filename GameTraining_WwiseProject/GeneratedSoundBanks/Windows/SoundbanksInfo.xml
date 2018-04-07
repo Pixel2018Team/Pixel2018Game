@@ -23,12 +23,43 @@
 			<IncludedEvents>
 				<Event Id="1360101095" Name="Bbq_Start" ObjectPath="\Events\Default Work Unit\Bbq_Start" MaxAttenuation="200.000000"/>
 				<Event Id="1506460941" Name="Bbq_Stop" ObjectPath="\Events\Default Work Unit\Bbq_Stop" MaxAttenuation="200.000000"/>
+				<Event Id="1598914998" Name="Bookshelf_Break" ObjectPath="\Events\Default Work Unit\Bookshelf_Break" MaxAttenuation="200.000000"/>
+				<Event Id="3311659667" Name="Bookshelf_Replace" ObjectPath="\Events\Default Work Unit\Bookshelf_Replace" MaxAttenuation="200.000000"/>
+				<Event Id="3489924218" Name="Dishes_Impact" ObjectPath="\Events\Default Work Unit\Dishes_Impact" MaxAttenuation="200.000000"/>
+				<Event Id="797412272" Name="Dishes_Start" ObjectPath="\Events\Default Work Unit\Dishes_Start" MaxAttenuation="200.000000"/>
+				<Event Id="2174854684" Name="Dishes_Stop" ObjectPath="\Events\Default Work Unit\Dishes_Stop" MaxAttenuation="0.000000"/>
+				<Event Id="128625444" Name="Door_Close" ObjectPath="\Events\Default Work Unit\Door_Close" MaxAttenuation="200.000000"/>
+				<Event Id="535830432" Name="Door_Open" ObjectPath="\Events\Default Work Unit\Door_Open" MaxAttenuation="200.000000"/>
+				<Event Id="536084281" Name="Extinctor_Use" ObjectPath="\Events\Default Work Unit\Extinctor_Use" MaxAttenuation="200.000000"/>
 				<Event Id="4058101365" Name="Gamestart" ObjectPath="\Events\Default Work Unit\Gamestart"/>
+				<Event Id="1704623631" Name="Gonzuela_Leading" ObjectPath="\Events\Default Work Unit\Gonzuela_Leading"/>
+				<Event Id="1205450473" Name="Kids_Crying" ObjectPath="\Events\Default Work Unit\Kids_Crying"/>
+				<Event Id="858248185" Name="Kids_Leading" ObjectPath="\Events\Default Work Unit\Kids_Leading"/>
+				<Event Id="280670697" Name="Lightswitch_Off" ObjectPath="\Events\Default Work Unit\Lightswitch_Off" MaxAttenuation="200.000000"/>
+				<Event Id="2253880733" Name="Lightswitch_On" ObjectPath="\Events\Default Work Unit\Lightswitch_On" MaxAttenuation="200.000000"/>
+				<Event Id="2575070678" Name="Oven_Start" ObjectPath="\Events\Default Work Unit\Oven_Start" MaxAttenuation="200.000000"/>
+				<Event Id="743584214" Name="Oven_Stop" ObjectPath="\Events\Default Work Unit\Oven_Stop" MaxAttenuation="200.000000"/>
+				<Event Id="3683557997" Name="Oven_Stretch" ObjectPath="\Events\Default Work Unit\Oven_Stretch" MaxAttenuation="200.000000"/>
+				<Event Id="3873705293" Name="Picture_Break" ObjectPath="\Events\Default Work Unit\Picture_Break" MaxAttenuation="200.000000"/>
+				<Event Id="1009363664" Name="Picture_Replace" ObjectPath="\Events\Default Work Unit\Picture_Replace" MaxAttenuation="200.000000"/>
+				<Event Id="1047931541" Name="Toaster_Drop" ObjectPath="\Events\Default Work Unit\Toaster_Drop" MaxAttenuation="200.000000"/>
+				<Event Id="1782344986" Name="Toaster_Pickup" ObjectPath="\Events\Default Work Unit\Toaster_Pickup" MaxAttenuation="200.000000"/>
+				<Event Id="509177165" Name="Toaster_WaterImpact" ObjectPath="\Events\Default Work Unit\Toaster_WaterImpact" MaxAttenuation="200.000000"/>
+				<Event Id="763008841" Name="Woodblock_Break" ObjectPath="\Events\Default Work Unit\Woodblock_Break" MaxAttenuation="200.000000"/>
+				<Event Id="2983120780" Name="Woodblock_Replace" ObjectPath="\Events\Default Work Unit\Woodblock_Replace" MaxAttenuation="200.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="64366828" Language="SFX">
+					<ShortName>VO_Baby_Hit_03.Wav</ShortName>
+					<Path>SFX/VO_Baby_Hit_03_1C9C67B2.wem</Path>
+				</File>
 				<File Id="81588674" Language="SFX">
 					<ShortName>SFX_Bbq_Loop.wav</ShortName>
 					<Path>SFX/SFX_Bbq_Loop_F17FB28C.wem</Path>
+				</File>
+				<File Id="86822573" Language="SFX">
+					<ShortName>SFX_Door_Open_L3_02.wav</ShortName>
+					<Path>SFX/SFX_Door_Open_L3_02_1C9C67B2.wem</Path>
 				</File>
 				<File Id="109568395" Language="SFX">
 					<ShortName>SFX_Bbq_Loop.wav</ShortName>
@@ -38,21 +69,165 @@
 					<ShortName>PIX18_Mus_KidsLayer.wav</ShortName>
 					<Path>SFX/PIX18_Mus_KidsLayer_F17FB28C.wem</Path>
 				</File>
+				<File Id="116155236" Language="SFX">
+					<ShortName>SFX_Door_Close_L1_02.wav</ShortName>
+					<Path>SFX/SFX_Door_Close_L1_02_1C9C67B2.wem</Path>
+				</File>
+				<File Id="127725770" Language="SFX">
+					<ShortName>SFX_Door_Close_L2_02.wav</ShortName>
+					<Path>SFX/SFX_Door_Close_L2_02_1C9C67B2.wem</Path>
+				</File>
+				<File Id="139926779" Language="SFX">
+					<ShortName>SFX_Picture_Break.wav</ShortName>
+					<Path>SFX/SFX_Picture_Break_1C9C67B2.wem</Path>
+				</File>
+				<File Id="147477361" Language="SFX">
+					<ShortName>SFX_Extinctor_Use.wav</ShortName>
+					<Path>SFX/SFX_Extinctor_Use_1C9C67B2.wem</Path>
+				</File>
+				<File Id="158616958" Language="SFX">
+					<ShortName>SFX_Oven_Stretch_02.wav</ShortName>
+					<Path>SFX/SFX_Oven_Stretch_02_1C9C67B2.wem</Path>
+				</File>
+				<File Id="161666379" Language="SFX">
+					<ShortName>SFX_Picture_Replace.wav</ShortName>
+					<Path>SFX/SFX_Picture_Replace_1C9C67B2.wem</Path>
+				</File>
+				<File Id="189920005" Language="SFX">
+					<ShortName>SFX_Oven_Burning_Loop.wav</ShortName>
+					<Path>SFX/SFX_Oven_Burning_Loop_F17FB28C.wem</Path>
+				</File>
+				<File Id="194829564" Language="SFX">
+					<ShortName>SFX_Woodblock_Break.wav</ShortName>
+					<Path>SFX/SFX_Woodblock_Break_1C9C67B2.wem</Path>
+				</File>
+				<File Id="236910838" Language="SFX">
+					<ShortName>SFX_Toaster_Drop.wav</ShortName>
+					<Path>SFX/SFX_Toaster_Drop_1C9C67B2.wem</Path>
+				</File>
+				<File Id="245305357" Language="SFX">
+					<ShortName>SFX_Oven_Stretch_01.wav</ShortName>
+					<Path>SFX/SFX_Oven_Stretch_01_1C9C67B2.wem</Path>
+				</File>
+				<File Id="248843256" Language="SFX">
+					<ShortName>SFX_Dishes_impact_03.wav</ShortName>
+					<Path>SFX/SFX_Dishes_impact_03_1C9C67B2.wem</Path>
+				</File>
+				<File Id="269960480" Language="SFX">
+					<ShortName>SFX_Door_Open_L3_04.wav</ShortName>
+					<Path>SFX/SFX_Door_Open_L3_04_1C9C67B2.wem</Path>
+				</File>
+				<File Id="296653858" Language="SFX">
+					<ShortName>SFX_Door_Open_L3_01.wav</ShortName>
+					<Path>SFX/SFX_Door_Open_L3_01_1C9C67B2.wem</Path>
+				</File>
+				<File Id="333840999" Language="SFX">
+					<ShortName>SFX_Woodblock_Replace.wav</ShortName>
+					<Path>SFX/SFX_Woodblock_Replace_1C9C67B2.wem</Path>
+				</File>
+				<File Id="350599103" Language="SFX">
+					<ShortName>SFX_Door_Close_L2_01.wav</ShortName>
+					<Path>SFX/SFX_Door_Close_L2_01_1C9C67B2.wem</Path>
+				</File>
 				<File Id="364453582" Language="SFX">
 					<ShortName>PIX18_Mus_GonzuelaLayer.wav</ShortName>
 					<Path>SFX/PIX18_Mus_GonzuelaLayer_F17FB28C.wem</Path>
+				</File>
+				<File Id="365936063" Language="SFX">
+					<ShortName>VO_Kids_Happy.wav</ShortName>
+					<Path>SFX/VO_Kids_Happy_1C9C67B2.wem</Path>
+				</File>
+				<File Id="404242412" Language="SFX">
+					<ShortName>SFX_Door_Close_L1_01.wav</ShortName>
+					<Path>SFX/SFX_Door_Close_L1_01_1C9C67B2.wem</Path>
+				</File>
+				<File Id="432096879" Language="SFX">
+					<ShortName>SFX_Oven_Burning_Stop.wav</ShortName>
+					<Path>SFX/SFX_Oven_Burning_Stop_1C9C67B2.wem</Path>
+				</File>
+				<File Id="435133464" Language="SFX">
+					<ShortName>VO_Baby_Hit_01.Wav</ShortName>
+					<Path>SFX/VO_Baby_Hit_01_1C9C67B2.wem</Path>
+				</File>
+				<File Id="452920392" Language="SFX">
+					<ShortName>VO_Kids_Unhappy.wav</ShortName>
+					<Path>SFX/VO_Kids_Unhappy_1C9C67B2.wem</Path>
 				</File>
 				<File Id="499969488" Language="SFX">
 					<ShortName>PIX18_Mus_BaseLayer.wav</ShortName>
 					<Path>SFX/PIX18_Mus_BaseLayer_F17FB28C.wem</Path>
 				</File>
+				<File Id="572823702" Language="SFX">
+					<ShortName>SFX_Bookshelf_Replace.wav</ShortName>
+					<Path>SFX/SFX_Bookshelf_Replace_1C9C67B2.wem</Path>
+				</File>
 				<File Id="615759594" Language="SFX">
 					<ShortName>SFX_Bbq_Stop.wav</ShortName>
 					<Path>SFX/SFX_Bbq_Stop_1C9C67B2.wem</Path>
 				</File>
+				<File Id="621181394" Language="SFX">
+					<ShortName>SFX_Dishes_impact_02.wav</ShortName>
+					<Path>SFX/SFX_Dishes_impact_02_1C9C67B2.wem</Path>
+				</File>
+				<File Id="670778273" Language="SFX">
+					<ShortName>SFX_LightSwitch_Off.wav</ShortName>
+					<Path>SFX/SFX_LightSwitch_Off_1C9C67B2.wem</Path>
+				</File>
+				<File Id="673708732" Language="SFX">
+					<ShortName>SFX_Door_Open_L3_03.wav</ShortName>
+					<Path>SFX/SFX_Door_Open_L3_03_1C9C67B2.wem</Path>
+				</File>
 				<File Id="737987464" Language="SFX">
 					<ShortName>SFX_Bbq_Start.wav</ShortName>
 					<Path>SFX/SFX_Bbq_Start_1C9C67B2.wem</Path>
+				</File>
+				<File Id="744368649" Language="SFX">
+					<ShortName>SFX_Door_Open_L2_01.wav</ShortName>
+					<Path>SFX/SFX_Door_Open_L2_01_1C9C67B2.wem</Path>
+				</File>
+				<File Id="749757211" Language="SFX">
+					<ShortName>SFX_Door_Open_L1.wav</ShortName>
+					<Path>SFX/SFX_Door_Open_L1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="795269752" Language="SFX">
+					<ShortName>SFX_Oven_Stretch_04.wav</ShortName>
+					<Path>SFX/SFX_Oven_Stretch_04_1C9C67B2.wem</Path>
+				</File>
+				<File Id="858152331" Language="SFX">
+					<ShortName>SFX_Toaster_Water_Impact.wav</ShortName>
+					<Path>SFX/SFX_Toaster_Water_Impact_1C9C67B2.wem</Path>
+				</File>
+				<File Id="927583315" Language="SFX">
+					<ShortName>SFX_Dishes_impact_01.wav</ShortName>
+					<Path>SFX/SFX_Dishes_impact_01_1C9C67B2.wem</Path>
+				</File>
+				<File Id="963540285" Language="SFX">
+					<ShortName>SFX_Oven_Stretch_03.wav</ShortName>
+					<Path>SFX/SFX_Oven_Stretch_03_1C9C67B2.wem</Path>
+				</File>
+				<File Id="973711741" Language="SFX">
+					<ShortName>SFX_Dishes_Loop.wav</ShortName>
+					<Path>SFX/SFX_Dishes_Loop_F17FB28C.wem</Path>
+				</File>
+				<File Id="1004019001" Language="SFX">
+					<ShortName>SFX_Toaster_Pickup.wav</ShortName>
+					<Path>SFX/SFX_Toaster_Pickup_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1031439115" Language="SFX">
+					<ShortName>SFX_Bookshelf_Break.wav</ShortName>
+					<Path>SFX/SFX_Bookshelf_Break_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1042793073" Language="SFX">
+					<ShortName>SFX_Door_Open_L2_02.wav</ShortName>
+					<Path>SFX/SFX_Door_Open_L2_02_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1044616284" Language="SFX">
+					<ShortName>SFX_LightSwitch_On.wav</ShortName>
+					<Path>SFX/SFX_LightSwitch_On_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1062726546" Language="SFX">
+					<ShortName>VO_Baby_Hit_02.Wav</ShortName>
+					<Path>SFX/VO_Baby_Hit_02_1C9C67B2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

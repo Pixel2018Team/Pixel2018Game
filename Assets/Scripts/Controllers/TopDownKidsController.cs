@@ -12,8 +12,9 @@ public class TopDownKidsController : MonoBehaviour
     public float facingAngleMargin = 5f;
     public float facingRotationSpeed = 5f;
     public GameObject interactableObjectInRange;
-    public GameObject interactableObjectReceiverInRanger;
+    public GameObject interactableObjectReceiverInRange;
     public float tossForce = 5f;
+    public bool requestedSwitchKid;
     private Rigidbody _rigidBody;
     private Vector3 _moveInput;
     private Vector3 _moveVelocity;
@@ -24,6 +25,8 @@ public class TopDownKidsController : MonoBehaviour
     private State state;
     private GameObject objectCurrentlyUsed;
 
+    public bool controlledByAI;
+
     private enum State
     {
         Normal,
@@ -32,7 +35,7 @@ public class TopDownKidsController : MonoBehaviour
         CarryingObject,
         Catched,
         IA_Wandering,
-        IA_PlayingAnim
+        IA_Idle
     };
 
     private void Awake()
@@ -48,68 +51,73 @@ public class TopDownKidsController : MonoBehaviour
         _animator = GetComponent<Animator>();
     }
 
+    public void SetPlayerVelocity(Vector3 vel)
+    {
+        _moveVelocity = vel;
+    }
+
     void Update()
     {
         Debug.DrawLine(transform.position, transform.position + transform.rotation * Vector3.forward * 3, Color.red);
 
-        //If not interacting with anything nor catched by gonzuela, move normally
-        if (!controlsLocked)
+        if(!controlledByAI)
         {
-            _moveInput = new Vector3(Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.Horizontal)), 0f,
-                Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.Vertical)));
-            _moveVelocity = _moveInput * speed;
-
-            Vector3 newDirection = Vector3.right * Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.Horizontal))
-                + Vector3.forward * Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.Vertical));
-            if (newDirection.sqrMagnitude > 0.0f)
+            //If not interacting with anything nor catched by gonzuela, move normally
+            if (!controlsLocked)
             {
-                transform.rotation = Quaternion.LookRotation(newDirection, Vector3.up);
-            }
+                _moveInput = new Vector3(Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.Horizontal)), 0f,
+                    Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.Vertical)));
+                _moveVelocity = _moveInput * speed;
 
-            if (Input.GetButtonDown(InputMapping.GetInputName(playerTag, InputMapping.Input.A)))
-            {
-                //Interact with an object (if we're not holding one)
-                if(interactableObjectInRange != null && objectCarried == null)
+                Vector3 newDirection = Vector3.right * Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.Horizontal))
+                    + Vector3.forward * Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.Vertical));
+                if (newDirection.sqrMagnitude > 0.0f)
                 {
-                    InteractWithObject(interactableObjectInRange);
+                    transform.rotation = Quaternion.LookRotation(newDirection, Vector3.up);
                 }
 
-                //Dropping a held object
-                else if (objectCarried != null)
+                if (Input.GetButtonDown(InputMapping.GetInputName(playerTag, InputMapping.Input.A)))
                 {
-                    var dropOnReceiver = interactableObjectReceiverInRanger != null ? true : false;
-                    DropCarriedObject(dropOnReceiver);
+                    //Interact with an object (if we're not holding one)
+                    if (interactableObjectInRange != null && objectCarried == null)
+                    {
+                        InteractWithObject(interactableObjectInRange);
+                    }
+
+                    //Dropping a held object
+                    else if (objectCarried != null)
+                    {
+                        var dropOnReceiver = interactableObjectReceiverInRange != null ? true : false;
+                        DropCarriedObject(dropOnReceiver);
+                    }
+                }
+
+                if (Input.GetButtonDown(InputMapping.GetInputName(playerTag, InputMapping.Input.Y)))
+                {
+                    requestedSwitchKid = true;
                 }
             }
-        }
 
-        if(state == State.RotatingTowardsObject)
-        {
-            if(interactableObjectInRange != null)
+            if (state == State.RotatingTowardsObject)
             {
-                var objPosition = new Vector3(interactableObjectInRange.transform.position.x, transform.position.y, interactableObjectInRange.transform.position.z) ;
-                var rotToObject = Quaternion.LookRotation(objPosition - transform.position);
-                transform.rotation = Quaternion.Slerp(transform.rotation, rotToObject, Time.deltaTime * facingRotationSpeed);
-
-                //DebugLogger.Log("angle = " + Vector3.Angle(transform.forward, objPosition - transform.position), Enum.LoggerMessageType.Important);
-                if (Vector3.Angle(transform.forward, objPosition - transform.position) <= facingAngleMargin)
+                if (interactableObjectInRange != null)
                 {
-                   // DebugLogger.Log("Rotation over", Enum.LoggerMessageType.Important);
-                    state = State.InAction;
-                    //gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
-                    interactableObjectInRange.GetComponent<InteractableItem>().currentOwner = gameObject;
-                    interactableObjectInRange.GetComponent<InteractableItem>().TriggerActionOnInteract();
+                    var objPosition = new Vector3(interactableObjectInRange.transform.position.x, transform.position.y, interactableObjectInRange.transform.position.z);
+                    var rotToObject = Quaternion.LookRotation(objPosition - transform.position);
+                    transform.rotation = Quaternion.Slerp(transform.rotation, rotToObject, Time.deltaTime * facingRotationSpeed);
 
+                    //DebugLogger.Log("angle = " + Vector3.Angle(transform.forward, objPosition - transform.position), Enum.LoggerMessageType.Important);
+                    if (Vector3.Angle(transform.forward, objPosition - transform.position) <= facingAngleMargin)
+                    {
+                        // DebugLogger.Log("Rotation over", Enum.LoggerMessageType.Important);
+                        state = State.InAction;
+                        //gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
+                        interactableObjectInRange.GetComponent<InteractableItem>().TriggerActionOnInteract();
+                    }
                 }
             }
-        }
 
-        if (state == State.InAction)
-        {
-            currentlockActionTime += Time.deltaTime;
-            var elapsedSecs = currentlockActionTime % 60;
-
-            if(elapsedSecs >= lockActionTime)
+            if (state == State.InAction)
             {
                 DebugLogger.Log("Interaction phase over", Enum.LoggerMessageType.Important);
                 state = State.Normal;
@@ -117,26 +125,37 @@ public class TopDownKidsController : MonoBehaviour
                 objectCurrentlyUsed.GetComponent<InteractableItem>().CheckProvokeChaos();
                 releaseOwnershipOnUsedObject();
                 //gameObject.GetComponent<MeshRenderer>().material.color = Color.white;
+                currentlockActionTime += Time.deltaTime;
+                var elapsedSecs = currentlockActionTime % 60;
+
+                if (elapsedSecs >= lockActionTime)
+                {
+                    DebugLogger.Log("Interaction phase over", Enum.LoggerMessageType.Important);
+                    state = State.Normal;
+                    controlsLocked = false;
+                    gameObject.GetComponent<MeshRenderer>().material.color = Color.white;
+                }
             }
-        }
 
-        if(state == State.CarryingObject)
-        {
-        }
+            if (state == State.CarryingObject)
+            {
 
-        if (state == State.Catched)
-        {
+            }
 
+            if (state == State.Catched)
+            {
+
+            }
         }
     }
 
     private void InteractWithObject(GameObject obj)
     {
-        if(obj != null)
+        if (obj != null)
         {
             var interactable = obj.GetComponent<InteractableItem>();
             Debug.Log("sdsd");
-            if(interactable != null && interactable.isInteractable)
+            if (interactable != null && interactable.isInteractable)
             {
                 if (interactable.interactableType == Enum.InteractableType.SingleAction)
                 {
@@ -153,7 +172,7 @@ public class TopDownKidsController : MonoBehaviour
                     state = State.CarryingObject;
                     objectCarried = obj;
                     objectCurrentlyUsed = obj;
-                    objectCarried.transform.position = new Vector3( transform.position.x,  transform.position.y + 0.5f, transform.position.z) + transform.forward * 0.5f;
+                    objectCarried.transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z) + transform.forward * 0.5f;
                     objectCarried.transform.parent = transform;
                     objectCarried.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                     objectCarried.GetComponent<Rigidbody>().useGravity = false;
@@ -166,11 +185,11 @@ public class TopDownKidsController : MonoBehaviour
 
     public void releaseOwnershipOnUsedObject()
     {
-        if(objectCurrentlyUsed != null)
+        if (objectCurrentlyUsed != null)
         {
             objectCurrentlyUsed.GetComponent<InteractableItem>().currentOwner = null;
             objectCurrentlyUsed = null;
-        }    
+        }
     }
 
     public void DropCarriedObject(bool dropOnReceiver)
@@ -180,7 +199,7 @@ public class TopDownKidsController : MonoBehaviour
             //If combo receiver
             if (dropOnReceiver)
             {
-                interactableObjectReceiverInRanger.GetComponent<ComboReceiver>().ReceiveObject(objectCarried);
+                interactableObjectReceiverInRange.GetComponent<ComboReceiver>().ReceiveObject(objectCarried);
                 objectCarried.GetComponent<InteractableItem>().isInteractable = false;
             }
 
@@ -203,7 +222,7 @@ public class TopDownKidsController : MonoBehaviour
 
     private bool IsFacingAndCloseToObject(GameObject obj)
     {
-        if (Vector3.Dot(transform.forward, obj.transform.position) >= 0 
+        if (Vector3.Dot(transform.forward, obj.transform.position) >= 0
             && Vector3.Distance(transform.position, obj.transform.position) <= minInteractionDistance)
         {
             return true;
@@ -214,7 +233,7 @@ public class TopDownKidsController : MonoBehaviour
 
     public void CaughtByGonzuela()
     {
-        if(state != State.Catched)
+        if (state != State.Catched)
         {
             state = State.Catched;
         }

@@ -240,6 +240,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1829918940}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: 261b19c006ff4c0479c1e2e1d5ff5143, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -251,3 +252,13 @@ MonoBehaviour:
   _kidsHappy: {fileID: 0}
   _kidsSad: {fileID: 0}
   _consuelaLeads: 1
+=======
+  m_Script: {fileID: 11500000, guid: bdb16ba97655c704e81c37e8d3eec515, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  numberOfWaypoints: 0
+  planeReference: {fileID: 0}
+  waypointPrefab: {fileID: 1667043113799144, guid: 63b0d3a7e8d7eab46a92ffde5d0f2856,
+    type: 2}
+>>>>>>> WIP AI + switch kid

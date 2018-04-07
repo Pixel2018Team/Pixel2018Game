@@ -20,9 +20,9 @@ public class InteractableItem : MonoBehaviour {
 
     public void OnTriggerEnter(Collider col)
     {
-        DebugLogger.Log("trigger enter interactable object", Enum.LoggerMessageType.Important);
-        if (col.gameObject.tag == "kid" && kidThatCanInteract == null)
+        if (col.gameObject.tag == "kid" && !col.gameObject.GetComponent<TopDownKidsController>().controlledByAI && kidThatCanInteract == null)
         {
+            DebugLogger.Log("trigger enter interactable object", Enum.LoggerMessageType.Important);
             kidThatCanInteract = col.gameObject;
             col.gameObject.GetComponent<TopDownKidsController>().interactableObjectInRange = gameObject;
         }
