@@ -15,6 +15,7 @@
 						<ObjectRef Name="Toaster_Drop" ID="{E0C83E31-67FA-4363-9DEA-F361ECB39216}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Door_Open" ID="{4CE2F97A-1BAC-43E2-931D-F55E5D6098F4}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Dishes_Stop" ID="{4203BD2D-DD8E-43FC-BEF3-9B817B70CE20}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Gonz_CaughtKid" ID="{656460AE-865F-440E-81EE-82D76CFB244A}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Bbq_Start" ID="{F36D64B0-A02C-443E-93BF-EEB9598B473E}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Oven_Stretch" ID="{4C5BC247-4475-44AB-B0FB-71E1D1F50283}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Lightswitch_Off" ID="{F8A31715-204F-469A-A694-5599D7D6408F}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>

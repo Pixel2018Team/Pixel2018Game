@@ -21,8 +21,8 @@
 			<ShortName>PIX_2018</ShortName>
 			<Path>PIX_2018.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1360101095" Name="Bbq_Start" ObjectPath="\Events\Default Work Unit\Bbq_Start" MaxAttenuation="200.000000"/>
-				<Event Id="1506460941" Name="Bbq_Stop" ObjectPath="\Events\Default Work Unit\Bbq_Stop" MaxAttenuation="200.000000"/>
+				<Event Id="1360101095" Name="Bbq_Start" ObjectPath="\Events\Default Work Unit\Bbq_Start"/>
+				<Event Id="1506460941" Name="Bbq_Stop" ObjectPath="\Events\Default Work Unit\Bbq_Stop"/>
 				<Event Id="1598914998" Name="Bookshelf_Break" ObjectPath="\Events\Default Work Unit\Bookshelf_Break" MaxAttenuation="200.000000"/>
 				<Event Id="3311659667" Name="Bookshelf_Replace" ObjectPath="\Events\Default Work Unit\Bookshelf_Replace" MaxAttenuation="200.000000"/>
 				<Event Id="3489924218" Name="Dishes_Impact" ObjectPath="\Events\Default Work Unit\Dishes_Impact" MaxAttenuation="200.000000"/>
@@ -35,19 +35,19 @@
 				<Event Id="4058101365" Name="Gamestart" ObjectPath="\Events\Default Work Unit\Gamestart"/>
 				<Event Id="430734518" Name="Gonz_CaughtKid" ObjectPath="\Events\Default Work Unit\Gonz_CaughtKid"/>
 				<Event Id="663907016" Name="Gonzuela_Leads" ObjectPath="\Events\Default Work Unit\Gonzuela_Leads"/>
-				<Event Id="1205450473" Name="Kids_Crying" ObjectPath="\Events\Default Work Unit\Kids_Crying"/>
+				<Event Id="1205450473" Name="Kids_Crying" ObjectPath="\Events\Default Work Unit\Kids_Crying" MaxAttenuation="100.000000"/>
 				<Event Id="1675969863" Name="Kids_Lead" ObjectPath="\Events\Default Work Unit\Kids_Lead"/>
 				<Event Id="280670697" Name="Lightswitch_Off" ObjectPath="\Events\Default Work Unit\Lightswitch_Off" MaxAttenuation="200.000000"/>
 				<Event Id="2253880733" Name="Lightswitch_On" ObjectPath="\Events\Default Work Unit\Lightswitch_On" MaxAttenuation="200.000000"/>
 				<Event Id="2607556080" Name="Menu" ObjectPath="\Events\Default Work Unit\Menu" MaxAttenuation="0.000000"/>
-				<Event Id="2575070678" Name="Oven_Start" ObjectPath="\Events\Default Work Unit\Oven_Start" MaxAttenuation="200.000000"/>
-				<Event Id="743584214" Name="Oven_Stop" ObjectPath="\Events\Default Work Unit\Oven_Stop" MaxAttenuation="200.000000"/>
-				<Event Id="3683557997" Name="Oven_Stretch" ObjectPath="\Events\Default Work Unit\Oven_Stretch" MaxAttenuation="200.000000"/>
+				<Event Id="2575070678" Name="Oven_Start" ObjectPath="\Events\Default Work Unit\Oven_Start"/>
+				<Event Id="743584214" Name="Oven_Stop" ObjectPath="\Events\Default Work Unit\Oven_Stop"/>
+				<Event Id="3683557997" Name="Oven_Stretch" ObjectPath="\Events\Default Work Unit\Oven_Stretch"/>
 				<Event Id="3873705293" Name="Picture_Break" ObjectPath="\Events\Default Work Unit\Picture_Break" MaxAttenuation="200.000000"/>
 				<Event Id="1009363664" Name="Picture_Replace" ObjectPath="\Events\Default Work Unit\Picture_Replace" MaxAttenuation="200.000000"/>
 				<Event Id="1047931541" Name="Toaster_Drop" ObjectPath="\Events\Default Work Unit\Toaster_Drop" MaxAttenuation="200.000000"/>
 				<Event Id="1782344986" Name="Toaster_Pickup" ObjectPath="\Events\Default Work Unit\Toaster_Pickup" MaxAttenuation="200.000000"/>
-				<Event Id="509177165" Name="Toaster_WaterImpact" ObjectPath="\Events\Default Work Unit\Toaster_WaterImpact" MaxAttenuation="200.000000"/>
+				<Event Id="509177165" Name="Toaster_WaterImpact" ObjectPath="\Events\Default Work Unit\Toaster_WaterImpact"/>
 				<Event Id="763008841" Name="Woodblock_Break" ObjectPath="\Events\Default Work Unit\Woodblock_Break" MaxAttenuation="200.000000"/>
 				<Event Id="2983120780" Name="Woodblock_Replace" ObjectPath="\Events\Default Work Unit\Woodblock_Replace" MaxAttenuation="200.000000"/>
 			</IncludedEvents>
@@ -88,6 +88,10 @@
 					<ShortName>SFX_Picture_Break.wav</ShortName>
 					<Path>SFX/SFX_Picture_Break_1C9C67B2.wem</Path>
 				</File>
+				<File Id="139940600" Language="SFX">
+					<ShortName>VO_Gonz_Happy_01.wav</ShortName>
+					<Path>SFX/VO_Gonz_Happy_01_1C9C67B2.wem</Path>
+				</File>
 				<File Id="147477361" Language="SFX">
 					<ShortName>SFX_Extinctor_Use.wav</ShortName>
 					<Path>SFX/SFX_Extinctor_Use_1C9C67B2.wem</Path>
@@ -99,6 +103,10 @@
 				<File Id="161666379" Language="SFX">
 					<ShortName>SFX_Picture_Replace.wav</ShortName>
 					<Path>SFX/SFX_Picture_Replace_1C9C67B2.wem</Path>
+				</File>
+				<File Id="168617662" Language="SFX">
+					<ShortName>Water_MediumSplash_01.Wav</ShortName>
+					<Path>SFX/Water_MediumSplash_01_1C9C67B2.wem</Path>
 				</File>
 				<File Id="182147281" Language="SFX">
 					<ShortName>VO_Gonz_CaughtKid_06.wav</ShortName>
@@ -170,7 +178,7 @@
 				</File>
 				<File Id="452920392" Language="SFX">
 					<ShortName>VO_Kids_Unhappy.wav</ShortName>
-					<Path>SFX/VO_Kids_Unhappy_1C9C67B2.wem</Path>
+					<Path>SFX/VO_Kids_Unhappy_9E895320.wem</Path>
 				</File>
 				<File Id="458327607" Language="SFX">
 					<ShortName>VO_Gonz_CaughtKid_03.wav</ShortName>
@@ -219,6 +227,10 @@
 				<File Id="673708732" Language="SFX">
 					<ShortName>SFX_Door_Open_L3_03.wav</ShortName>
 					<Path>SFX/SFX_Door_Open_L3_03_1C9C67B2.wem</Path>
+				</File>
+				<File Id="709847891" Language="SFX">
+					<ShortName>Water_MediumSplash_02.Wav</ShortName>
+					<Path>SFX/Water_MediumSplash_02_1C9C67B2.wem</Path>
 				</File>
 				<File Id="737987464" Language="SFX">
 					<ShortName>SFX_Bbq_Start.wav</ShortName>
@@ -279,6 +291,10 @@
 				<File Id="1044616284" Language="SFX">
 					<ShortName>SFX_LightSwitch_On.wav</ShortName>
 					<Path>SFX/SFX_LightSwitch_On_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1045082646" Language="SFX">
+					<ShortName>VO_Gonz_Happy_02.wav</ShortName>
+					<Path>SFX/VO_Gonz_Happy_02_1C9C67B2.wem</Path>
 				</File>
 				<File Id="1062726546" Language="SFX">
 					<ShortName>VO_Baby_Hit_02.Wav</ShortName>

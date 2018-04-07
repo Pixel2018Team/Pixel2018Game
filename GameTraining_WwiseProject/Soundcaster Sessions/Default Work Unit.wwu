@@ -14,8 +14,16 @@
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Mix_GonzCaughtKid" ID="{BAFE7F2E-C461-4519-B6BF-CF2D369FA248}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Mix_Extinctor_Oven" ID="{44F11878-4D83-4BD3-938C-FDDF2F5D9A5B}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
 							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Gonz_CaughtKid" ID="{656460AE-865F-440E-81EE-82D76CFB244A}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="0" Y="4"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Gonzuela_Leads" ID="{606250E7-74AF-4F72-9A87-286994A300F1}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
@@ -42,15 +50,11 @@
 							<Position X="2" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Kids_Crying" ID="{FB5E5CF4-1FC4-4CAC-A487-3BF8651E2E42}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
-							<Position X="2" Y="1"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="Dishes_Stop" ID="{4203BD2D-DD8E-43FC-BEF3-9B817B70CE20}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
 							<Position X="2" Y="2"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Oven_Start" ID="{D4C341DD-2D16-4D3B-A36E-7D39AD17719E}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<ObjectRef Name="Picture_Break" ID="{76134999-D34B-4FE0-A788-BE3D4D05D821}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
 							<Position X="2" Y="3"/>
 						</Module>
 						<Module>
@@ -58,7 +62,7 @@
 							<Position X="2" Y="4"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Bbq_Stop" ID="{3A0BA28C-9281-4717-B308-E6B3BA50A550}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<ObjectRef Name="Bookshelf_Break" ID="{879E7E35-1DC8-40D4-9C29-D37B11A066F9}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
 							<Position X="3" Y="0"/>
 						</Module>
 						<Module>
@@ -66,11 +70,19 @@
 							<Position X="3" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Oven_Stop" ID="{3F0FE35C-147D-4133-95D6-113D3A425BF5}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<ObjectRef Name="Toaster_WaterImpact" ID="{01E3187B-BA07-4DD8-83B0-58798C34D9C5}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Picture_Replace" ID="{D83CB0FD-9CE6-40C2-BD9B-CF508CD2EEA0}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
 							<Position X="3" Y="3"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Bbq_Start" ID="{F36D64B0-A02C-443E-93BF-EEB9598B473E}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<ObjectRef Name="Door_Close" ID="{BB8E5DB0-11DA-46E5-9920-2A8433C2006A}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="3" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Bookshelf_Replace" ID="{57D41F6E-889F-4740-BFC9-657432BC5384}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
 							<Position X="4" Y="0"/>
 						</Module>
 						<Module>
@@ -78,11 +90,125 @@
 							<Position X="4" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Toaster_WaterImpact" ID="{01E3187B-BA07-4DD8-83B0-58798C34D9C5}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
-							<Position X="4" Y="2"/>
+							<ObjectRef Name="Toaster_Pickup" ID="{BC0A1134-EA80-495B-836C-F87341D4CDC9}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="4" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Door_Open" ID="{4CE2F97A-1BAC-43E2-931D-F55E5D6098F4}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="4" Y="4"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="MUS_Stigners_Sidechain" ID="{7261FE18-5570-4FD6-BB00-F07A8CC3F801}"/>
+							<Value>-48</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="MUS_GonzuelaLeads" ID="{DC301AEC-AD49-4077-96C5-78F9567155F1}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+				<SoundcasterSession Name="ShowRoom" ID="{6116C58F-476A-4FC6-905A-68D4E0BF079D}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Gamestart" ID="{F68CF027-2BD7-40E2-9597-1709832B6D3F}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Bbq_Start" ID="{F36D64B0-A02C-443E-93BF-EEB9598B473E}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Bookshelf_Break" ID="{879E7E35-1DC8-40D4-9C29-D37B11A066F9}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Picture_Break" ID="{76134999-D34B-4FE0-A788-BE3D4D05D821}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Door_Open" ID="{4CE2F97A-1BAC-43E2-931D-F55E5D6098F4}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="0" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lightswitch_On" ID="{17684984-1E73-435B-8A24-C4BF3F415738}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="0" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Kids_Lead" ID="{19E75DC0-A905-4826-9A62-B6E9B8C11BDE}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Bbq_Stop" ID="{3A0BA28C-9281-4717-B308-E6B3BA50A550}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Bookshelf_Replace" ID="{57D41F6E-889F-4740-BFC9-657432BC5384}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Picture_Replace" ID="{D83CB0FD-9CE6-40C2-BD9B-CF508CD2EEA0}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="1" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Door_Close" ID="{BB8E5DB0-11DA-46E5-9920-2A8433C2006A}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="1" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lightswitch_Off" ID="{F8A31715-204F-469A-A694-5599D7D6408F}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="1" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Gonzuela_Leads" ID="{606250E7-74AF-4F72-9A87-286994A300F1}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Extinctor_Use" ID="{720CD8BE-B6E7-46DB-812F-891CB01C11D7}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Oven_Start" ID="{D4C341DD-2D16-4D3B-A36E-7D39AD17719E}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="2" Y="2"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Toaster_Pickup" ID="{BC0A1134-EA80-495B-836C-F87341D4CDC9}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="2" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Dishes_Start" ID="{09A4D549-EDC4-4D0E-99AC-F77C343EB228}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="2" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Woodblock_Break" ID="{91C50A2F-3109-4DB9-BD65-EAC35B493EE4}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="2" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Mix_GonzCaughtKid" ID="{BAFE7F2E-C461-4519-B6BF-CF2D369FA248}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Oven_Stretch" ID="{4C5BC247-4475-44AB-B0FB-71E1D1F50283}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Toaster_Drop" ID="{E0C83E31-67FA-4363-9DEA-F361ECB39216}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="3" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Dishes_Stop" ID="{4203BD2D-DD8E-43FC-BEF3-9B817B70CE20}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="3" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Woodblock_Replace" ID="{3ACC5E18-155C-4C7E-9F4F-8CB8EC0643BE}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="3" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Oven_Stop" ID="{3F0FE35C-147D-4133-95D6-113D3A425BF5}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+							<Position X="4" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Mix_Toaster_WaterDrop" ID="{FDF94BEF-22D3-4739-9B73-97FECB9F4B75}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
 							<Position X="4" Y="3"/>
 						</Module>
 					</ModuleList>
@@ -93,7 +219,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="MUS_KidsLeads" ID="{5ECD4C07-29CE-4A90-8E9C-C8BE5AF119C7}"/>
+						<CurrentStateRef Name="MUS_GonzuelaLeads" ID="{DC301AEC-AD49-4077-96C5-78F9567155F1}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>

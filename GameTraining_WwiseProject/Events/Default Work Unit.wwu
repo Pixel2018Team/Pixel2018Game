@@ -86,7 +86,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="SFX_Dishes_Loop" ID="{0892C13A-8268-4467-9015-C549C34F8149}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+									<ObjectRef Name="Dishes" ID="{E5E4FC17-1030-40A2-9B4E-E2608CD8AF6D}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -101,7 +101,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="SFX_Dishes_Loop" ID="{0892C13A-8268-4467-9015-C549C34F8149}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+									<ObjectRef Name="Dishes" ID="{E5E4FC17-1030-40A2-9B4E-E2608CD8AF6D}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -232,7 +232,31 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="SFX_Toaster_Water_Impact" ID="{080620FA-2B30-4877-B486-2AB9F754F975}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+											<ObjectRef Name="Toaster WaterSPlash" ID="{0C2BE748-5205-4EC1-BA65-7A19A4AA31F2}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Mix_GonzCaughtKid" ID="{BAFE7F2E-C461-4519-B6BF-CF2D369FA248}">
+							<ChildrenList>
+								<Action Name="" ID="{C3E4C876-F3AC-4593-90B4-803D58133865}" ShortID="320266349">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Kids_Crying" ID="{FB5E5CF4-1FC4-4CAC-A487-3BF8651E2E42}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{EE252DFA-81CA-400E-BBEC-AAAEF18F9608}" ShortID="523245483">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Gonz_CaughtKid" ID="{656460AE-865F-440E-81EE-82D76CFB244A}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -262,7 +286,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="SFX_Toaster_Water_Impact" ID="{080620FA-2B30-4877-B486-2AB9F754F975}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
+									<ObjectRef Name="Toaster WaterSPlash" ID="{0C2BE748-5205-4EC1-BA65-7A19A4AA31F2}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -294,9 +318,21 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{2C68939D-81A2-4C83-B059-9ED1A713FB24}" ShortID="195914311">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MUS_GonzLead" ID="{36C98184-0ADF-4A88-A0BC-4461DC3D3C4C}" WorkUnitID="{3F3A4A03-12A8-4908-B129-74342C5DBED3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 						<Action Name="" ID="{AF25A521-15D9-4B74-82B2-E7EDFC0AA524}" ShortID="749727609">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="35"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -342,9 +378,21 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{E71DDFE1-CC8C-4504-948B-753DEFE34F20}" ShortID="529494042">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MUS_KidsLead" ID="{1E791F30-C861-4CA2-88B9-F1432A35B7F8}" WorkUnitID="{3F3A4A03-12A8-4908-B129-74342C5DBED3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 						<Action Name="" ID="{6E9577E8-4F13-435A-A4F7-162F1D6200AD}" ShortID="589302689">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="1.2"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -355,10 +403,22 @@
 						<Action Name="" ID="{735E01DD-32F0-424E-A249-F37B2F5FDEA4}" ShortID="996851009">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="35"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="GonzLead" ID="{F4241A5A-1874-4FC2-92A8-A03F4962F185}" WorkUnitID="{8496A4A9-1E27-4C40-AE6D-B720E02A3338}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7F1CD5F1-81A7-43BD-8905-211F81E719B6}" ShortID="289802081">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gonz_Happy" ID="{73927598-3EC3-49B1-A978-E3BA8B052CC9}" WorkUnitID="{B2B9F945-2F1A-463D-9418-CC009FD9C46A}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
