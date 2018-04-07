@@ -1,0 +1,258 @@
+fileFormatVersion: 2
+guid: 73c970bb819ed1d468a6b418bcdbf2ad
+timeCreated: 1523132899
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Gonzuela
+    100002: //RootNode
+    100004: Human_
+    100006: Human_Head
+    100008: Human_LCalf
+    100010: Human_LCollarbone
+    100012: Human_LDigit11
+    100014: Human_LDigit11 1
+    100016: Human_LDigit12
+    100018: Human_LDigit21
+    100020: Human_LDigit22
+    100022: Human_LFoot
+    100024: Human_LForearm
+    100026: Human_LPalm
+    100028: Human_LPlatform
+    100030: Human_LThigh
+    100032: Human_LUpperarm
+    100034: Human_Neck
+    100036: Human_Pelvis
+    100038: Human_RCalf
+    100040: Human_RCollarbone
+    100042: Human_RDigit11
+    100044: Human_RDigit11 1
+    100046: Human_RDigit12
+    100048: Human_RDigit21
+    100050: Human_RDigit22
+    100052: Human_RFoot
+    100054: Human_RForearm
+    100056: Human_Ribcage
+    100058: Human_RPalm
+    100060: Human_RPlatform
+    100062: Human_RThigh
+    100064: Human_RUpperarm
+    100066: Human_Spine1
+    100068: Human_Spine2
+    100070: Human_Spine3
+    400000: Gonzuela
+    400002: //RootNode
+    400004: Human_
+    400006: Human_Head
+    400008: Human_LCalf
+    400010: Human_LCollarbone
+    400012: Human_LDigit11
+    400014: Human_LDigit11 1
+    400016: Human_LDigit12
+    400018: Human_LDigit21
+    400020: Human_LDigit22
+    400022: Human_LFoot
+    400024: Human_LForearm
+    400026: Human_LPalm
+    400028: Human_LPlatform
+    400030: Human_LThigh
+    400032: Human_LUpperarm
+    400034: Human_Neck
+    400036: Human_Pelvis
+    400038: Human_RCalf
+    400040: Human_RCollarbone
+    400042: Human_RDigit11
+    400044: Human_RDigit11 1
+    400046: Human_RDigit12
+    400048: Human_RDigit21
+    400050: Human_RDigit22
+    400052: Human_RFoot
+    400054: Human_RForearm
+    400056: Human_Ribcage
+    400058: Human_RPalm
+    400060: Human_RPlatform
+    400062: Human_RThigh
+    400064: Human_RUpperarm
+    400066: Human_Spine1
+    400068: Human_Spine2
+    400070: Human_Spine3
+    2100000: No Name
+    2100002: MAT_Gonzuela
+    2300000: Human_Head
+    2300002: Human_LCalf
+    2300004: Human_LCollarbone
+    2300006: Human_LDigit11
+    2300008: Human_LDigit11 1
+    2300010: Human_LDigit12
+    2300012: Human_LDigit21
+    2300014: Human_LDigit22
+    2300016: Human_LFoot
+    2300018: Human_LForearm
+    2300020: Human_LPalm
+    2300022: Human_LThigh
+    2300024: Human_LUpperarm
+    2300026: Human_Neck
+    2300028: Human_Pelvis
+    2300030: Human_RCalf
+    2300032: Human_RCollarbone
+    2300034: Human_RDigit11
+    2300036: Human_RDigit11 1
+    2300038: Human_RDigit12
+    2300040: Human_RDigit21
+    2300042: Human_RDigit22
+    2300044: Human_RFoot
+    2300046: Human_RForearm
+    2300048: Human_Ribcage
+    2300050: Human_RPalm
+    2300052: Human_RThigh
+    2300054: Human_RUpperarm
+    2300056: Human_Spine1
+    2300058: Human_Spine2
+    2300060: Human_Spine3
+    3300000: Human_Head
+    3300002: Human_LCalf
+    3300004: Human_LCollarbone
+    3300006: Human_LDigit11
+    3300008: Human_LDigit11 1
+    3300010: Human_LDigit12
+    3300012: Human_LDigit21
+    3300014: Human_LDigit22
+    3300016: Human_LFoot
+    3300018: Human_LForearm
+    3300020: Human_LPalm
+    3300022: Human_LThigh
+    3300024: Human_LUpperarm
+    3300026: Human_Neck
+    3300028: Human_Pelvis
+    3300030: Human_RCalf
+    3300032: Human_RCollarbone
+    3300034: Human_RDigit11
+    3300036: Human_RDigit11 1
+    3300038: Human_RDigit12
+    3300040: Human_RDigit21
+    3300042: Human_RDigit22
+    3300044: Human_RFoot
+    3300046: Human_RForearm
+    3300048: Human_Ribcage
+    3300050: Human_RPalm
+    3300052: Human_RThigh
+    3300054: Human_RUpperarm
+    3300056: Human_Spine1
+    3300058: Human_Spine2
+    3300060: Human_Spine3
+    4300000: Human_Pelvis
+    4300002: Human_LThigh
+    4300004: Human_LCalf
+    4300006: Human_LFoot
+    4300008: Human_LDigit11
+    4300010: Human_RThigh
+    4300012: Human_RCalf
+    4300014: Human_RFoot
+    4300016: Human_RDigit11
+    4300018: Human_Spine1
+    4300020: Human_Spine2
+    4300022: Human_Spine3
+    4300024: Human_Ribcage
+    4300026: Human_LCollarbone
+    4300028: Human_LUpperarm
+    4300030: Human_LForearm
+    4300032: Human_LPalm
+    4300034: Human_LDigit11
+    4300036: Human_LDigit12
+    4300038: Human_LDigit21
+    4300040: Human_LDigit22
+    4300042: Human_RCollarbone
+    4300044: Human_RUpperarm
+    4300046: Human_RForearm
+    4300048: Human_RPalm
+    4300050: Human_RDigit11
+    4300052: Human_RDigit12
+    4300054: Human_RDigit21
+    4300056: Human_RDigit22
+    4300058: Human_Neck
+    4300060: Human_Head
+    4300062: Gonzuela
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Gonzuela
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

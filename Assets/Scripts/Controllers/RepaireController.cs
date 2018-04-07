@@ -117,7 +117,10 @@ public class RepaireController : MonoBehaviour
             if (isBroken)
             {
                 var controller = _actor.GetComponent<TopDownController>();
-                controller.enabled = false;
+                if(controller != null)
+                {
+                    controller.enabled = false;
+                }
             }
             else
             {
