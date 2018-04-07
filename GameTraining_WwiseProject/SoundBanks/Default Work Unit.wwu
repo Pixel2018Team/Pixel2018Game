@@ -5,9 +5,32 @@
 			<ChildrenList>
 				<SoundBank Name="PIX_2018" ID="{C3C77E31-4A3F-47C2-8E0A-F480F4F51061}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Picture_Replace" ID="{D83CB0FD-9CE6-40C2-BD9B-CF508CD2EEA0}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Bookshelf_Break" ID="{879E7E35-1DC8-40D4-9C29-D37B11A066F9}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Gamestart" ID="{F68CF027-2BD7-40E2-9597-1709832B6D3F}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Oven_Stop" ID="{3F0FE35C-147D-4133-95D6-113D3A425BF5}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Lightswitch_On" ID="{17684984-1E73-435B-8A24-C4BF3F415738}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Toaster_Drop" ID="{E0C83E31-67FA-4363-9DEA-F361ECB39216}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Door_Open" ID="{4CE2F97A-1BAC-43E2-931D-F55E5D6098F4}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Dishes_Stop" ID="{4203BD2D-DD8E-43FC-BEF3-9B817B70CE20}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Bbq_Start" ID="{F36D64B0-A02C-443E-93BF-EEB9598B473E}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Oven_Stretch" ID="{4C5BC247-4475-44AB-B0FB-71E1D1F50283}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Lightswitch_Off" ID="{F8A31715-204F-469A-A694-5599D7D6408F}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Extinctor_Use" ID="{720CD8BE-B6E7-46DB-812F-891CB01C11D7}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Door_Close" ID="{BB8E5DB0-11DA-46E5-9920-2A8433C2006A}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Bbq_Stop" ID="{3A0BA28C-9281-4717-B308-E6B3BA50A550}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Bookshelf_Replace" ID="{57D41F6E-889F-4740-BFC9-657432BC5384}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Kids_Leading" ID="{19E75DC0-A905-4826-9A62-B6E9B8C11BDE}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Toaster_Pickup" ID="{BC0A1134-EA80-495B-836C-F87341D4CDC9}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Woodblock_Replace" ID="{3ACC5E18-155C-4C7E-9F4F-8CB8EC0643BE}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Kids_Crying" ID="{FB5E5CF4-1FC4-4CAC-A487-3BF8651E2E42}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Dishes_Start" ID="{09A4D549-EDC4-4D0E-99AC-F77C343EB228}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Oven_Start" ID="{D4C341DD-2D16-4D3B-A36E-7D39AD17719E}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Woodblock_Break" ID="{91C50A2F-3109-4DB9-BD65-EAC35B493EE4}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Toaster_WaterImpact" ID="{01E3187B-BA07-4DD8-83B0-58798C34D9C5}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Dishes_Impact" ID="{C6A3EAD6-E084-4EAB-ACF2-6CA3F891AB92}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Gonzuela_Leading" ID="{606250E7-74AF-4F72-9A87-286994A300F1}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Picture_Break" ID="{76134999-D34B-4FE0-A788-BE3D4D05D821}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

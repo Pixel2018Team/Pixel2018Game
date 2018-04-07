@@ -31,7 +31,7 @@ public class ComboReceiver : MonoBehaviour {
         DebugLogger.Log("trigger enter", Enum.LoggerMessageType.Important);
         if (col.gameObject.tag == "kid")
         {
-            col.gameObject.GetComponent<TopDownKidsController>().interactableObjectReceiverInRanger = gameObject;
+            col.gameObject.GetComponent<TopDownKidsController>().interactableObjectReceiverInRange = gameObject;
             DebugLogger.Log("Combo object inbound", Enum.LoggerMessageType.Important);
         }
     }
@@ -40,7 +40,7 @@ public class ComboReceiver : MonoBehaviour {
     {
         if (col.gameObject.tag == "kid")
         {
-            col.gameObject.GetComponent<TopDownKidsController>().interactableObjectReceiverInRanger = null;
+            col.gameObject.GetComponent<TopDownKidsController>().interactableObjectReceiverInRange = null;
         }
     }
 
@@ -68,6 +68,7 @@ public class ComboReceiver : MonoBehaviour {
             triggerObject.GetComponent<InteractableItem>().TriggerActionOnCombo(Enum.ComboAnimType.StaticToAnimated);
 
             _sprite.SetActive(true);
+            triggerObject.GetComponent<InteractableItem>().CheckProvokeChaos();
         }
     }
 }
