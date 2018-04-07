@@ -5,16 +5,17 @@ using UnityEngine;
 
 public class PlayerSwitchManager : MonoBehaviour {
 
-    public GameObject startingKid;
+    public GameObject currentKid;
     public List<GameObject> kids;
+    private int arrayIndex;
 
-    private void Awake()
+    private void Start()
     {
-        if(startingKid != null)
+        if(currentKid != null)
         {
-            startingKid.GetComponent<TopDownKidsController>().enabled = true;
+            currentKid.GetComponent<TopDownKidsController>().enabled = true;
 
-            var ai = startingKid.GetComponent<AIKid>();
+            var ai = currentKid.GetComponent<AIKid>();
 
             if(ai != null)
             {
@@ -25,35 +26,60 @@ public class PlayerSwitchManager : MonoBehaviour {
 
         foreach (var kid in kids)
         {
-            if(kid != startingKid)
+            if(kid != currentKid)
             {
                 DelegateKidToAI(kid);
+            }
+
+            if(kid == currentKid)
+            {
+                arrayIndex = kids.IndexOf(currentKid);
             }
         }
     }
 
     public void SwitchToNextKid()
     {
+        arrayIndex++;
+        if(arrayIndex > kids.Count() - 1)
+        {
+            arrayIndex = 0;
+        }
 
+        //DelegateKidToPlayer(kids[arrayIndex]);
+
+        foreach (var k in kids)
+        {
+            if (kids.IndexOf(k) != arrayIndex)
+            {
+                DelegateKidToAI(k);
+            }
+
+            else
+            {
+                DelegateKidToPlayer(k);
+            }
+        }    
     }
 
     public void DelegateKidToAI(GameObject kid)
     {
         var kidToModify = kids.FirstOrDefault( k => k == kid);
 
-        if(kidToModify != null)
+        kidToModify.GetComponent<Rigidbody>().velocity = Vector3.zero;
+
+        if (kidToModify != null)
         {
             var controller = kidToModify.GetComponent<TopDownKidsController>();
             controller.controlledByAI = true;
-
+            controller.SetAnimationsAIOrPlayer();
             //drop any object held by the ai
-            if(controller.objectCarried != null)
+            if (controller.objectCarried != null)
             {
-                controller.objectCarried = null;
+                //controller.releaseOwnershipOnUsedObject();
                 controller.DropCarriedObject(false);
             }
             
-
             var ai = kidToModify.GetComponent<AIKid>();
             if (ai != null)
             {
@@ -69,7 +95,9 @@ public class PlayerSwitchManager : MonoBehaviour {
 
         if (kidToModify != null)
         {
-            kidToModify.GetComponent<TopDownKidsController>().controlledByAI = false;
+            var controller = kidToModify.GetComponent<TopDownKidsController>();
+            controller.controlledByAI = false;
+            controller.SetAnimationsAIOrPlayer();
             var ai = kidToModify.GetComponent<AIKid>();
 
             if (ai != null)
@@ -78,15 +106,18 @@ public class PlayerSwitchManager : MonoBehaviour {
                 ai.EnableDisableAgent(false);
             }
         }
+
+        currentKid = kidToModify;
     }
 
-    // Use this for initialization
-    void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+
+        if (currentKid != null && currentKid.GetComponent<TopDownKidsController>().requestedSwitchKid == true)
+        {
+            currentKid.GetComponent<TopDownKidsController>().requestedSwitchKid = false;
+            SwitchToNextKid();
+        }
 	}
 }

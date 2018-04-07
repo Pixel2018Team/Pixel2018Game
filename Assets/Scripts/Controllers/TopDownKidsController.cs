@@ -12,8 +12,9 @@ public class TopDownKidsController : MonoBehaviour
     public float facingAngleMargin = 5f;
     public float facingRotationSpeed = 5f;
     public GameObject interactableObjectInRange;
-    public GameObject interactableObjectReceiverInRanger;
+    public GameObject interactableObjectReceiverInRange;
     public float tossForce = 5f;
+    public bool requestedSwitchKid;
     private Rigidbody _rigidBody;
     private Vector3 _moveInput;
     private Vector3 _moveVelocity;
@@ -50,16 +51,30 @@ public class TopDownKidsController : MonoBehaviour
         _animator = GetComponent<Animator>();
     }
 
+    public void SetAnimationsAIOrPlayer()
+    {
+        if (controlledByAI)
+        {
+            if (_animator.GetBool("controlledByAI") == false)
+            {
+                _animator.SetBool("controlledByAI", true);
+            }
+        }
+
+        else
+        {
+            if (_animator.GetBool("controlledByAI") == true)
+            {
+                _animator.SetBool("controlledByAI", false);
+            }
+        }
+    }
+
     void Update()
     {
         Debug.DrawLine(transform.position, transform.position + transform.rotation * Vector3.forward * 3, Color.red);
 
-        if (controlledByAI)
-        {
-
-        }
-
-        else
+        if(!controlledByAI)
         {
             //If not interacting with anything nor catched by gonzuela, move normally
             if (!controlsLocked)
@@ -86,9 +101,14 @@ public class TopDownKidsController : MonoBehaviour
                     //Dropping a held object
                     else if (objectCarried != null)
                     {
-                        var dropOnReceiver = interactableObjectReceiverInRanger != null ? true : false;
+                        var dropOnReceiver = interactableObjectReceiverInRange != null ? true : false;
                         DropCarriedObject(dropOnReceiver);
                     }
+                }
+
+                if (Input.GetButtonDown(InputMapping.GetInputName(playerTag, InputMapping.Input.Y)))
+                {
+                    requestedSwitchKid = true;
                 }
             }
 
@@ -96,14 +116,6 @@ public class TopDownKidsController : MonoBehaviour
             {
                 if (interactableObjectInRange != null)
                 {
-<<<<<<< HEAD
-                   // DebugLogger.Log("Rotation over", Enum.LoggerMessageType.Important);
-                    state = State.InAction;
-                    //gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
-                    interactableObjectInRange.GetComponent<InteractableItem>().currentOwner = gameObject;
-                    interactableObjectInRange.GetComponent<InteractableItem>().TriggerActionOnInteract();
-
-=======
                     var objPosition = new Vector3(interactableObjectInRange.transform.position.x, transform.position.y, interactableObjectInRange.transform.position.z);
                     var rotToObject = Quaternion.LookRotation(objPosition - transform.position);
                     transform.rotation = Quaternion.Slerp(transform.rotation, rotToObject, Time.deltaTime * facingRotationSpeed);
@@ -116,20 +128,17 @@ public class TopDownKidsController : MonoBehaviour
                         //gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
                         interactableObjectInRange.GetComponent<InteractableItem>().TriggerActionOnInteract();
                     }
->>>>>>> WIP AI + switch kid
                 }
             }
 
             if (state == State.InAction)
             {
-<<<<<<< HEAD
                 DebugLogger.Log("Interaction phase over", Enum.LoggerMessageType.Important);
                 state = State.Normal;
                 controlsLocked = false;
                 objectCurrentlyUsed.GetComponent<InteractableItem>().CheckProvokeChaos();
                 releaseOwnershipOnUsedObject();
                 //gameObject.GetComponent<MeshRenderer>().material.color = Color.white;
-=======
                 currentlockActionTime += Time.deltaTime;
                 var elapsedSecs = currentlockActionTime % 60;
 
@@ -140,19 +149,12 @@ public class TopDownKidsController : MonoBehaviour
                     controlsLocked = false;
                     gameObject.GetComponent<MeshRenderer>().material.color = Color.white;
                 }
->>>>>>> WIP AI + switch kid
             }
 
-<<<<<<< HEAD
-        if(state == State.CarryingObject)
-        {
-        }
-=======
             if (state == State.CarryingObject)
             {
 
             }
->>>>>>> WIP AI + switch kid
 
             if (state == State.Catched)
             {
@@ -163,11 +165,11 @@ public class TopDownKidsController : MonoBehaviour
 
     private void InteractWithObject(GameObject obj)
     {
-        if(obj != null)
+        if (obj != null)
         {
             var interactable = obj.GetComponent<InteractableItem>();
             Debug.Log("sdsd");
-            if(interactable != null && interactable.isInteractable)
+            if (interactable != null && interactable.isInteractable)
             {
                 if (interactable.interactableType == Enum.InteractableType.SingleAction)
                 {
@@ -184,7 +186,7 @@ public class TopDownKidsController : MonoBehaviour
                     state = State.CarryingObject;
                     objectCarried = obj;
                     objectCurrentlyUsed = obj;
-                    objectCarried.transform.position = new Vector3( transform.position.x,  transform.position.y + 0.5f, transform.position.z) + transform.forward * 0.5f;
+                    objectCarried.transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z) + transform.forward * 0.5f;
                     objectCarried.transform.parent = transform;
                     objectCarried.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                     objectCarried.GetComponent<Rigidbody>().useGravity = false;
@@ -197,11 +199,11 @@ public class TopDownKidsController : MonoBehaviour
 
     public void releaseOwnershipOnUsedObject()
     {
-        if(objectCurrentlyUsed != null)
+        if (objectCurrentlyUsed != null)
         {
             objectCurrentlyUsed.GetComponent<InteractableItem>().currentOwner = null;
             objectCurrentlyUsed = null;
-        }    
+        }
     }
 
     public void DropCarriedObject(bool dropOnReceiver)
@@ -211,7 +213,7 @@ public class TopDownKidsController : MonoBehaviour
             //If combo receiver
             if (dropOnReceiver)
             {
-                interactableObjectReceiverInRanger.GetComponent<ComboReceiver>().ReceiveObject(objectCarried);
+                interactableObjectReceiverInRange.GetComponent<ComboReceiver>().ReceiveObject(objectCarried);
                 objectCarried.GetComponent<InteractableItem>().isInteractable = false;
             }
 
@@ -234,7 +236,7 @@ public class TopDownKidsController : MonoBehaviour
 
     private bool IsFacingAndCloseToObject(GameObject obj)
     {
-        if (Vector3.Dot(transform.forward, obj.transform.position) >= 0 
+        if (Vector3.Dot(transform.forward, obj.transform.position) >= 0
             && Vector3.Distance(transform.position, obj.transform.position) <= minInteractionDistance)
         {
             return true;
@@ -245,7 +247,7 @@ public class TopDownKidsController : MonoBehaviour
 
     public void CaughtByGonzuela()
     {
-        if(state != State.Catched)
+        if (state != State.Catched)
         {
             state = State.Catched;
         }

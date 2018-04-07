@@ -11,12 +11,13 @@ public class AIKid : MonoBehaviour
     public int maxIdleTime; //seconds
     public float distanceMargin; //margin used to decide if the npc has reached a waypoint
 
-    private NavMeshAgent navMeshAgent;
+    private NavMeshAgent _navMeshAgent;
     private AIState state;
     private float currentIdleTimer;
     private int nextIdleEndTime; //seconds
     private bool canChooseWaypoint;
     private Vector3 targetWaypoint;
+    private Animator _animator;
 
     public enum AIState
     {
@@ -27,7 +28,8 @@ public class AIKid : MonoBehaviour
 
     public void Awake()
     {
-        navMeshAgent = GetComponent<NavMeshAgent>();
+        _navMeshAgent = GetComponent<NavMeshAgent>();
+        _animator = GetComponent<Animator>();
     }
 
     // Use this for initialization
@@ -46,7 +48,7 @@ public class AIKid : MonoBehaviour
         {
             currentIdleTimer += Time.deltaTime;
             var elapsedIdleSecs = currentIdleTimer % 60;
-            //DebugLogger.Log("Idle current time = "+elapsedIdleSecs+"s", Enum.LoggerMessageType.Important);
+            //DebugLogger.Log("Idle current time = " + elapsedIdleSecs + "s", Enum.LoggerMessageType.Important);
             //DebugLogger.Log("I will move at " + nextIdleEndTime + "s", Enum.LoggerMessageType.Important);
             //choose a new destination when reaching the nextIdleEndTime
             if (elapsedIdleSecs >= nextIdleEndTime && canChooseWaypoint)
@@ -60,7 +62,7 @@ public class AIKid : MonoBehaviour
         {
             //Debug.Log("remaining distance : " + Vector3.Distance(transform.position, targetWaypoint));
             //If waypoint reached, trigger idle state
-            if (Vector3.Distance(transform.position, navMeshAgent.destination) <= distanceMargin)
+            if (Vector3.Distance(transform.position, _navMeshAgent.destination) <= distanceMargin)
             {
                 StartIdle();
             }
@@ -73,13 +75,20 @@ public class AIKid : MonoBehaviour
         }
     }
 
+    public void FixedUpdate()
+    {
+
+    }
+
     //Set the idle state
     public void StartIdle()
     {
         state = AIState.Idle;
         canChooseWaypoint = true;
+        currentIdleTimer = 0;
         nextIdleEndTime = Random.Range(0, maxIdleTime);
-        DebugLogger.Log(gameObject.name + "starts idling'!", Enum.LoggerMessageType.Error);
+       // DebugLogger.Log(gameObject.name + "starts idling'!", Enum.LoggerMessageType.Error);
+        _animator.SetBool("ai_walking", false);
     }
 
     //Choose the next waypoint to move to
@@ -89,18 +98,19 @@ public class AIKid : MonoBehaviour
         {
             var randomIdx = Random.Range(0, wayPoints.Count);
             targetWaypoint = wayPoints[randomIdx].transform.position;
-            DebugLogger.Log(gameObject.name + "'s destination = " + targetWaypoint, Enum.LoggerMessageType.Important);
-            navMeshAgent.SetDestination(targetWaypoint);
+            //DebugLogger.Log(gameObject.name + "'s destination = " + targetWaypoint, Enum.LoggerMessageType.Important);
+            _navMeshAgent.SetDestination(targetWaypoint);
             state = AIState.GoingToWayPoint;
+            _animator.SetBool("ai_walking", true);
             DebugLogger.Log(gameObject.name + "starts moving !", Enum.LoggerMessageType.Important);
         }
     }
 
     public void EnableDisableAgent(bool enable)
     {
-        if(navMeshAgent != null)
+        if (_navMeshAgent != null)
         {
-            navMeshAgent.enabled = enable;
+            _navMeshAgent.enabled = enable;
         }
     }
 }
