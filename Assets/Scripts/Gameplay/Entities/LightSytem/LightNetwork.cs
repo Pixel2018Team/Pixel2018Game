@@ -7,16 +7,26 @@ public class LightNetwork : InteractableItem {
 
     public List<GameObject> lights;
     public bool isOn = true;
+    public GameObject button;
+    private Animator buttonAnimator;
+
+    public void Awake()
+    {
+        buttonAnimator = button.GetComponent<Animator>();
+    }
 
     public override void TriggerActionOnInteract()
     {
+        Debug.Log("INTERACTED");
 
         if (isOn)
         {
+            //buttonAnimator.SetBool("isOn", true);
             SwitchAllState(false);
         }
         else
         {
+            //buttonAnimator.SetBool("isOn", false);
             SwitchAllState(true);
         }
     }

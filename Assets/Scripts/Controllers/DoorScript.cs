@@ -12,6 +12,7 @@ public class DoorScript : MonoBehaviour
     public bool doorLocked;
     public float maxOpenTime = 1.5f;
     public float currentOpenTime = 0f;
+    private GameObject childDoor;
 
     private void Awake()
     {
@@ -20,6 +21,8 @@ public class DoorScript : MonoBehaviour
         Debug.DrawRay(transform.position, closeDir, Color.green, 1200);
         Debug.DrawRay(transform.position, openDir, Color.yellow, 1200);
         numberOfKidsInbounds = 0;
+
+        childDoor = transform.GetChild(0).gameObject;
     }
 
     public void OpenClose(bool open)
@@ -56,6 +59,7 @@ public class DoorScript : MonoBehaviour
 
         if (isRotating)
         {
+            childDoor.GetComponent<MeshCollider>().enabled = false;
             if (hasToOpen && !isOpened)
             {
                 //Debug.Log("signed angle = " + Vector3.SignedAngle(transform.forward, openDir, transform.up));
@@ -85,8 +89,14 @@ public class DoorScript : MonoBehaviour
                         
                     }
                 }
-                Debug.Log("angle from starting angle = " + Vector3.Angle(transform.forward, closeDir));
+                //Debug.Log("angle from starting angle = " + Vector3.Angle(transform.forward, closeDir));
             }
+        }
+
+        else
+        {
+            if(childDoor.GetComponent<MeshCollider>().enabled == false)
+                childDoor.GetComponent<MeshCollider>().enabled = true;
         }
     }
 
@@ -101,7 +111,7 @@ public class DoorScript : MonoBehaviour
     public void OnTriggerEnter(Collider col)
     {
         var obj = col.gameObject;
-        if (obj.tag == "kid")
+        if (obj.tag == "kid" || obj.tag == "gonzuela")
         {
             numberOfKidsInbounds++;
 
@@ -120,7 +130,7 @@ public class DoorScript : MonoBehaviour
     public void OnTriggerExit(Collider col)
     {
         var obj = col.gameObject;
-        if (obj.tag == "kid")
+        if (obj.tag == "kid" || obj.tag == "gonzuela")
         {
             numberOfKidsInbounds--;
 

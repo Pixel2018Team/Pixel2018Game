@@ -84,12 +84,14 @@ public class MoveController : MonoBehaviour
                 if (isBroken)
                 {
                     var controller = _actor.GetComponent<TopDownController>();
-                    controller.enabled = true;
+                    if (controller != null)
+                        controller.enabled = true;
                 }
                 else
                 {
                     var controller = _actor.GetComponent<TopDownKidsController>();
-                    controller.enabled = true;
+                    if(controller != null)
+                        controller.enabled = true;
                 }
                 var animator = _actor.GetComponent<Animator>();
                 animator.SetBool("action", false);
