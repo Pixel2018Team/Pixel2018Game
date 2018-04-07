@@ -197,7 +197,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4220018537675736, guid: 9c2820f0269a39547a89a4e03e4c5273, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 3.37
+      value: -6.04
       objectReference: {fileID: 0}
     - target: {fileID: 4220018537675736, guid: 9c2820f0269a39547a89a4e03e4c5273, type: 2}
       propertyPath: m_LocalPosition.y
@@ -205,7 +205,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4220018537675736, guid: 9c2820f0269a39547a89a4e03e4c5273, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -4.06
+      value: -7.63
       objectReference: {fileID: 0}
     - target: {fileID: 4220018537675736, guid: 9c2820f0269a39547a89a4e03e4c5273, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1554,6 +1554,16 @@ Prefab:
       propertyPath: m_Materials.Array.data[2]
       value: 
       objectReference: {fileID: 2100000, guid: 9faa549d9b732b346a35b2b1cbd27911, type: 2}
+    - target: {fileID: 114280603874754892, guid: 757adbd4891f1834d9cf6658eab01b56,
+        type: 2}
+      propertyPath: breakSoundEventName
+      value: Bbq_Start
+      objectReference: {fileID: 0}
+    - target: {fileID: 114280603874754892, guid: 757adbd4891f1834d9cf6658eab01b56,
+        type: 2}
+      propertyPath: fixSoundEventName
+      value: Bbq_Stop
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 757adbd4891f1834d9cf6658eab01b56, type: 2}
   m_IsPrefabParent: 0
@@ -1812,6 +1822,7 @@ GameObject:
   - component: {fileID: 1455483938}
   - component: {fileID: 1455483937}
   - component: {fileID: 1455483936}
+  - component: {fileID: 1455483939}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -1868,6 +1879,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1455483939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1455483935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dba3b35fc331a7148bf1abfeb709eff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  bankName: PIX_2018
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  valueGuid: 317ec7c33f4ac2478e0af480f4f51061
 --- !u!1 &1485381937
 GameObject:
   m_ObjectHideFlags: 0
@@ -2614,6 +2644,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBad: 0
   isTag: 0
+  freezeTime: 10
+  currentTime: 0
   playerTag: 0
 --- !u!1001 &2070603766
 Prefab:

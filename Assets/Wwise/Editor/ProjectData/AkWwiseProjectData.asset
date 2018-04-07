@@ -13,30 +13,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AcousticTextureWwu:
   - Guid: '{2B1A5A9B-E426-4A0A-9DF3-B1FF02702E98}'
-    m_lastTimePart2: -1999267288
-    m_lastTimePsrt1: -1777129856
+    m_lastTimePart2: -1999267015
+    m_lastTimePsrt1: -1451254938
     ParentPhysicalPath: 
-    PhysicalPath: Virtual Acoustics/Default Work Unit.wwu
+    PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     List: []
   autoPopulateEnabled: 1
   AuxBusWwu:
   - Guid: '{BBEB7192-4061-40B2-BB2C-F43371343F1E}'
-    m_lastTimePart2: -1999267288
-    m_lastTimePsrt1: -1777129856
+    m_lastTimePart2: -1999267015
+    m_lastTimePsrt1: -1451495100
     ParentPhysicalPath: 
-    PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
+    PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     List: []
   BankWwu:
   - Guid: '{95453523-4657-49D3-B09F-C2ABF7CEAF1C}'
-    m_lastTimePart2: -1999266844
-    m_lastTimePsrt1: -782609280
+    m_lastTimePart2: -1999266793
+    m_lastTimePsrt1: -420233679
     ParentPhysicalPath: 
-    PhysicalPath: SoundBanks/Default Work Unit.wwu
+    PhysicalPath: SoundBanks\Default Work Unit.wwu
     List:
     - Guid: 317ec7c33f4ac2478e0af480f4f51061
       ID: -1298100754
       Name: PIX_2018
-      Path: Default Work Unit/PIX_2018
+      Path: Default Work Unit\PIX_2018
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -48,15 +48,15 @@ MonoBehaviour:
   defaultPoolSize: 4096
   EventWwu:
   - Guid: '{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}'
-    m_lastTimePart2: -1999266844
-    m_lastTimePsrt1: -782609280
+    m_lastTimePart2: -1999266793
+    m_lastTimePsrt1: -424506506
     ParentPhysicalPath: 
-    PhysicalPath: Events/Default Work Unit.wwu
+    PhysicalPath: Events\Default Work Unit.wwu
     List:
     - Guid: b0646df32ca03e4493bfeeb9598b473e
       ID: 1360101095
       Name: Bbq_Start
-      Path: Default Work Unit/Bbq_Start
+      Path: Default Work Unit\Bbq_Start
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -68,7 +68,7 @@ MonoBehaviour:
     - Guid: 8ca20b3a81921747b308e6b3ba50a550
       ID: 1506460941
       Name: Bbq_Stop
-      Path: Default Work Unit/Bbq_Stop
+      Path: Default Work Unit\Bbq_Stop
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -77,10 +77,58 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - Guid: d6eaa3c684e0ab4eacf26ca3f891ab92
+      ID: -805043078
+      Name: Dishes_Impact
+      Path: Default Work Unit\Dishes_Impact
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Dishes_Impact
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 49d5a409c4ed0e4d99acf77c343eb228
+      ID: 797412272
+      Name: Dishes_Start
+      Path: Default Work Unit\Dishes_Start
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Dishes_Start
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 2dbd03428eddfc43bef39b817b70ce20
+      ID: -2120112612
+      Name: Dishes_Stop
+      Path: Default Work Unit\Dishes_Stop
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Dishes_Stop
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: bed80c72e7b6db46812f891cb01c11d7
+      ID: 536084281
+      Name: Extinctor_Use
+      Path: Default Work Unit\Extinctor_Use
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Extinctor_Use
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - Guid: 27f08cf6d72be24095971709832b6d3f
       ID: -236865931
       Name: Gamestart
-      Path: Default Work Unit/Gamestart
+      Path: Default Work Unit\Gamestart
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -89,10 +137,74 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - Guid: 7818f144834dd34b938cfddf2f5d9a5b
+      ID: -1761159097
+      Name: Mix_Extinctor_Oven
+      Path: Default Work Unit\ForMixing\Mix_Extinctor_Oven
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ForMixing
+        ObjectType: 4
+      - ElementName: Mix_Extinctor_Oven
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: ef4bf9fdd32239479b7397fecb9f4b75
+      ID: -333981005
+      Name: Mix_Toaster_WaterDrop
+      Path: Default Work Unit\ForMixing\Mix_Toaster_WaterDrop
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ForMixing
+        ObjectType: 4
+      - ElementName: Mix_Toaster_WaterDrop
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: dd41c3d4162d3b4da36e7d39ad17719e
+      ID: -1719896618
+      Name: Oven_Start
+      Path: Default Work Unit\Oven_Start
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Oven_Start
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 5ce30f3f7d14334195d6113d3a425bf5
+      ID: 743584214
+      Name: Oven_Stop
+      Path: Default Work Unit\Oven_Stop
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Oven_Stop
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 47c25b4c7544ab44b0fb71e1d1f50283
+      ID: -611409299
+      Name: Oven_Stretch
+      Path: Default Work Unit\Oven_Stretch
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Oven_Stretch
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - Guid: 382b8b50d19cac49ba8f6bf499c903b6
       ID: -1137964055
       Name: test
-      Path: Default Work Unit/test
+      Path: Default Work Unit\test
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -101,8 +213,48 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - Guid: 313ec8e0fa6763439deaf361ecb39216
+      ID: 1047931541
+      Name: Toaster_Drop
+      Path: Default Work Unit\Toaster_Drop
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Toaster_Drop
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 34110abc80ea5b49836cf87341d4cdc9
+      ID: 1782344986
+      Name: Toaster_Pickup
+      Path: Default Work Unit\Toaster_Pickup
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Toaster_Pickup
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 7b18e30107bad84d83b058798c34d9c5
+      ID: 509177165
+      Name: Toaster_WaterImpact
+      Path: Default Work Unit\Toaster_WaterImpact
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Toaster_WaterImpact
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   ExpandedItems:
   - /GameTraining_WwiseProject
+  - /GameTraining_WwiseProject/Events
+  - /GameTraining_WwiseProject/Events/Default Work Unit
+  - /GameTraining_WwiseProject/SoundBanks
+  - /GameTraining_WwiseProject/SoundBanks/Default Work Unit
   language: English(US)
   lowerPoolSize: 2048
   m_lastPopulateTimePart2: 0
@@ -111,15 +263,15 @@ MonoBehaviour:
   preparePoolSize: 0
   RtpcWwu:
   - Guid: '{984F371D-8246-4448-9F08-10BD93704E5A}'
-    m_lastTimePart2: -1999266973
-    m_lastTimePsrt1: -1571828096
+    m_lastTimePart2: -1999266793
+    m_lastTimePsrt1: -424496495
     ParentPhysicalPath: 
-    PhysicalPath: Game Parameters/Default Work Unit.wwu
+    PhysicalPath: Game Parameters\Default Work Unit.wwu
     List:
     - Guid: 18fe61727055d64fbb00f07a8cc3f801
       ID: -1692465047
       Name: MUS_LayersFade
-      Path: Default Work Unit/MUS_LayersFade
+      Path: Default Work Unit\MUS_LayersFade
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -127,15 +279,15 @@ MonoBehaviour:
         ObjectType: 13
   StateWwu:
   - Guid: '{70A2E602-0038-49F3-8033-7E9D0F78433D}'
-    m_lastTimePart2: -1999266872
-    m_lastTimePsrt1: -1123524992
+    m_lastTimePart2: -1999266793
+    m_lastTimePsrt1: -420213663
     ParentPhysicalPath: 
-    PhysicalPath: States/Default Work Unit.wwu
+    PhysicalPath: States\Default Work Unit.wwu
     List:
     - Guid: 27a05e35372a014e8e931a84e68dc0eb
       ID: -1525519074
       Name: MUS_Progression
-      Path: Default Work Unit/MUS_Progression
+      Path: Default Work Unit\MUS_Progression
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -160,15 +312,15 @@ MonoBehaviour:
   streamingPoolSize: 1024
   SwitchWwu:
   - Guid: '{0A965B9D-0641-4D6C-8F90-BFCA67345BF6}'
-    m_lastTimePart2: -1999267288
-    m_lastTimePsrt1: -1777129856
+    m_lastTimePart2: -1999267015
+    m_lastTimePsrt1: -1451334988
     ParentPhysicalPath: 
-    PhysicalPath: Switches/Default Work Unit.wwu
+    PhysicalPath: Switches\Default Work Unit.wwu
     List: []
   TriggerWwu:
   - Guid: '{8496A4A9-1E27-4C40-AE6D-B720E02A3338}'
-    m_lastTimePart2: -1999267288
-    m_lastTimePsrt1: -1777129856
+    m_lastTimePart2: -1999267015
+    m_lastTimePsrt1: -1451314981
     ParentPhysicalPath: 
-    PhysicalPath: Triggers/Default Work Unit.wwu
+    PhysicalPath: Triggers\Default Work Unit.wwu
     List: []
