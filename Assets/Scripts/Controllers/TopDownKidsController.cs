@@ -24,6 +24,8 @@ public class TopDownKidsController : MonoBehaviour
     private State state;
     private GameObject objectCurrentlyUsed;
 
+    public bool controlledByAI;
+
     private enum State
     {
         Normal,
@@ -32,7 +34,7 @@ public class TopDownKidsController : MonoBehaviour
         CarryingObject,
         Catched,
         IA_Wandering,
-        IA_PlayingAnim
+        IA_Idle
     };
 
     private void Awake()
@@ -52,81 +54,110 @@ public class TopDownKidsController : MonoBehaviour
     {
         Debug.DrawLine(transform.position, transform.position + transform.rotation * Vector3.forward * 3, Color.red);
 
-        //If not interacting with anything nor catched by gonzuela, move normally
-        if (!controlsLocked)
+        if (controlledByAI)
         {
-            _moveInput = new Vector3(Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.Horizontal)), 0f,
-                Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.Vertical)));
-            _moveVelocity = _moveInput * speed;
 
-            Vector3 newDirection = Vector3.right * Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.Horizontal))
-                + Vector3.forward * Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.Vertical));
-            if (newDirection.sqrMagnitude > 0.0f)
-            {
-                transform.rotation = Quaternion.LookRotation(newDirection, Vector3.up);
-            }
-
-            if (Input.GetButtonDown(InputMapping.GetInputName(playerTag, InputMapping.Input.A)))
-            {
-                //Interact with an object (if we're not holding one)
-                if(interactableObjectInRange != null && objectCarried == null)
-                {
-                    InteractWithObject(interactableObjectInRange);
-                }
-
-                //Dropping a held object
-                else if (objectCarried != null)
-                {
-                    var dropOnReceiver = interactableObjectReceiverInRanger != null ? true : false;
-                    DropCarriedObject(dropOnReceiver);
-                }
-            }
         }
 
-        if(state == State.RotatingTowardsObject)
+        else
         {
-            if(interactableObjectInRange != null)
+            //If not interacting with anything nor catched by gonzuela, move normally
+            if (!controlsLocked)
             {
-                var objPosition = new Vector3(interactableObjectInRange.transform.position.x, transform.position.y, interactableObjectInRange.transform.position.z) ;
-                var rotToObject = Quaternion.LookRotation(objPosition - transform.position);
-                transform.rotation = Quaternion.Slerp(transform.rotation, rotToObject, Time.deltaTime * facingRotationSpeed);
+                _moveInput = new Vector3(Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.Horizontal)), 0f,
+                    Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.Vertical)));
+                _moveVelocity = _moveInput * speed;
 
-                //DebugLogger.Log("angle = " + Vector3.Angle(transform.forward, objPosition - transform.position), Enum.LoggerMessageType.Important);
-                if (Vector3.Angle(transform.forward, objPosition - transform.position) <= facingAngleMargin)
+                Vector3 newDirection = Vector3.right * Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.Horizontal))
+                    + Vector3.forward * Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.Vertical));
+                if (newDirection.sqrMagnitude > 0.0f)
                 {
+                    transform.rotation = Quaternion.LookRotation(newDirection, Vector3.up);
+                }
+
+                if (Input.GetButtonDown(InputMapping.GetInputName(playerTag, InputMapping.Input.A)))
+                {
+                    //Interact with an object (if we're not holding one)
+                    if (interactableObjectInRange != null && objectCarried == null)
+                    {
+                        InteractWithObject(interactableObjectInRange);
+                    }
+
+                    //Dropping a held object
+                    else if (objectCarried != null)
+                    {
+                        var dropOnReceiver = interactableObjectReceiverInRanger != null ? true : false;
+                        DropCarriedObject(dropOnReceiver);
+                    }
+                }
+            }
+
+            if (state == State.RotatingTowardsObject)
+            {
+                if (interactableObjectInRange != null)
+                {
+<<<<<<< HEAD
                    // DebugLogger.Log("Rotation over", Enum.LoggerMessageType.Important);
                     state = State.InAction;
                     //gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
                     interactableObjectInRange.GetComponent<InteractableItem>().currentOwner = gameObject;
                     interactableObjectInRange.GetComponent<InteractableItem>().TriggerActionOnInteract();
 
+=======
+                    var objPosition = new Vector3(interactableObjectInRange.transform.position.x, transform.position.y, interactableObjectInRange.transform.position.z);
+                    var rotToObject = Quaternion.LookRotation(objPosition - transform.position);
+                    transform.rotation = Quaternion.Slerp(transform.rotation, rotToObject, Time.deltaTime * facingRotationSpeed);
+
+                    //DebugLogger.Log("angle = " + Vector3.Angle(transform.forward, objPosition - transform.position), Enum.LoggerMessageType.Important);
+                    if (Vector3.Angle(transform.forward, objPosition - transform.position) <= facingAngleMargin)
+                    {
+                        // DebugLogger.Log("Rotation over", Enum.LoggerMessageType.Important);
+                        state = State.InAction;
+                        //gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
+                        interactableObjectInRange.GetComponent<InteractableItem>().TriggerActionOnInteract();
+                    }
+>>>>>>> WIP AI + switch kid
                 }
             }
-        }
 
-        if (state == State.InAction)
-        {
-            currentlockActionTime += Time.deltaTime;
-            var elapsedSecs = currentlockActionTime % 60;
-
-            if(elapsedSecs >= lockActionTime)
+            if (state == State.InAction)
             {
+<<<<<<< HEAD
                 DebugLogger.Log("Interaction phase over", Enum.LoggerMessageType.Important);
                 state = State.Normal;
                 controlsLocked = false;
                 objectCurrentlyUsed.GetComponent<InteractableItem>().CheckProvokeChaos();
                 releaseOwnershipOnUsedObject();
                 //gameObject.GetComponent<MeshRenderer>().material.color = Color.white;
-            }
-        }
+=======
+                currentlockActionTime += Time.deltaTime;
+                var elapsedSecs = currentlockActionTime % 60;
 
+                if (elapsedSecs >= lockActionTime)
+                {
+                    DebugLogger.Log("Interaction phase over", Enum.LoggerMessageType.Important);
+                    state = State.Normal;
+                    controlsLocked = false;
+                    gameObject.GetComponent<MeshRenderer>().material.color = Color.white;
+                }
+>>>>>>> WIP AI + switch kid
+            }
+
+<<<<<<< HEAD
         if(state == State.CarryingObject)
         {
         }
+=======
+            if (state == State.CarryingObject)
+            {
 
-        if (state == State.Catched)
-        {
+            }
+>>>>>>> WIP AI + switch kid
 
+            if (state == State.Catched)
+            {
+
+            }
         }
     }
 
