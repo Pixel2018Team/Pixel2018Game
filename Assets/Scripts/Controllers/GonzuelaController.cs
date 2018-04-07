@@ -37,6 +37,7 @@ public class GonzuelaController : MonoBehaviour
                     {
                         controller.CatchActing();
                         _animator.SetTrigger("angry");
+                        AkSoundEngine.PostEvent("Gonz_CaughtKid", gameObject);
                     }
                 }
                 else
@@ -46,6 +47,7 @@ public class GonzuelaController : MonoBehaviour
                     {
                         moveController.CatchActing();
                         _animator.SetTrigger("angry");
+                        AkSoundEngine.PostEvent("Gonz_CaughtKid", gameObject);
                     }
                 }
             }

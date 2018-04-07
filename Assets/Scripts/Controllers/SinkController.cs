@@ -41,7 +41,17 @@ public class SinkController : MonoBehaviour
     {
         if (isActive)
         {
-            if(Input.GetButton(InputMapping.GetInputName(playerTag, InputMapping.Input.X)))
+            if (Input.GetButtonDown(InputMapping.GetInputName(playerTag, InputMapping.Input.X)))
+            {
+                AkSoundEngine.PostEvent("Dishes_Start", gameObject);
+            }
+
+            if (Input.GetButtonUp(InputMapping.GetInputName(playerTag, InputMapping.Input.X)))
+            {
+                AkSoundEngine.PostEvent("Dishes_Stop", gameObject);
+            }
+
+            if (Input.GetButton(InputMapping.GetInputName(playerTag, InputMapping.Input.X)))
             {
                 _spriteController.SetActive(false);
                 washed += Time.deltaTime;

@@ -169,6 +169,7 @@ public class TopDownKidsController : MonoBehaviour
 
                 else if (interactable.interactableType == Enum.InteractableType.ComboCarriable)
                 {
+                    AkSoundEngine.PostEvent("Toaster_Pickup", gameObject);
                     state = State.CarryingObject;
                     objectCarried = obj;
                     objectCurrentlyUsed = obj;
@@ -199,12 +200,15 @@ public class TopDownKidsController : MonoBehaviour
             //If combo receiver
             if (dropOnReceiver)
             {
+                AkSoundEngine.PostEvent("Toaster_Drop", gameObject);
+                AkSoundEngine.PostEvent("Toaster_WaterImpact", gameObject);
                 interactableObjectReceiverInRange.GetComponent<ComboReceiver>().ReceiveObject(objectCarried);
                 objectCarried.GetComponent<InteractableItem>().isInteractable = false;
             }
 
             else
             {
+                AkSoundEngine.PostEvent("Toaster_Drop", gameObject);
                 //toss object forward
                 objectCarried.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
                 objectCarried.GetComponent<Rigidbody>().useGravity = true;
