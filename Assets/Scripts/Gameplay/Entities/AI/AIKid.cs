@@ -39,7 +39,11 @@ public class AIKid : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        wayPoints = WaypointsManager.GetWaypointsManager().waypoints;
+        if(WaypointsManager.GetWaypointsManager() != null)
+        {
+            wayPoints = WaypointsManager.GetWaypointsManager().waypoints;
+        }
+        
         StartIdle();
         stuckLastPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         InvokeRepeating("CheckForAIStuck", 0f, 3f);
