@@ -7,6 +7,9 @@ public class KidController : MonoBehaviour
 
     public bool isBad = false;
     public bool isTag = false;
+    public float freezeTime = 10.0f;
+    public float currentTime;
+
     public InputMapping.PlayerTag playerTag;
 
     void Start()
@@ -23,17 +26,36 @@ public class KidController : MonoBehaviour
         transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
         var controller = GetComponent<TopDownKidsController>();
         controller.enabled = false;
+
+        currentTime = freezeTime;
     }
 
     void Update()
     {
-        if (Input.GetButtonDown(InputMapping.GetInputName(playerTag, InputMapping.Input.Y)))
+        if (isTag)
         {
-            isBad = true;
+            currentTime -= Time.deltaTime;
+            if(currentTime < 0)
+            {
+                var controller = GetComponent<TopDownKidsController>();
+                controller.enabled = true;
+                var animator = GetComponent<Animator>();
+                animator.SetBool("crying", false);
+
+                isTag = false;
+                _tag.enabled = false;
+            }
         }
-        else if (Input.GetButtonUp(InputMapping.GetInputName(playerTag, InputMapping.Input.Y)))
+        else
         {
-            isBad = false;
+            if (Input.GetButtonDown(InputMapping.GetInputName(playerTag, InputMapping.Input.Y)))
+            {
+                isBad = true;
+            }
+            else if (Input.GetButtonUp(InputMapping.GetInputName(playerTag, InputMapping.Input.Y)))
+            {
+                isBad = false;
+            }
         }
     }
 }
