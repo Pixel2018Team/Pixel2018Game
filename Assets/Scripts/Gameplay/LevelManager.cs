@@ -159,10 +159,10 @@ public class LevelManager : MonoBehaviour
         {
             _consuelaLeads = true;
 
-            _consuelaHappy.gameObject.SetActive(true);
-            _consuelaSad.gameObject.SetActive(false);
-            _kidsHappy.gameObject.SetActive(false);
-            _kidsSad.gameObject.SetActive(true);
+            if (_consuelaHappy != null) _consuelaHappy.gameObject.SetActive(true);
+            if (_consuelaSad != null) _consuelaSad.gameObject.SetActive(false);
+            if (_kidsHappy != null) _kidsHappy.gameObject.SetActive(false);
+            if (_kidsSad != null) _kidsSad.gameObject.SetActive(true);
         }
 
         ScoreTextTest.text = _chaos.ToString();
