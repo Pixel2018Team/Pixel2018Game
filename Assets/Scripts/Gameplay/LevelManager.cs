@@ -89,6 +89,8 @@ public class LevelManager : MonoBehaviour
 
         _startingChaos = (maxChaos / 2);
         _chaos = _startingChaos;
+        _chaosBar.value = ((float)_chaos / (float)maxChaos);
+        ScoreTextTest.text = _chaos.ToString();
     }
 
     // Update is called once per frame
