@@ -47,11 +47,6 @@ public class MainMenuInteraction : MonoBehaviour
         menuState = MenuState.PlayerReadyScreen;
     }
 
-    public void PressScoresCallback()
-    {
-        //Open scores scene
-    }
-
     public void Exit()
     {
         Debug.Log("User has pressed exit");
@@ -71,18 +66,6 @@ public class MainMenuInteraction : MonoBehaviour
                     else if (_es.currentSelectedGameObject.name == "ExitButton") Exit();
                 }
             }
-
-            //if (Input.GetButtonDown("P1"+ ButtonName_Back) || Input.GetButtonDown("P2"+ ButtonName_Back))
-            //{
-            //    Debug.Log("press scores");
-            //    PressScoresCallback();
-            //}
-
-            //    if (Input.GetButtonDown(ButtonName_ExitKB))
-            //    {
-            //        Debug.Log("press quit");
-            //        Application.Quit();
-            //    }
         }
 
         if (menuState == MenuState.PlayerReadyScreen)

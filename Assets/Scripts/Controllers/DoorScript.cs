@@ -68,10 +68,6 @@ public class DoorScript : MonoBehaviour
                 }
                 Debug.Log("angle from starting angle = " + Vector3.Angle(transform.forward, closeDir));
             }
-
-
-
-
         }
     }
 
@@ -81,7 +77,5 @@ public class DoorScript : MonoBehaviour
     public void Interact()
     {
         LevelManager.Instance.OpenAllDoors();
-        // TODO: Code to close this door
-        //this._open = false;
     }
 }
