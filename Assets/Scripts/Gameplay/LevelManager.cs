@@ -70,7 +70,6 @@ public class LevelManager : MonoBehaviour
 
     private int _chaos = 0;
     private List<DoorScript> _doors;
-    private int _totalChaos;
     private int _startingChaos = 0;
 
     private void Awake()
@@ -88,7 +87,7 @@ public class LevelManager : MonoBehaviour
             if (obj != null) _doors.Add(dm);
         }
 
-        _startingChaos = (_totalChaos / 2);
+        _startingChaos = (maxChaos / 2);
     }
 
     // Update is called once per frame
@@ -96,14 +95,13 @@ public class LevelManager : MonoBehaviour
     {
         _gameTimer -= Time.deltaTime;
         if (_gameTimer <= 0) FinishLevel();
-        if (_chaos >= _totalChaos) FinishLevel();
+        if (_chaos >= maxChaos) FinishLevel();
     }
 
     private void Reset()
     {
         _gameTimer = 300f;
         _chaos = 0;
-        _totalChaos = maxChaos;
 
         // Hide the game over panel
         //_gameOverPanel.SetActive(false);
@@ -135,7 +133,7 @@ public class LevelManager : MonoBehaviour
     {
         _chaos += amount;
 
-        _chaosBar.value = (float)(_chaos / _totalChaos);
+        _chaosBar.value = ((float)_chaos / (float)maxChaos);
 
         if (_chaos > _startingChaos && _consuelaLeads)
         {
@@ -164,14 +162,5 @@ public class LevelManager : MonoBehaviour
         }
 
         ScoreTextTest.text = _chaos.ToString();
-    }
-
-    /// <summary>
-    /// Method used to add to the total chaos at the start of the game
-    /// </summary>
-    /// <param name="amount">The amount to add to the total level of chaos</param>
-    public void TotalChaos(int amount)
-    {
-        this._totalChaos += amount;
     }
 }
