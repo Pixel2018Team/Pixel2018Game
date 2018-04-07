@@ -43,8 +43,9 @@ public class MainMenuInteraction : MonoBehaviour
     public void PressPlayCallback()
     {
         MenuCanvas.SetActive(false);
-        PlayerConfirmCanvas.SetActive(true);
-        menuState = MenuState.PlayerReadyScreen;
+        //PlayerConfirmCanvas.SetActive(true);
+        //menuState = MenuState.PlayerReadyScreen;
+        SceneManager.LoadScene(2);
     }
 
     public void Exit()
