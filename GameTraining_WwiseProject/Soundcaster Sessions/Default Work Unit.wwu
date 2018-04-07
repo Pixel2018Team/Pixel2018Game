@@ -30,10 +30,6 @@
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Bookshelf_Break" ID="{879E7E35-1DC8-40D4-9C29-D37B11A066F9}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
-							<Position X="1" Y="1"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="Dishes_Start" ID="{09A4D549-EDC4-4D0E-99AC-F77C343EB228}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
 							<Position X="1" Y="2"/>
 						</Module>
@@ -48,10 +44,6 @@
 						<Module>
 							<ObjectRef Name="Bbq_Stop" ID="{3A0BA28C-9281-4717-B308-E6B3BA50A550}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
 							<Position X="2" Y="0"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Bookshelf_Replace" ID="{57D41F6E-889F-4740-BFC9-657432BC5384}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
-							<Position X="2" Y="1"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Dishes_Stop" ID="{4203BD2D-DD8E-43FC-BEF3-9B817B70CE20}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
@@ -74,10 +66,6 @@
 							<Position X="3" Y="3"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Door_Close" ID="{BB8E5DB0-11DA-46E5-9920-2A8433C2006A}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
-							<Position X="3" Y="4"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="Toaster_Drop" ID="{E0C83E31-67FA-4363-9DEA-F361ECB39216}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
 							<Position X="4" Y="1"/>
 						</Module>
@@ -88,10 +76,6 @@
 						<Module>
 							<ObjectRef Name="Toaster_Pickup" ID="{BC0A1134-EA80-495B-836C-F87341D4CDC9}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
 							<Position X="4" Y="3"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Door_Open" ID="{4CE2F97A-1BAC-43E2-931D-F55E5D6098F4}" WorkUnitID="{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}"/>
-							<Position X="4" Y="4"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">

@@ -13,30 +13,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AcousticTextureWwu:
   - Guid: '{2B1A5A9B-E426-4A0A-9DF3-B1FF02702E98}'
-    m_lastTimePart2: -1999267015
-    m_lastTimePsrt1: -1451254938
+    m_lastTimePart2: -1999267288
+    m_lastTimePsrt1: -1777129856
     ParentPhysicalPath: 
-    PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    PhysicalPath: Virtual Acoustics/Default Work Unit.wwu
     List: []
   autoPopulateEnabled: 1
   AuxBusWwu:
   - Guid: '{BBEB7192-4061-40B2-BB2C-F43371343F1E}'
-    m_lastTimePart2: -1999267015
-    m_lastTimePsrt1: -1451495100
+    m_lastTimePart2: -1999267288
+    m_lastTimePsrt1: -1777129856
     ParentPhysicalPath: 
-    PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
     List: []
   BankWwu:
   - Guid: '{95453523-4657-49D3-B09F-C2ABF7CEAF1C}'
-    m_lastTimePart2: -1999266793
-    m_lastTimePsrt1: -420233679
+    m_lastTimePart2: -1999266779
+    m_lastTimePsrt1: 339483776
     ParentPhysicalPath: 
-    PhysicalPath: SoundBanks\Default Work Unit.wwu
+    PhysicalPath: SoundBanks/Default Work Unit.wwu
     List:
     - Guid: 317ec7c33f4ac2478e0af480f4f51061
       ID: -1298100754
       Name: PIX_2018
-      Path: Default Work Unit\PIX_2018
+      Path: Default Work Unit/PIX_2018
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -48,15 +48,15 @@ MonoBehaviour:
   defaultPoolSize: 4096
   EventWwu:
   - Guid: '{D2BC21DC-16B2-4869-8F8B-83A2B5129D83}'
-    m_lastTimePart2: -1999266793
-    m_lastTimePsrt1: -424506506
+    m_lastTimePart2: -1999266780
+    m_lastTimePsrt1: -420516224
     ParentPhysicalPath: 
-    PhysicalPath: Events\Default Work Unit.wwu
+    PhysicalPath: Events/Default Work Unit.wwu
     List:
     - Guid: b0646df32ca03e4493bfeeb9598b473e
       ID: 1360101095
       Name: Bbq_Start
-      Path: Default Work Unit\Bbq_Start
+      Path: Default Work Unit/Bbq_Start
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -68,7 +68,7 @@ MonoBehaviour:
     - Guid: 8ca20b3a81921747b308e6b3ba50a550
       ID: 1506460941
       Name: Bbq_Stop
-      Path: Default Work Unit\Bbq_Stop
+      Path: Default Work Unit/Bbq_Stop
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -77,10 +77,34 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - Guid: 357e9e87c81dd4409c29d37b11a066f9
+      ID: 1598914998
+      Name: Bookshelf_Break
+      Path: Default Work Unit/Bookshelf_Break
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bookshelf_Break
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 6e1fd4579f884047bfc9657432bc5384
+      ID: -983307629
+      Name: Bookshelf_Replace
+      Path: Default Work Unit/Bookshelf_Replace
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Bookshelf_Replace
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - Guid: d6eaa3c684e0ab4eacf26ca3f891ab92
       ID: -805043078
       Name: Dishes_Impact
-      Path: Default Work Unit\Dishes_Impact
+      Path: Default Work Unit/Dishes_Impact
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -92,7 +116,7 @@ MonoBehaviour:
     - Guid: 49d5a409c4ed0e4d99acf77c343eb228
       ID: 797412272
       Name: Dishes_Start
-      Path: Default Work Unit\Dishes_Start
+      Path: Default Work Unit/Dishes_Start
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -104,7 +128,7 @@ MonoBehaviour:
     - Guid: 2dbd03428eddfc43bef39b817b70ce20
       ID: -2120112612
       Name: Dishes_Stop
-      Path: Default Work Unit\Dishes_Stop
+      Path: Default Work Unit/Dishes_Stop
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -116,7 +140,7 @@ MonoBehaviour:
     - Guid: bed80c72e7b6db46812f891cb01c11d7
       ID: 536084281
       Name: Extinctor_Use
-      Path: Default Work Unit\Extinctor_Use
+      Path: Default Work Unit/Extinctor_Use
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -128,7 +152,7 @@ MonoBehaviour:
     - Guid: 27f08cf6d72be24095971709832b6d3f
       ID: -236865931
       Name: Gamestart
-      Path: Default Work Unit\Gamestart
+      Path: Default Work Unit/Gamestart
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -137,10 +161,70 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - Guid: e7506260af74724f9a87286994a300f1
+      ID: 1704623631
+      Name: Gonzuela_Leading
+      Path: Default Work Unit/Gonzuela_Leading
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Gonzuela_Leading
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: f45c5efbc41fac4ca4873bf8651e2e42
+      ID: 1205450473
+      Name: Kids_Crying
+      Path: Default Work Unit/Kids_Crying
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Kids_Crying
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: c05de71905a926489a62b6e9b8c11bde
+      ID: 858248185
+      Name: Kids_Leading
+      Path: Default Work Unit/Kids_Leading
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Kids_Leading
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 1517a3f84f209a46a6945599d7d6408f
+      ID: 280670697
+      Name: Lightswitch_Off
+      Path: Default Work Unit/Lightswitch_Off
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Lightswitch_Off
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 84496817731e5b438a24c4bf3f415738
+      ID: -2041086563
+      Name: Lightswitch_On
+      Path: Default Work Unit/Lightswitch_On
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Lightswitch_On
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - Guid: 7818f144834dd34b938cfddf2f5d9a5b
       ID: -1761159097
       Name: Mix_Extinctor_Oven
-      Path: Default Work Unit\ForMixing\Mix_Extinctor_Oven
+      Path: Default Work Unit/ForMixing/Mix_Extinctor_Oven
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -154,7 +238,7 @@ MonoBehaviour:
     - Guid: ef4bf9fdd32239479b7397fecb9f4b75
       ID: -333981005
       Name: Mix_Toaster_WaterDrop
-      Path: Default Work Unit\ForMixing\Mix_Toaster_WaterDrop
+      Path: Default Work Unit/ForMixing/Mix_Toaster_WaterDrop
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -168,7 +252,7 @@ MonoBehaviour:
     - Guid: dd41c3d4162d3b4da36e7d39ad17719e
       ID: -1719896618
       Name: Oven_Start
-      Path: Default Work Unit\Oven_Start
+      Path: Default Work Unit/Oven_Start
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -180,7 +264,7 @@ MonoBehaviour:
     - Guid: 5ce30f3f7d14334195d6113d3a425bf5
       ID: 743584214
       Name: Oven_Stop
-      Path: Default Work Unit\Oven_Stop
+      Path: Default Work Unit/Oven_Stop
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -192,7 +276,7 @@ MonoBehaviour:
     - Guid: 47c25b4c7544ab44b0fb71e1d1f50283
       ID: -611409299
       Name: Oven_Stretch
-      Path: Default Work Unit\Oven_Stretch
+      Path: Default Work Unit/Oven_Stretch
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -201,14 +285,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - Guid: 382b8b50d19cac49ba8f6bf499c903b6
-      ID: -1137964055
-      Name: test
-      Path: Default Work Unit\test
+    - Guid: 994913764bd3e04fa788be3d4d05d821
+      ID: -421262003
+      Name: Picture_Break
+      Path: Default Work Unit/Picture_Break
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: test
+      - ElementName: Picture_Break
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: fdb03cd8e69cc240bd9bcf508cd2eea0
+      ID: 1009363664
+      Name: Picture_Replace
+      Path: Default Work Unit/Picture_Replace
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Picture_Replace
         ObjectType: 3
       maxAttenuation: 0
       maxDuration: 0
@@ -216,7 +312,7 @@ MonoBehaviour:
     - Guid: 313ec8e0fa6763439deaf361ecb39216
       ID: 1047931541
       Name: Toaster_Drop
-      Path: Default Work Unit\Toaster_Drop
+      Path: Default Work Unit/Toaster_Drop
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -228,7 +324,7 @@ MonoBehaviour:
     - Guid: 34110abc80ea5b49836cf87341d4cdc9
       ID: 1782344986
       Name: Toaster_Pickup
-      Path: Default Work Unit\Toaster_Pickup
+      Path: Default Work Unit/Toaster_Pickup
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -240,7 +336,7 @@ MonoBehaviour:
     - Guid: 7b18e30107bad84d83b058798c34d9c5
       ID: 509177165
       Name: Toaster_WaterImpact
-      Path: Default Work Unit\Toaster_WaterImpact
+      Path: Default Work Unit/Toaster_WaterImpact
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -249,12 +345,32 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - Guid: 2f0ac5910931b94dbd65eac35b493ee4
+      ID: 763008841
+      Name: Woodblock_Break
+      Path: Default Work Unit/Woodblock_Break
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Woodblock_Break
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 185ecc3a5c157e4c9f4f8cb8ec0643be
+      ID: -1311846516
+      Name: Woodblock_Replace
+      Path: Default Work Unit/Woodblock_Replace
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Woodblock_Replace
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   ExpandedItems:
   - /GameTraining_WwiseProject
-  - /GameTraining_WwiseProject/Events
-  - /GameTraining_WwiseProject/Events/Default Work Unit
-  - /GameTraining_WwiseProject/SoundBanks
-  - /GameTraining_WwiseProject/SoundBanks/Default Work Unit
   language: English(US)
   lowerPoolSize: 2048
   m_lastPopulateTimePart2: 0
@@ -263,15 +379,15 @@ MonoBehaviour:
   preparePoolSize: 0
   RtpcWwu:
   - Guid: '{984F371D-8246-4448-9F08-10BD93704E5A}'
-    m_lastTimePart2: -1999266793
-    m_lastTimePsrt1: -424496495
+    m_lastTimePart2: -1999266973
+    m_lastTimePsrt1: -1571828096
     ParentPhysicalPath: 
-    PhysicalPath: Game Parameters\Default Work Unit.wwu
+    PhysicalPath: Game Parameters/Default Work Unit.wwu
     List:
     - Guid: 18fe61727055d64fbb00f07a8cc3f801
       ID: -1692465047
       Name: MUS_LayersFade
-      Path: Default Work Unit\MUS_LayersFade
+      Path: Default Work Unit/MUS_LayersFade
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -279,15 +395,15 @@ MonoBehaviour:
         ObjectType: 13
   StateWwu:
   - Guid: '{70A2E602-0038-49F3-8033-7E9D0F78433D}'
-    m_lastTimePart2: -1999266793
-    m_lastTimePsrt1: -420213663
+    m_lastTimePart2: -1999266872
+    m_lastTimePsrt1: -1123524992
     ParentPhysicalPath: 
-    PhysicalPath: States\Default Work Unit.wwu
+    PhysicalPath: States/Default Work Unit.wwu
     List:
     - Guid: 27a05e35372a014e8e931a84e68dc0eb
       ID: -1525519074
       Name: MUS_Progression
-      Path: Default Work Unit\MUS_Progression
+      Path: Default Work Unit/MUS_Progression
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -312,15 +428,15 @@ MonoBehaviour:
   streamingPoolSize: 1024
   SwitchWwu:
   - Guid: '{0A965B9D-0641-4D6C-8F90-BFCA67345BF6}'
-    m_lastTimePart2: -1999267015
-    m_lastTimePsrt1: -1451334988
+    m_lastTimePart2: -1999267288
+    m_lastTimePsrt1: -1777129856
     ParentPhysicalPath: 
-    PhysicalPath: Switches\Default Work Unit.wwu
+    PhysicalPath: Switches/Default Work Unit.wwu
     List: []
   TriggerWwu:
   - Guid: '{8496A4A9-1E27-4C40-AE6D-B720E02A3338}'
-    m_lastTimePart2: -1999267015
-    m_lastTimePsrt1: -1451314981
+    m_lastTimePart2: -1999267288
+    m_lastTimePsrt1: -1777129856
     ParentPhysicalPath: 
-    PhysicalPath: Triggers\Default Work Unit.wwu
+    PhysicalPath: Triggers/Default Work Unit.wwu
     List: []
