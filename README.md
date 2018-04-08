@@ -9,13 +9,13 @@ Les enfants doivent en effet casser un maximum de choses pour faire monter une j
 A la fin du chrono, Gonzuela gagne si la maison est suffisament propre, sinon les enfants gagnent !
 
 ### Équipe Psycho Mantisse
-Guillaume Boivin (Artiste 3D)
-David Borba (Artiste 3D)
-Marilyne Lord (UI designer)
-Samuel Carrière (Programmeur)
-Yannis M'rad (Programmeur)
-Ghislain Saint-Denis (Programmeur)
-Léandre Monette (Sound designer)
+- Guillaume Boivin (Artiste 3D)
+- David Borba (Artiste 3D)
+- Marilyne Lord (UI designer)
+- Samuel Carrière (Programmeur)
+- Yannis M'rad (Programmeur)
+- Ghislain Saint-Denis (Programmeur)
+- Léandre Monette (Sound designer)
 
 
 
