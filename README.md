@@ -8,7 +8,7 @@ Le lien avec le thème de la tempête se situe dans l'accumulation d'évènement
 Les enfants doivent en effet casser un maximum de choses pour faire monter une jauge de "Chaos" (représentant l’état de la maison) que Gonzuela doit faire descendre en nettoyant / réparant les objets cassés.
 A la fin du chrono, Gonzuela gagne si la maison est suffisament propre, sinon les enfants gagnent !
 
-## Équipe Psycho Mantisse
+### Équipe Psycho Mantisse
 Guillaume Boivin (Artiste 3D)
 David Borba (Artiste 3D)
 Marilyne Lord (UI designer)
