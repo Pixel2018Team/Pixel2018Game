@@ -1,0 +1,258 @@
+fileFormatVersion: 2
+guid: 23e9f300ea659c74e83aa01bc52abe15
+timeCreated: 1523138029
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: boy_parrot
+    100002: //RootNode
+    100004: boy_parrot_low
+    100006: boy_parrotHead
+    100008: boy_parrotLCalf
+    100010: boy_parrotLCollarbone
+    100012: boy_parrotLDigit11
+    100014: boy_parrotLDigit11 1
+    100016: boy_parrotLDigit12
+    100018: boy_parrotLDigit21
+    100020: boy_parrotLDigit22
+    100022: boy_parrotLFoot
+    100024: boy_parrotLForearm
+    100026: boy_parrotLPalm
+    100028: boy_parrotLPlatform
+    100030: boy_parrotLThigh
+    100032: boy_parrotLUpperarm
+    100034: boy_parrotNeck
+    100036: boy_parrotPelvis
+    100038: boy_parrotRCalf
+    100040: boy_parrotRCollarbone
+    100042: boy_parrotRDigit11
+    100044: boy_parrotRDigit11 1
+    100046: boy_parrotRDigit12
+    100048: boy_parrotRDigit21
+    100050: boy_parrotRDigit22
+    100052: boy_parrotRFoot
+    100054: boy_parrotRForearm
+    100056: boy_parrotRibcage
+    100058: boy_parrotRPalm
+    100060: boy_parrotRPlatform
+    100062: boy_parrotRThigh
+    100064: boy_parrotRUpperarm
+    100066: boy_parrotSpine1
+    100068: boy_parrotSpine2
+    100070: boy_parrotSpine3
+    400000: //RootNode
+    400002: boy_parrot
+    400004: boy_parrot_low
+    400006: boy_parrotHead
+    400008: boy_parrotLCalf
+    400010: boy_parrotLCollarbone
+    400012: boy_parrotLDigit11
+    400014: boy_parrotLDigit11 1
+    400016: boy_parrotLDigit12
+    400018: boy_parrotLDigit21
+    400020: boy_parrotLDigit22
+    400022: boy_parrotLFoot
+    400024: boy_parrotLForearm
+    400026: boy_parrotLPalm
+    400028: boy_parrotLPlatform
+    400030: boy_parrotLThigh
+    400032: boy_parrotLUpperarm
+    400034: boy_parrotNeck
+    400036: boy_parrotPelvis
+    400038: boy_parrotRCalf
+    400040: boy_parrotRCollarbone
+    400042: boy_parrotRDigit11
+    400044: boy_parrotRDigit11 1
+    400046: boy_parrotRDigit12
+    400048: boy_parrotRDigit21
+    400050: boy_parrotRDigit22
+    400052: boy_parrotRFoot
+    400054: boy_parrotRForearm
+    400056: boy_parrotRibcage
+    400058: boy_parrotRPalm
+    400060: boy_parrotRPlatform
+    400062: boy_parrotRThigh
+    400064: boy_parrotRUpperarm
+    400066: boy_parrotSpine1
+    400068: boy_parrotSpine2
+    400070: boy_parrotSpine3
+    2100000: No Name
+    2100002: MAT_boyparrot
+    2300000: boy_parrotHead
+    2300002: boy_parrotLCalf
+    2300004: boy_parrotLCollarbone
+    2300006: boy_parrotLDigit11
+    2300008: boy_parrotLDigit11 1
+    2300010: boy_parrotLDigit12
+    2300012: boy_parrotLDigit21
+    2300014: boy_parrotLDigit22
+    2300016: boy_parrotLFoot
+    2300018: boy_parrotLForearm
+    2300020: boy_parrotLPalm
+    2300022: boy_parrotLThigh
+    2300024: boy_parrotLUpperarm
+    2300026: boy_parrotNeck
+    2300028: boy_parrotPelvis
+    2300030: boy_parrotRCalf
+    2300032: boy_parrotRCollarbone
+    2300034: boy_parrotRDigit11
+    2300036: boy_parrotRDigit11 1
+    2300038: boy_parrotRDigit12
+    2300040: boy_parrotRDigit21
+    2300042: boy_parrotRDigit22
+    2300044: boy_parrotRFoot
+    2300046: boy_parrotRForearm
+    2300048: boy_parrotRibcage
+    2300050: boy_parrotRPalm
+    2300052: boy_parrotRThigh
+    2300054: boy_parrotRUpperarm
+    2300056: boy_parrotSpine1
+    2300058: boy_parrotSpine2
+    2300060: boy_parrotSpine3
+    3300000: boy_parrotHead
+    3300002: boy_parrotLCalf
+    3300004: boy_parrotLCollarbone
+    3300006: boy_parrotLDigit11
+    3300008: boy_parrotLDigit11 1
+    3300010: boy_parrotLDigit12
+    3300012: boy_parrotLDigit21
+    3300014: boy_parrotLDigit22
+    3300016: boy_parrotLFoot
+    3300018: boy_parrotLForearm
+    3300020: boy_parrotLPalm
+    3300022: boy_parrotLThigh
+    3300024: boy_parrotLUpperarm
+    3300026: boy_parrotNeck
+    3300028: boy_parrotPelvis
+    3300030: boy_parrotRCalf
+    3300032: boy_parrotRCollarbone
+    3300034: boy_parrotRDigit11
+    3300036: boy_parrotRDigit11 1
+    3300038: boy_parrotRDigit12
+    3300040: boy_parrotRDigit21
+    3300042: boy_parrotRDigit22
+    3300044: boy_parrotRFoot
+    3300046: boy_parrotRForearm
+    3300048: boy_parrotRibcage
+    3300050: boy_parrotRPalm
+    3300052: boy_parrotRThigh
+    3300054: boy_parrotRUpperarm
+    3300056: boy_parrotSpine1
+    3300058: boy_parrotSpine2
+    3300060: boy_parrotSpine3
+    4300000: boy_parrotPelvis
+    4300002: boy_parrotLThigh
+    4300004: boy_parrotLCalf
+    4300006: boy_parrotLFoot
+    4300008: boy_parrotLDigit11
+    4300010: boy_parrotRThigh
+    4300012: boy_parrotRCalf
+    4300014: boy_parrotRFoot
+    4300016: boy_parrotRDigit11
+    4300018: boy_parrotSpine1
+    4300020: boy_parrotSpine2
+    4300022: boy_parrotSpine3
+    4300024: boy_parrotRibcage
+    4300026: boy_parrotLCollarbone
+    4300028: boy_parrotLUpperarm
+    4300030: boy_parrotLForearm
+    4300032: boy_parrotLPalm
+    4300034: boy_parrotLDigit11
+    4300036: boy_parrotLDigit12
+    4300038: boy_parrotLDigit21
+    4300040: boy_parrotLDigit22
+    4300042: boy_parrotRCollarbone
+    4300044: boy_parrotRUpperarm
+    4300046: boy_parrotRForearm
+    4300048: boy_parrotRPalm
+    4300050: boy_parrotRDigit11
+    4300052: boy_parrotRDigit12
+    4300054: boy_parrotRDigit21
+    4300056: boy_parrotRDigit22
+    4300058: boy_parrotNeck
+    4300060: boy_parrotHead
+    4300062: boy_parrot_low
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: boy_parrot_low
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

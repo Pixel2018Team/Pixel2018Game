@@ -46,7 +46,7 @@ public class LevelManager : MonoBehaviour
     #endregion Singleton
 
     [SerializeField]
-    private float _gameTimer = 300f;
+    private float _gameTimer = 5f;
 
     [SerializeField]
     private GameObject
@@ -95,7 +95,10 @@ public class LevelManager : MonoBehaviour
     private void Update()
     {
         if (_gameTimer > 0) _gameTimer -= Time.deltaTime;
-        if (_gameTimer <= 0) FinishLevel();
+        if (GetComponent<TimerManager>().remainingSecs <= 0)
+        {
+            FinishLevel();
+        }
         if (_chaos >= maxChaos) FinishLevel();
 
         if (_gameTimer <= 0)

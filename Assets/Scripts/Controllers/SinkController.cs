@@ -8,7 +8,7 @@ public class SinkController : MonoBehaviour
     private bool isActive = false;
 
     public float washed = 0;
-    public float doneWashing = 10.0f;
+    public float doneWashing = 2.0f;
     public InputMapping.PlayerTag playerTag;
     private Image _image;
     private SpriteController _spriteController;
@@ -55,6 +55,11 @@ public class SinkController : MonoBehaviour
             {
                 _spriteController.SetActive(false);
                 washed += Time.deltaTime;
+                if (washed > doneWashing)
+                {
+                    washed = 0.0f;
+                    LevelManager.Instance.AddChaos(-5);
+                }
                 _image.fillAmount = washed / doneWashing;
             }
             else

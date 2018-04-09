@@ -11,13 +11,5 @@ public class test_start_audio : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("P1_A"))
-        {
-            LevelManager.Instance.AddChaos(25);
-        }
-        if (Input.GetButtonDown("P1_X"))
-        {
-            LevelManager.Instance.AddChaos(-25);
-        }
     }
 }

@@ -19,7 +19,7 @@ public class TimerManager : MonoBehaviour
     public int countDownMinutes;
     [Range(0, 59)]
     public int countDownSeconds;
-    private float remainingMins, remainingSecs, milliseconds;
+    public float remainingMins, remainingSecs, milliseconds;
     private bool timerOver;
 
     private void Awake()
