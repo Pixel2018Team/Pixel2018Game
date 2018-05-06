@@ -1,4 +1,6 @@
 ﻿#if UNITY_EDITOR && UNITY_5_6_OR_NEWER
+using UnityEditor;
+
 public partial class AkBuildPreprocessor
 {
 	/// <summary>
@@ -151,10 +153,21 @@ public partial class AkBuildPreprocessor : UnityEditor.Build.IPreprocessBuild, U
 		OnPreprocessBuildInternal(report.summary.platform, report.summary.outputPath);
 	}
 
-	public void OnPostprocessBuild(UnityEditor.Build.Reporting.BuildReport report)
+    public void OnPreprocessBuild(BuildTarget target, string path)
+    {
+        OnPreprocessBuildInternal(target, path);
+    }
+
+    public void OnPostprocessBuild(UnityEditor.Build.Reporting.BuildReport report)
 	{
 		OnPostprocessBuildInternal(report.summary.platform, report.summary.outputPath);
 	}
+
+    public void OnPostprocessBuild(BuildTarget target, string path)
+    {
+        OnPostprocessBuildInternal(target, path);
+    }
+
 #else
 	public void OnPreprocessBuild(UnityEditor.BuildTarget target, string path)
 	{
